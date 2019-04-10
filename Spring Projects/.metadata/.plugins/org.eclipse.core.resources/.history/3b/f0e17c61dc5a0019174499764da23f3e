@@ -1,0 +1,5 @@
+package io.homecloud.homeserver.localFile;
+
+public class LocalFile {
+
+}

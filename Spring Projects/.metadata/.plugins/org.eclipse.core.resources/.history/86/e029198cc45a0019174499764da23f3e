@@ -1,0 +1,12 @@
+package io.homecloud.homeserver.Htmlcontroller;
+
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HtmlController {
+
+	
+	public String sendBackHtml() {
+		return "Hello world";
+	}
+}

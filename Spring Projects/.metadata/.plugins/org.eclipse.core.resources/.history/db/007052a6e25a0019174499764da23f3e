@@ -1,0 +1,25 @@
+package io.homecloud.homeserver.localFile;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class LoaclFileController {
+
+	@Autowired /*A Singleton object */
+	private LocalFileService _localFileService;
+	
+	@RequestMapping("/files")
+	public List<LocalFile> getAllFiles() {
+		return _localFileService.getAllFiles();
+	}
+	
+	
+	public LocalFile getFile(int file) {
+		
+	}
+	
+}

@@ -1,0 +1,14 @@
+package io.homecloud.homeserver.localFile;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class LoaclFileController {
+
+	@RequestMapping("/files")
+	public String getAllFiles() {
+		return "Hello World from homeServer";
+	}
+	
+}

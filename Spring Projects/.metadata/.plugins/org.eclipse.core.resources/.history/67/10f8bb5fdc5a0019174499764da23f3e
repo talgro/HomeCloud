@@ -1,0 +1,18 @@
+package io.homecloud.homeserver.Htmlcontroller;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class HtmlController {
+
+	@RequestMapping("/hello")
+	public String sendBackHtml() {
+		return "Hello world";
+	}
+	
+	@RequestMapping("/goodbye")
+	public String sendBackHtml2() {
+		return "goodbye";
+	}
+}
