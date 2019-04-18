@@ -4,7 +4,7 @@
     <input type="text" id="password" v-model="input.password" placeholder="Password"/>
     <button type="button" v-on:click="login()">Login</button>
     <button type="button" v-on:click="register()">Register</button>
-    <h1>{{ loggedIn }}</h1>
+    <h1>{{ msg }}</h1>
   </div>
 </template>
 
@@ -24,6 +24,7 @@ export default {
     login () {
       if (this.input.username !== '' && this.input.password !== '' && this.validate()) {
         this.msg = 'Success!'
+        this.$router.push({ name: 'top-page-segment' })
       } else {
         this.msg = 'Incorrect username and/or passsword!'
       }

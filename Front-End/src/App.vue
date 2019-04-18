@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-    <LoginPage></LoginPage>
-    <top-page-segment v-if="loggedIn && !login && !register"></top-page-segment>
+    <router-view></router-view>
   </div>
 </template>
 
