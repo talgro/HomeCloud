@@ -2,10 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="df7ecbae-3ca0-40d4-afe5-20e99dd71143" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Front-End/src/components/Header.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-End/src/components/NotLoggedInPage.vue" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-End/src/components/Register.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/src/components/LoginPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/LoginPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/src/components/TopPageSegment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/TopPageSegment.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/components/HelloWorld.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/components/LoginPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/components/TopPageSegment.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/LoggedInPage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/router/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Front-End/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+            <state relative-caret-position="119">
+              <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -45,20 +49,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Front-End/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+            <state relative-caret-position="306">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
               <folding>
-                <element signature="e#134#194#0" expanded="true" />
+                <element signature="e#92#100#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Front-End/src/components/LoginPage.vue">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Front-End/src/components/Register.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+            <state relative-caret-position="34">
+              <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Front-End/src/components/Header.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
             </state>
           </provider>
         </entry>
@@ -66,8 +79,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Front-End/src/router/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+            <state relative-caret-position="493">
+              <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
               <folding>
                 <element signature="e#0#21#0" expanded="true" />
               </folding>
@@ -76,10 +89,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Front-End/src/components/TopPageSegment.vue">
+        <entry file="file://$PROJECT_DIR$/Front-End/src/components/NotLoggedInPage.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
+            <state relative-caret-position="17">
+              <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Front-End/src/components/LoggedInPage.vue">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -97,7 +119,11 @@
     <findStrings>
       <find>hello</find>
       <find>msg</find>
+      <find>TopPageSegment</find>
     </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -109,11 +135,16 @@
         <option value="$PROJECT_DIR$/Front-End/src/components/HelloWorld.vue" />
         <option value="$PROJECT_DIR$/Front-End/src/components/Top-Page-Segment.vue" />
         <option value="$PROJECT_DIR$/Front-End/index.html" />
-        <option value="$PROJECT_DIR$/Front-End/src/App.vue" />
         <option value="$PROJECT_DIR$/Front-End/src/main.js" />
-        <option value="$PROJECT_DIR$/Front-End/src/router/index.js" />
         <option value="$PROJECT_DIR$/Front-End/src/components/TopPageSegment.vue" />
         <option value="$PROJECT_DIR$/Front-End/src/components/LoginPage.vue" />
+        <option value="$PROJECT_DIR$/Front-End/src/App.vue" />
+        <option value="$PROJECT_DIR$/Front-End/src/components/MainPage.vue" />
+        <option value="$PROJECT_DIR$/Front-End/src/components/NotLoggedInPage.vue" />
+        <option value="$PROJECT_DIR$/Front-End/src/router/index.js" />
+        <option value="$PROJECT_DIR$/Front-End/src/components/Header.vue" />
+        <option value="$PROJECT_DIR$/Front-End/src/components/Register.vue" />
+        <option value="$PROJECT_DIR$/Front-End/src/components/LoggedInPage.vue" />
       </list>
     </option>
   </component>
@@ -145,6 +176,13 @@
               <item name="HomeCloud" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="Front-End" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="HomeCloud" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="HomeCloud" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="Front-End" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="components" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -188,7 +226,7 @@
       <option name="presentableId" value="Default" />
       <updated>1555586959650</updated>
       <workItem from="1555586960864" duration="963000" />
-      <workItem from="1555588094913" duration="14161000" />
+      <workItem from="1555588094913" duration="17098000" />
     </task>
     <task id="LOCAL-00001" summary="Added LoginPage.vue in components">
       <created>1555601658825</created>
@@ -197,17 +235,24 @@
       <option name="project" value="LOCAL" />
       <updated>1555601658825</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="added routing from login page to logged in page (called top-page-segment for now)">
+      <created>1555608246603</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1555608246603</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15124000" />
+    <option name="totallyTimeSpent" value="18061000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18271334" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2560175" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -243,13 +288,21 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added LoginPage.vue in components" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added LoginPage.vue in components" />
+    <MESSAGE value="added routing from login page to logged in page (called top-page-segment for now)" />
+    <option name="LAST_COMMIT_MESSAGE" value="added routing from login page to logged in page (called top-page-segment for now)" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/Front-End/src/components/HelloWorld.vue">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="8" lean-forward="true" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>
@@ -264,44 +317,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Front-End/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="8" lean-forward="true" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+        <state relative-caret-position="306">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding>
-            <element signature="e#134#194#0" expanded="true" />
+            <element signature="e#92#100#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/src/components/TopPageSegment.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="10" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Front-End/src/router/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
+        <state relative-caret-position="493">
+          <caret line="29" column="29" lean-forward="true" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
           <folding>
             <element signature="e#0#21#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Front-End/src/components/LoginPage.vue">
+    <entry file="file://$PROJECT_DIR$/Front-End/src/components/Header.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="14" lean-forward="true" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+        <state relative-caret-position="544">
+          <caret line="32" column="49" lean-forward="true" selection-start-line="32" selection-start-column="49" selection-end-line="32" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/src/components/Register.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/src/components/NotLoggedInPage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="33" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/src/components/LoggedInPage.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
         </state>
       </provider>
     </entry>

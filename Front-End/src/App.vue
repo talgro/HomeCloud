@@ -1,24 +1,27 @@
 <template>
   <div id="app">
+    <app-header></app-header>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import TopPageSegment from './components/TopPageSegment.vue'
-import LoginPage from './components/LoginPage.vue'
+
+import Header from './components/Header.vue'
+import LoggedInPage from './components/LoggedInPage.vue'
+import RegisterPage from './components/Register.vue'
 
 export default {
   data () {
     return {
       login: true,
-      register: false,
-      loggedIn: false
+      register: false
     }
   },
   components: {
-    'top-page-segment': TopPageSegment,
-    'login-page': LoginPage
+    'top-page-segment': LoggedInPage,
+    'login-page': RegisterPage,
+    'app-header': Header
   },
   name: 'App'
 }

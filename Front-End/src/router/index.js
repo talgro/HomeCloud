@@ -1,7 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import LoginPage from '../components/LoginPage.vue'
-import TopPageSegment from '../components/TopPageSegment.vue'
+import NotLoggedInPage from '../components/NotLoggedInPage.vue'
+import RegisterPage from '../components/Register.vue'
+import LoggedInPage from '../components/LoggedInPage.vue'
 
 Vue.use(Router)
 
@@ -10,18 +11,24 @@ export default new Router({
     {
       path: '/',
       redirect: {
-        name: 'login-page'
+        name: 'NotLoggedInPage'
       }
     },
     {
-      path: '/login',
-      name: 'login-page',
-      component: LoginPage
+      path: '/',
+      name: 'NotLoggedInPage',
+      component: NotLoggedInPage
     },
     {
-      path: '/top-page-segment',
-      name: 'top-page-segment',
-      component: TopPageSegment
+      path: '/Register',
+      name: 'RegisterPage',
+      component: RegisterPage
+    },
+    {
+      // TODO: make it so the username will be in the URL
+      path: '/user-name',
+      name: 'logged-in-page',
+      component: LoggedInPage
     }
   ]
 })

@@ -1,5 +1,5 @@
 <template>
-  <div id="login-page">
+  <div id="header">
     <input type="text" id="username" v-model="input.username" placeholder="Username"/>
     <input type="text" id="password" v-model="input.password" placeholder="Password"/>
     <button type="button" v-on:click="login()">Login</button>
@@ -10,7 +10,7 @@
 
 <script>
 export default {
-  name: 'LoginPage',
+  name: 'Header',
   data () {
     return {
       input: {
@@ -23,15 +23,14 @@ export default {
   methods: {
     login () {
       if (this.input.username !== '' && this.input.password !== '' && this.validate()) {
-        this.msg = 'Success!'
-        this.$router.push({ name: 'top-page-segment' })
+        this.$router.push({ name: 'logged-in-page' })
       } else {
         this.msg = 'Incorrect username and/or passsword!'
       }
     },
     // TODO: change this function to whatever function changes the page to the register page
     register () {
-
+      this.$router.push({ name: 'RegisterPage' })
     },
     // TODO: change this function to whatever function validates username and password
     validate () {

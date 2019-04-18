@@ -1,12 +1,12 @@
 <template>
   <div id="top-page-segment">
-    <p>YOU LOGGED IN!</p>
+    <h1>YOU ARE LOGGED IN!</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TopPageSegment',
+  name: 'LoggedInPage',
   data () {
 
   },
