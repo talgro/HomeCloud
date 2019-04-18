@@ -7,7 +7,7 @@
 <script>
 export default {
   name: 'HelloWorld',
-  data() {
+  data () {
     return {
       msg: ''
     }
@@ -15,9 +15,9 @@ export default {
   methods: {
 
   },
-  created() {
-    this.$http.get('https://my-json-server.typicode.com/typicode/demo/posts').then(function(data) {
-      this.msg = data.body[0].title;
+  created () {
+    this.$http.get('https://my-json-server.typicode.com/typicode/demo/posts').then(function (data) {
+      this.msg = data.body[0].title
     })
   }
 }
