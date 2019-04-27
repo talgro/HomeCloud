@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import NotLoggedInPage from '../components/NotLoggedInPage.vue'
 import RegisterPage from '../components/Register.vue'
-import LoggedInPage from '../components/LoggedInPage.vue'
+import LoginPage from '../components/LoginPage.vue'
+import HomePage from '../components/HomePage.vue'
 
 Vue.use(Router)
 
@@ -11,24 +11,23 @@ export default new Router({
     {
       path: '/',
       redirect: {
-        name: 'NotLoggedInPage'
+        name: 'LoginPage'
       }
     },
     {
-      path: '/',
-      name: 'NotLoggedInPage',
-      component: NotLoggedInPage
+      path: '/login',
+      name: 'LoginPage',
+      component: LoginPage
     },
     {
-      path: '/Register',
+      path: '/register',
       name: 'RegisterPage',
       component: RegisterPage
     },
     {
-      // TODO: make it so the username will be in the URL
-      path: '/user-name',
-      name: 'logged-in-page',
-      component: LoggedInPage
+      path: '/home-page',
+      name: 'HomePage',
+      component: HomePage
     }
   ]
 })
