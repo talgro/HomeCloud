@@ -7,15 +7,10 @@ import HomePage from '../components/HomePage.vue'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
-      redirect: {
-        name: 'LoginPage'
-      }
-    },
-    {
-      path: '/login',
       name: 'LoginPage',
       component: LoginPage
     },

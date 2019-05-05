@@ -1,55 +1,77 @@
+/* eslint-disable */
 <template>
     <div id="home-page">
-      <folder v-for="element in contents" v-bind:element="element"></folder>
+      <h1>THIS IS THE HOMEPAGE</h1>
+      <h1>{{ curr_folder.name }}</h1>
+      <file v-on:click="openChild" v-for="node in curr_folder.children" v-bind:node="node" v-bind:key="node.name"></file>
     </div>
 </template>
 
 <script>
-
 import Header from './Header.vue'
-import Folder from './FolderElement.vue'
+import TreeNode from '../Classes/TreeNode.js'
+import Tree from '../Classes/Tree.js'
+import File from './File.vue'
 
 export default {
   data () {
     return {
-      contents: []
+      curr_folder: {name: 'test', children: []},
+      files_tree: null
+    }
+  },
+  methods: {
+    openChild: function (event) {
+      console.log('switched curr')
+      this.curr_folder = event.target.node
     }
   },
   created () {
-    // TODO: change this link to get the contents of the server
-    // this.$http.get('http://jsonplaceholder.typicode.com/posts').then(function (data) {
-    //   this.contents = data.body
-    // })
-    // TODO: delete after we can get json from the server
-    this.contents = [
+    // TODO: replace custom json to json from server.
+    this.files_tree = new Tree()
+    let file2 = new TreeNode('file2', [])
+    let folder2 = new TreeNode('folder2', [file2])
+    let folder3 = new TreeNode('folder3', [])
+    let folder1 = new TreeNode('folder1', [folder2, folder3])
+    let file1 = new TreeNode('file1', [])
+    this.files_tree.root.addChild(folder1)
+    this.files_tree.root.addChild(file1)
+
+    /* this.files_tree = new Tree(
       {
-        name: 'folder1',
-        contents: [
+        name: 'root',
+        children: [
           {
-            name: 'file2'
-          },
-          {
-            name: 'folder2',
-            contents: [
+            name: 'folder1',
+            children: [
               {
-                name: 'file3'
+                name: 'folder2',
+                children: [
+                  {
+                    name: 'file2',
+                    children: []
+                  }
+                ]
               },
               {
-                name: 'file4'
+                name: 'folder3',
+                children: []
               }
             ]
+          },
+          {
+            name: 'file1',
+            children: []
           }
         ]
-      },
-      {
-        name: 'file1'
       }
-    ]
+    ) */
+    this.curr_folder = this.files_tree.root
   },
   name: 'HomePage',
   components: {
     'app-header': Header,
-    'folder': Folder
+    'file': File
   }
 }
 </script>
