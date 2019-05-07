@@ -1,5 +1,6 @@
+/* eslint-disable */
 <template>
-  <p>{{ node.name }}</p>
+  <p v-on:click="emitNode">{{ node.name }}</p>
 </template>
 
 <script>
@@ -7,7 +8,12 @@ export default {
   name: 'File',
   props: [
     'node'
-  ]
+  ],
+  methods: {
+    emitNode () {
+      this.$emit('changeNode', this.node)
+    }
+  }
 }
 </script>
 

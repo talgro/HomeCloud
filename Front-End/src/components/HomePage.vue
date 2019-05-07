@@ -1,9 +1,13 @@
 /* eslint-disable */
 <template>
     <div id="home-page">
-      <h1>THIS IS THE HOMEPAGE</h1>
+      <h1 v-on:click="test">THIS IS THE HOMEPAGE</h1>
       <h1>{{ curr_folder.name }}</h1>
-      <file v-on:click="openChild" v-for="node in curr_folder.children" v-bind:node="node" v-bind:key="node.name"></file>
+      <file
+        v-for="node in curr_folder.children"
+        v-bind:node="node" v-bind:key="node.name"
+        v-on:changeNode="curr_folder = $event">
+      </file>
     </div>
 </template>
 
@@ -16,14 +20,13 @@ import File from './File.vue'
 export default {
   data () {
     return {
-      curr_folder: {name: 'test', children: []},
-      files_tree: null
+      curr_folder: {},
+      files_tree: {}
     }
   },
   methods: {
-    openChild: function (event) {
-      console.log('switched curr')
-      this.curr_folder = event.target.node
+    test: function (event) {
+      console.log('test22')
     }
   },
   created () {
