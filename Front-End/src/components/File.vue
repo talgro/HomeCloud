@@ -1,8 +1,8 @@
 <template>
-<!--  <div>-->
+  <div>
     <p v-on:click="navigate">{{ node.name }}</p>
-<!--    <button v-on:click="this.node.deleteFile()">[del]</button>-->
-<!--  </div>-->
+    <button v-on:click="deleteFile">delete {{ node.name }}</button>
+  </div>
 </template>
 
 <script>
@@ -11,6 +11,9 @@ export default {
   methods: {
     navigate () {
       this.$emit('changeNode', this.node)
+    },
+    deleteFile () {
+      this.node.deleteFile()
     }
   },
   props: [

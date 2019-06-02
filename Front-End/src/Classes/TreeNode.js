@@ -12,6 +12,7 @@ export default class TreeNode {
   addChild (node) {
     this.children.push(node)
     node.parent = this
+    // TODO: send an http request to the server to add this file.
   }
 
   deleteFile () {
@@ -21,5 +22,6 @@ export default class TreeNode {
         break
       }
     }
+    // TODO: send an http request to the server to delete this file.
   }
 }
