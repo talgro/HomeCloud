@@ -14,7 +14,12 @@ export default class TreeNode {
     node.parent = this
   }
 
-  removeChildAt (index) {
-    this.children = this.children.splice(index, index)
+  deleteFile () {
+    for (let i = 0; i < this.parent.children.length; ++i) {
+      if (this.parent.children[i] === this) {
+        this.parent.children.splice(i, 1)
+        break
+      }
+    }
   }
 }

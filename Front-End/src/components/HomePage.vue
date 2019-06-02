@@ -1,7 +1,7 @@
 /* eslint-disable */
 <template>
     <div id="home-page">
-      <h1 v-on:click="test">THIS IS THE HOMEPAGE</h1>
+      <h1>THIS IS THE HOMEPAGE</h1>
       <h1>{{ curr_folder.name }}</h1>
       <file
         v-for="node in curr_folder.children"
@@ -22,11 +22,6 @@ export default {
     return {
       curr_folder: {},
       files_tree: {}
-    }
-  },
-  methods: {
-    test: function (event) {
-      console.log('test22')
     }
   },
   created () {
