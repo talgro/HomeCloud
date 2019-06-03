@@ -2,7 +2,11 @@
 <template>
     <div id="home-page">
       <h1>THIS IS THE HOMEPAGE</h1>
-      <h1>{{ curr_folder.name }}</h1>
+      <div v-if="!upload_file">
+        <h2>Select a file to upload</h2>
+        <input type="file" v-on:change="fileSelected">
+      </div>
+      <h2>{{ curr_folder.name }}</h2>
       <file
         v-for="node in curr_folder.children"
         v-bind:node="node" v-bind:key="node.name"
@@ -20,8 +24,18 @@ import File from './File.vue'
 export default {
   data () {
     return {
+      file: {},
       curr_folder: {},
       files_tree: {}
+    }
+  },
+  methods: {
+    fileSelected (event) {
+      this.file = event.target.files || event.dataTransfer.files
+      if (!this.file.length) {
+        return
+      }
+      // TODO: send a server an http request to add the selected file.
     }
   },
   created () {

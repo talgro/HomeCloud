@@ -22,6 +22,7 @@ export default class TreeNode {
         break
       }
     }
+
     // TODO: send an http request to the server to delete this file.
   }
 }
