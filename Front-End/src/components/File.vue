@@ -1,7 +1,7 @@
 <template>
   <div>
-    <p v-on:click="navigate">{{ node.name }}</p>
-    <button v-on:click="deleteFile">delete {{ node.name }}</button>
+    <p v-on:click="elementClicked">{{ element.name }}</p>
+    <button v-on:click="deleteElement">delete {{ element.name }}</button>
   </div>
 </template>
 
@@ -9,15 +9,15 @@
 export default {
   name: 'File',
   methods: {
-    navigate () {
-      this.$emit('changeNode', this.node)
+    elementClicked () {
+      this.$emit('elementClicked', this.element.name)
     },
-    deleteFile () {
-      this.node.deleteFile()
+    deleteElement () {
+      this.node.deleteElement()
     }
   },
   props: [
-    'node'
+    'element'
   ]
 }
 </script>
