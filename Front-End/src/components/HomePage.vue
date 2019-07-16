@@ -22,8 +22,8 @@ export default {
     }
   },
   methods: {
-    navigateTo (element_name) {
-      this.curr_folder = this.$http.get(element_name)
+    navigateTo (elementName) {
+      this.curr_folder = this.$http.get(elementName) // TODO: need to complete the url to get the new folder contents
     }
   },
   created () {
@@ -40,7 +40,16 @@ export default {
           type: 'Folder',
           size: 732,
           last_modified: '12/08/2019',
-          created: '11/06/2019'
+          created: '11/06/2019',
+          children: [
+            {
+              name: 'file2',
+              type: 'txt',
+              size: 4725,
+              last_modified: '25/10/2019',
+              created: '11/09/2019'
+            }
+          ]
         },
         {
           name: 'file1',
