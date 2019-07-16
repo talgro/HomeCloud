@@ -7,14 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df7ecbae-3ca0-40d4-afe5-20e99dd71143" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/src/components/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/HomePage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/src/components/LoginPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/LoginPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/router/index.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-End/src/plugins/vuetify.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/Spring Projects/homeServer/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -106,14 +99,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Front-End/src/App.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="354">
-              <caret line="30" selection-start-line="30" selection-start-column="4" selection-end-line="39" selection-end-column="12" />
+            <state relative-caret-position="136">
+              <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
               <folding>
                 <element signature="e#91#135#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Front-End/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -144,15 +146,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="17">
               <caret line="1" column="19" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Front-End/src/Classes/TreeNode.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="25" column="68" selection-start-line="25" selection-start-column="68" selection-end-line="25" selection-end-column="68" />
             </state>
           </provider>
         </entry>
@@ -250,6 +243,12 @@
               <item name="HomeCloud" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="HomeCloud" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="Front-End" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="HomeCloud" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="HomeCloud" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="Front-End" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="node_modules" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="HomeCloud" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -438,7 +437,7 @@
       <workItem from="1559734279645" duration="2147000" />
       <workItem from="1560169330101" duration="1448000" />
       <workItem from="1563275602978" duration="4007000" />
-      <workItem from="1563285154307" duration="5452000" />
+      <workItem from="1563285154307" duration="6482000" />
     </task>
     <task id="LOCAL-00001" summary="Added LoginPage.vue in components">
       <created>1555601658825</created>
@@ -482,17 +481,23 @@
       <option name="project" value="LOCAL" />
       <updated>1559495527307</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added delete button for every element in folder">
+      <created>1563295968926</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1563295968926</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68235000" />
+    <option name="totallyTimeSpent" value="69265000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12579957" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12579957" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -509,9 +514,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
-      <window_info anchor="bottom" id="Terminal" order="10" visible="true" weight="0.32502708" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32502708" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="12" weight="0.34860885" />
       <window_info anchor="bottom" id="Spring" order="13" />
@@ -659,11 +664,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Front-End/src/App.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="354">
-          <caret line="30" selection-start-line="30" selection-start-column="4" selection-end-line="39" selection-end-column="12" />
+        <state relative-caret-position="136">
+          <caret line="8" column="10" lean-forward="true" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
           <folding>
             <element signature="e#91#135#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Front-End/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="28" lean-forward="true" selection-start-line="26" selection-start-column="28" selection-end-line="26" selection-end-column="28" />
         </state>
       </provider>
     </entry>
