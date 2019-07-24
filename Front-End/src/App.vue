@@ -1,16 +1,16 @@
 <template>
   <v-app>
-    <v-btn dark>button</v-btn>
-<!--    <div id="app">-->
-    <v-content>
-      <router-view></router-view>
+    <app-header></app-header>
+    <v-content class="blue lighten-2">
+      <v-container class="my-5">
+        <router-view></router-view>
+      </v-container>
     </v-content>
-<!--    </div>-->
   </v-app>
 </template>
 
 <script>
-import Header from './components/Header.vue'
+import NavBar from './components/NavigationBar.vue'
 import LoginPage from './components/LoginPage.vue'
 import RegisterPage from './components/Register.vue'
 
@@ -22,7 +22,7 @@ export default {
   components: {
     'login-page': LoginPage,
     'register-page': RegisterPage,
-    'app-header': Header
+    'app-header': NavBar
   },
   name: 'App'
 }
