@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-btn dark>button</v-btn>
+    <v-btn>button</v-btn>
 <!--    <div id="app">-->
     <v-content>
       <router-view></router-view>
