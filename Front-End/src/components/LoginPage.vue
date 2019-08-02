@@ -3,7 +3,6 @@
     <input type="text" id="username" v-model="input.username" placeholder="Username"/>
     <input type="text" id="password" v-model="input.password" placeholder="Password"/>
     <v-btn dark v-on:click="login()">Login</v-btn>
-    <v-card :style="{'background-color': 'red'}"/>
     <h1>{{ msg }}</h1>
   </div>
 </template>
