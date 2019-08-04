@@ -1,40 +1,31 @@
 <template>
   <v-app>
-    <app-header></app-header>
-    <v-content class="blue lighten-2">
-      <v-container class="my-5">
-        <router-view></router-view>
-      </v-container>
+    <nav-drawer></nav-drawer>
+    <nav-bar></nav-bar>
+    <v-content class="ma-3">
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import NavBar from './components/NavigationBar.vue'
+import NavBar from './components/NavigationBar'
+import NavDrawer from './components/NavigationDrawer'
 import LoginPage from './components/LoginPage.vue'
 import RegisterPage from './components/Register.vue'
 
 export default {
-  data () {
-    return {
-    }
-  },
+  name: 'App',
   components: {
     'login-page': LoginPage,
     'register-page': RegisterPage,
-    'app-header': NavBar
+    'nav-bar': NavBar,
+    'nav-drawer': NavDrawer
   },
-  name: 'App'
+  data () {
+    return {
+      //
+    }
+  }
 }
 </script>
-
-<!--<style>-->
-<!--  #app {-->
-<!--    font-family: 'Avenir', Helvetica, Arial, sans-serif;-->
-<!--    -webkit-font-smoothing: antialiased;-->
-<!--    -moz-osx-font-smoothing: grayscale;-->
-<!--    text-align: center;-->
-<!--    color: #2c3e50;-->
-<!--    margin-top: 60px;-->
-<!--  }-->
-<!--</style>-->

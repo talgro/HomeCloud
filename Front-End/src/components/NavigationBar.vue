@@ -1,8 +1,8 @@
 <template>
   <div id="NavBar">
     <nav>
-      <v-toolbar app class="blue lighten-3">
-        <v-toolbar-title class="text-uppercase white--text">
+      <v-toolbar clipped-left app>
+        <v-toolbar-title class="text-uppercase">
           <span class="font-weight-thin">Home</span><span class="font-weight-bold">Cloud</span>
         </v-toolbar-title>
       </v-toolbar>
