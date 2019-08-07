@@ -6,7 +6,11 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df7ecbae-3ca0-40d4-afe5-20e99dd71143" name="Default Changelist" comment="" />
+    <list default="true" id="df7ecbae-3ca0-40d4-afe5-20e99dd71143" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/components/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/HomePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/components/NavigationDrawer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/NavigationDrawer.vue" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -183,7 +187,10 @@
       <workItem from="1564393234518" duration="10615000" />
       <workItem from="1564563313442" duration="16383000" />
       <workItem from="1564661613447" duration="757000" />
-      <workItem from="1564915959951" duration="16581000" />
+      <workItem from="1564915959951" duration="18905000" />
+      <workItem from="1565010127165" duration="3649000" />
+      <workItem from="1565111646267" duration="2883000" />
+      <workItem from="1565176549534" duration="1377000" />
     </task>
     <task id="LOCAL-00001" summary="Added LoginPage.vue in components">
       <created>1555601658825</created>
@@ -255,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564933025878</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="fixed folders view&#10;added breadcrumbs">
+      <created>1564933386355</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1564933386356</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
