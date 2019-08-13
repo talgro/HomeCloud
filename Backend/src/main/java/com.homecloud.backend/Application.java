@@ -1,4 +1,4 @@
-package com.homecloud.backend.hello;
+package com.homecloud.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
