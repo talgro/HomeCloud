@@ -8,8 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="df7ecbae-3ca0-40d4-afe5-20e99dd71143" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/src/components/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/HomePage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/src/components/NavigationDrawer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/NavigationDrawer.vue" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,24 +48,6 @@
         <option value="Vue Single File Component" />
       </list>
     </option>
-  </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>hello</find>
-      <find>msg</find>
-      <find>TopPageSegment</find>
-      <find>127</find>
-      <find>application.pr</find>
-      <find>changeNode</find>
-      <find>element_name</find>
-      <find>&lt;template&gt;</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
-    <dirStrings>
-      <dir>$PROJECT_DIR$</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -190,7 +170,15 @@
       <workItem from="1564915959951" duration="18905000" />
       <workItem from="1565010127165" duration="3649000" />
       <workItem from="1565111646267" duration="2883000" />
-      <workItem from="1565176549534" duration="1377000" />
+      <workItem from="1565176549534" duration="2043000" />
+      <workItem from="1565522056263" duration="12339000" />
+      <workItem from="1565607329933" duration="3648000" />
+      <workItem from="1565703573928" duration="6924000" />
+      <workItem from="1565774172329" duration="10463000" />
+      <workItem from="1565794563650" duration="8307000" />
+      <workItem from="1565860897790" duration="348000" />
+      <workItem from="1565863544115" duration="1526000" />
+      <workItem from="1566052939796" duration="1464000" />
     </task>
     <task id="LOCAL-00001" summary="Added LoginPage.vue in components">
       <created>1555601658825</created>
@@ -269,7 +257,21 @@
       <option name="project" value="LOCAL" />
       <updated>1564933386356</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fixed http requests">
+      <created>1565179527031</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1565179527031</updated>
+    </task>
+    <task id="LOCAL-00013" summary="update">
+      <created>1566053157088</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1566053157088</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,7 +299,9 @@
     <MESSAGE value="fdfd" />
     <MESSAGE value="cvcvc" />
     <MESSAGE value="fixed folders view&#10;added breadcrumbs" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed folders view&#10;added breadcrumbs" />
+    <MESSAGE value="fixed http requests" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
