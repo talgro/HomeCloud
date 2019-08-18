@@ -18,7 +18,7 @@ public class HomeServerController {
         return serverId;
     }
 
-    @RequestMapping(value = "{serverId}/updateConnection/{address}", method = RequestMethod.POST)
+    @RequestMapping(value = "{serverId}/ /{address}", method = RequestMethod.POST)
     public void updateConnection(@PathVariable("serverId") int serverId, @PathVariable("address") String address) {
         this.homeServerService.updateConnection(serverId, address);
     }
