@@ -12,7 +12,7 @@
 import NavBar from './components/NavigationBar'
 import NavDrawer from './components/NavigationDrawer'
 import LoginPage from './components/LoginPage.vue'
-import RegisterPage from './components/Register.vue'
+import RegisterPage from './components/RegisterPage.vue'
 
 export default {
   name: 'App',
