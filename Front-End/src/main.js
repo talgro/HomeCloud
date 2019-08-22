@@ -8,9 +8,9 @@ import VueResource from 'vue-resource'
 import router from './router'
 import Amplify, * as AmplifyModules from 'aws-amplify'
 import { AmplifyPlugin } from 'aws-amplify-vue'
-import awsconfig from './aws-exports'
+import awsmobile from './aws-exports'
 
-Amplify.configure(awsconfig)
+Amplify.configure(awsmobile)
 Vue.use(AmplifyPlugin, AmplifyModules)
 
 Vue.config.productionTip = false

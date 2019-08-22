@@ -15,5 +15,22 @@
                 "frontendd05dcb3a": {}
             }
         }
+    },
+    "tomenv": {
+        "awscloudformation": {
+            "AuthRoleName": "front-end-tomenv-20190822213903-authRole",
+            "UnauthRoleArn": "arn:aws:iam::651070535250:role/front-end-tomenv-20190822213903-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::651070535250:role/front-end-tomenv-20190822213903-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "front-end-tomenv-20190822213903-deployment",
+            "UnauthRoleName": "front-end-tomenv-20190822213903-unauthRole",
+            "StackName": "front-end-tomenv-20190822213903",
+            "StackId": "arn:aws:cloudformation:us-east-1:651070535250:stack/front-end-tomenv-20190822213903/2d593050-c50c-11e9-8b3b-0e0c84e5bae6"
+        },
+        "categories": {
+            "auth": {
+                "frontendd05dcb3a": {}
+            }
+        }
     }
 }
