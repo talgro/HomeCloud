@@ -1,0 +1,19 @@
+{
+    "cloudenv": {
+        "awscloudformation": {
+            "AuthRoleName": "front-end-cloudenv-20190822175036-authRole",
+            "UnauthRoleArn": "arn:aws:iam::651070535250:role/front-end-cloudenv-20190822175036-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::651070535250:role/front-end-cloudenv-20190822175036-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "front-end-cloudenv-20190822175036-deployment",
+            "UnauthRoleName": "front-end-cloudenv-20190822175036-unauthRole",
+            "StackName": "front-end-cloudenv-20190822175036",
+            "StackId": "arn:aws:cloudformation:us-east-1:651070535250:stack/front-end-cloudenv-20190822175036/4361a730-c4ec-11e9-90b4-0e3e6f4b77b8"
+        },
+        "categories": {
+            "auth": {
+                "frontendd05dcb3a": {}
+            }
+        }
+    }
+}

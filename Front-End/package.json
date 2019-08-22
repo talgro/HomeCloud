@@ -14,6 +14,9 @@
     "unit": "jest --config test/unit/jest.conf.js --coverage"
   },
   "dependencies": {
+    "aws-amplify": "^1.1.36",
+    "aws-amplify-vue": "^0.2.14",
+    "aws-sdk": "^2.515.0",
     "vue": "^2.5.2",
     "vue-resource": "^1.5.1",
     "vue-router": "^3.0.1",

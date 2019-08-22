@@ -14,7 +14,7 @@
         <v-text-field prepend-icon="search" single-line clearable color="grey"></v-text-field>
       </v-flex>
     </v-layout>
-<!--  TODO: for some wierd reason the v-model="uploadValue" does not work  -->
+<!--  TODO: for some weird reason the v-model="uploadValue" does not work  -->
     <v-progress-linear :indeterminate="true" :active="uploading"></v-progress-linear>
     <v-divider></v-divider>
     <v-breadcrumbs divider="/" :items="trail">
@@ -118,8 +118,9 @@ export default {
     },
     deleteItem (event) {
       let url = this.address + this.trailToString()
-      this.$http.delete(url + event.name)
-      setTimeout(function () { this.updateCurrFolder(url) }, 2000)
+      this.$http.delete(url + event.name).then(function () {
+        this.updateCurrFolder(url)
+      })
     },
     updateCurrFolder (url) {
       this.$http.get(url).then(function (data) {
@@ -129,62 +130,62 @@ export default {
   },
   created () {
     // TODO: change every http call to on with .then
-    this.updateCurrFolder(this.address + 'root/')
-    // this.curr_folder = JSON.parse('{' +
-    //       '    "numOfItems": 4,' +
-    //       '    "totalSize": 55330266,' +
-    //       '    "content": [' +
-    //       '        {' +
-    //       '            "name": "folder",' +
-    //       '            "type": "folder",' +
-    //       '            "size": 29081154,' +
-    //       '            "lastModified": "21/07/2019 15:47:08",' +
-    //       '            "createDate": "18/07/2019 17:37:22"' +
-    //       '        },' +
-    //       '        {' +
-    //       '            "name": "folder2",' +
-    //       '            "type": "folder",' +
-    //       '            "size": 26248994,' +
-    //       '            "lastModified": "21/07/2019 15:35:16",' +
-    //       '            "createDate": "21/07/2019 12:06:19"' +
-    //       '        },' +
-    //       '        {' +
-    //       '            "name": "test.txt",' +
-    //       '            "type": "txt",' +
-    //       '            "size": 59,' +
-    //       '            "lastModified": "21/07/2019 19:24:33",' +
-    //       '            "createDate": "21/07/2019 19:24:24"' +
-    //       '        },' +
-    //       '        {' +
-    //       '            "name": "test2.txt",' +
-    //       '            "type": "txt",' +
-    //       '            "size": 59,' +
-    //       '            "lastModified": "21/07/2019 19:24:33",' +
-    //       '            "createDate": "21/07/2019 19:25:56"' +
-    //       '        },' +
-    //       '        {' +
-    //             '            "name": "folder6",' +
-    //             '            "type": "folder",' +
-    //             '            "size": 29081154,' +
-    //             '            "lastModified": "21/07/2019 15:47:08",' +
-    //             '            "createDate": "18/07/2019 17:37:22"' +
-    //             '        },' +
-    //             '        {' +
-    //             '            "name": "folder7",' +
-    //             '            "type": "folder",' +
-    //             '            "size": 26248994,' +
-    //             '            "lastModified": "21/07/2019 15:35:16",' +
-    //             '            "createDate": "21/07/2019 12:06:19"' +
-    //             '        },' +
-    //             '        {' +
-    //             '            "name": "test6.txt",' +
-    //             '            "type": "txt",' +
-    //             '            "size": 59,' +
-    //             '            "lastModified": "21/07/2019 19:24:33",' +
-    //             '            "createDate": "21/07/2019 19:24:24"' +
-    //             '        }' +
-    //       '    ]' +
-    //       '}')
+    // this.updateCurrFolder(this.address + 'root/')
+    this.curr_folder = JSON.parse('{' +
+          '    "numOfItems": 4,' +
+          '    "totalSize": 55330266,' +
+          '    "content": [' +
+          '        {' +
+          '            "name": "folder",' +
+          '            "type": "folder",' +
+          '            "size": 29081154,' +
+          '            "lastModified": "21/07/2019 15:47:08",' +
+          '            "createDate": "18/07/2019 17:37:22"' +
+          '        },' +
+          '        {' +
+          '            "name": "folder2",' +
+          '            "type": "folder",' +
+          '            "size": 26248994,' +
+          '            "lastModified": "21/07/2019 15:35:16",' +
+          '            "createDate": "21/07/2019 12:06:19"' +
+          '        },' +
+          '        {' +
+          '            "name": "test.txt",' +
+          '            "type": "txt",' +
+          '            "size": 59,' +
+          '            "lastModified": "21/07/2019 19:24:33",' +
+          '            "createDate": "21/07/2019 19:24:24"' +
+          '        },' +
+          '        {' +
+          '            "name": "test2.txt",' +
+          '            "type": "txt",' +
+          '            "size": 59,' +
+          '            "lastModified": "21/07/2019 19:24:33",' +
+          '            "createDate": "21/07/2019 19:25:56"' +
+          '        },' +
+          '        {' +
+                '            "name": "folder6",' +
+                '            "type": "folder",' +
+                '            "size": 29081154,' +
+                '            "lastModified": "21/07/2019 15:47:08",' +
+                '            "createDate": "18/07/2019 17:37:22"' +
+                '        },' +
+                '        {' +
+                '            "name": "folder7",' +
+                '            "type": "folder",' +
+                '            "size": 26248994,' +
+                '            "lastModified": "21/07/2019 15:35:16",' +
+                '            "createDate": "21/07/2019 12:06:19"' +
+                '        },' +
+                '        {' +
+                '            "name": "test6.txt",' +
+                '            "type": "txt",' +
+                '            "size": 59,' +
+                '            "lastModified": "21/07/2019 19:24:33",' +
+                '            "createDate": "21/07/2019 19:24:24"' +
+                '        }' +
+          '    ]' +
+          '}')
   },
   name: 'HomePage',
   components: {

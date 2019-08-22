@@ -12,13 +12,13 @@
 import NavBar from './components/NavigationBar'
 import NavDrawer from './components/NavigationDrawer'
 import LoginPage from './components/LoginPage.vue'
-import RegisterPage from './components/Register.vue'
+import { AmplifyEventBus } from 'aws-amplify-vue'
+import { Auth } from 'aws-amplify'
 
 export default {
   name: 'App',
   components: {
     'login-page': LoginPage,
-    'register-page': RegisterPage,
     'nav-bar': NavBar,
     'nav-drawer': NavDrawer
   },
@@ -26,6 +26,21 @@ export default {
     return {
       //
     }
+  },
+  beforeCreate () {
+    AmplifyEventBus.$on('authState', info => {
+      if (info === 'signedIn') {
+        this.signedIn = true
+        this.$router.push('/home-page')
+      }
+      if (info === 'signedOut') {
+        this.$router.push('/')
+        this.signedIn = false
+      }
+    })
+    Auth.currentAuthenticatedUser().then(user => {
+      this.signedIn = true
+    }).catch(() => { this.signedIn = false })
   }
 }
 </script>
