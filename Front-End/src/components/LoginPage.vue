@@ -1,5 +1,8 @@
+/* eslint-disable */
 <template>
   <div class="login-page">
+    <amplify-authenticator></amplify-authenticator>
+    <amplify-confirm-sign-up></amplify-confirm-sign-up>
     <v-container>
       <v-layout row justify-center>
         <v-flex xs6>
@@ -35,17 +38,20 @@
           <v-container>
             <v-layout column align-center>
               <v-flex>
-                <v-text-field vmodel="registerForm.username" :rules="usernameRules" :counter="20" required label="Username"></v-text-field>
+<!--       TODO: add :rules="usernameRules"         -->
+                <v-text-field vmodel="registerForm.username"  :counter="20" required label="Username"></v-text-field>
               </v-flex>
+<!--       TODO: add :rules="passwordRules"         -->
               <v-flex>
-                <v-text-field  type="password" vmodel="registerForm.password" :rules="passwordRules" :counter="20" required label="Password"></v-text-field>
+                <v-text-field  type="password" vmodel="registerForm.password" :counter="20" required label="Password"></v-text-field>
               </v-flex>
+<!--       TODO: add :rules="emailRules"         -->
               <v-flex>
-                <v-text-field vmodel="registerForm.email" :rules="usernameRules" required label="E-mail"></v-text-field>
+                <v-text-field vmodel="registerForm.email" required label="E-mail"></v-text-field>
               </v-flex>
               <v-flex>
                 <div>
-                  <v-btn>Register</v-btn>
+                  <v-btn @click="register">Register</v-btn>
                   <v-btn @click="registerDialog = false" flat>Cancel</v-btn>
                 </div>
               </v-flex>
@@ -58,6 +64,7 @@
 </template>
 
 <script>
+import { Auth } from 'aws-amplify'
 export default {
   name: 'LoginPage',
   data () {
@@ -74,10 +81,23 @@ export default {
         email: ''
       },
       msg: '',
-      registerDialog: false
+      registerDialog: false,
+      signedIn: false
     }
   },
   methods: {
+    register () {
+      Auth.signUp({
+        username: this.registerForm.email,
+        password: this.registerForm.password,
+        attributes: {
+          email: this.registerForm.email // optional
+        },
+        validationData: [] // optional
+      })
+        .then(data => console.log(data))
+        .catch(err => console.log(err))
+    },
     login () {
       if (this.loginForm.username !== '' && this.loginForm.password !== '' && this.authenticate()) {
         this.$router.push({ name: 'HomePage' })

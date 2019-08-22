@@ -1,7 +1,7 @@
 <template>
   <div id="item">
-    <v-card class="ma-2 pa-1" hover>
-      <v-container class="ma-0 pa-0" @dblclick="itemClicked">
+    <v-card class="ma-2 pa-1 unselectable" hover @dblclick="itemClicked">
+      <v-container class="ma-0 pa-0">
         <v-layout justify-start align-start row>
           <v-flex xs1>
             <v-icon v-if="element.type === 'folder'" color="yellow darken-3" size="80">folder</v-icon>
@@ -101,5 +101,13 @@ export default {
 <style scoped>
 .v-btn {
   min-width: 0;
+}
+.unselectable {
+ -webkit-user-select:none;
+ -khtml-user-select:none;
+ -moz-user-select:none;
+ -ms-user-select:none;
+ -o-user-select:none;
+ user-select:none;
 }
 </style>

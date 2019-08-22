@@ -1,12 +1,13 @@
+/* eslint-disable */
+
 import Vue from 'vue'
 import Router from 'vue-router'
-import RegisterPage from '../components/RegisterPage.vue'
 import LoginPage from '../components/LoginPage.vue'
 import HomePage from '../components/HomePage.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   mode: 'history',
   routes: [
     {
@@ -15,14 +16,29 @@ export default new Router({
       component: LoginPage
     },
     {
-      path: '/register',
-      name: 'RegisterPage',
-      component: RegisterPage
-    },
-    {
       path: '/home-page',
       name: 'HomePage',
+      meta: { requireAuth: true },
       component: HomePage
     }
   ]
 })
+
+router.beforeResolve((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    let user
+    Vue.prototype.$Amplify.Auth.currentAuthenticatedUser().then(data => {
+      if (data && data.signInUserSession) {
+        user = data
+      }
+      next()
+    }).catch((e) => {
+      next({
+        path: '/'
+      })
+    })
+  }
+  next()
+})
+
+export default router

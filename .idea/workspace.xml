@@ -7,13 +7,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df7ecbae-3ca0-40d4-afe5-20e99dd71143" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Front-End/amplify/.config/project-config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-End/amplify/backend/auth/frontendd05dcb3a/frontendd05dcb3a-cloudformation-template.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-End/amplify/backend/auth/frontendd05dcb3a/parameters.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-End/amplify/backend/backend-config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Front-End/amplify/team-provider-info.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/src/components/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/HomePage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/components/Item.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/Item.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/src/components/LoginPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/LoginPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/src/components/NavigationDrawer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/NavigationDrawer.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/src/components/Register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/RegisterPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/src/plugins/vuetify.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/plugins/vuetify.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/components/NavigationBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/NavigationBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/components/RegisterPage.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/main.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/src/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/router/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -195,6 +203,13 @@
       <workItem from="1566169535543" duration="1768000" />
       <workItem from="1566252894259" duration="3470000" />
       <workItem from="1566259188458" duration="920000" />
+      <workItem from="1566281092336" duration="655000" />
+      <workItem from="1566350053106" duration="670000" />
+      <workItem from="1566419538711" duration="6175000" />
+      <workItem from="1566457035792" duration="602000" />
+      <workItem from="1566508815444" duration="10423000" />
+      <workItem from="1566485177287" duration="3552000" />
+      <workItem from="1566489087366" duration="8957000" />
     </task>
     <task id="LOCAL-00001" summary="Added LoginPage.vue in components">
       <created>1555601658825</created>
@@ -287,7 +302,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566053157088</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added most frequent">
+      <created>1566281147945</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1566281147945</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +339,8 @@
     <MESSAGE value="fixed folders view&#10;added breadcrumbs" />
     <MESSAGE value="fixed http requests" />
     <MESSAGE value="update" />
-    <option name="LAST_COMMIT_MESSAGE" value="update" />
+    <MESSAGE value="added most frequent" />
+    <option name="LAST_COMMIT_MESSAGE" value="added most frequent" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
