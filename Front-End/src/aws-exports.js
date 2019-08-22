@@ -3,8 +3,8 @@
 const awsmobile = {
   region: 'us-east-1',
   aws_project_region: 'us-east-1',
-  userPoolId: 'us-east-1_42Z5mCThl',
-  userPoolWebClientId: '4r83io36djl77qfea8r8s6kg2t'
+  userPoolId: 'us-east-1_bseEJEnuz',
+  userPoolWebClientId: '6gq3q9ucsbm36ga3or9f94iskl'
 }
 
 export default awsmobile

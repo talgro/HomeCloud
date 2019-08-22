@@ -11,13 +11,16 @@
               <v-container>
                 <v-layout column align-center>
                   <v-flex xs3>
-                    <v-text-field v-model="loginForm.username" label="Username"></v-text-field>
+                    <v-text-field v-model="loginForm.firstName" required label="First Name"/>
                   </v-flex>
                   <v-flex xs3>
-                    <v-text-field v-model="loginForm.password" label="Password" type="password"></v-text-field>
+                    <v-text-field v-model="loginForm.lastName" required label="Last Name"/>
+                  </v-flex>
+                  <v-flex xs3>
+                    <v-text-field type="password" v-model="loginForm.password" required label="Password"/>
                   </v-flex>
                   <v-flex class="mb-0" xs3>
-                    <v-btn class="mb-0" dark v-on:click="login()">Login</v-btn>
+                    <v-btn class="mb-0" dark @click="login">Login</v-btn>
                   </v-flex>
                   <v-flex xs3 class="mt-0">
                     <v-btn @click="registerDialog = true" class="mt-0" flat>Register</v-btn>
@@ -38,17 +41,22 @@
           <v-container>
             <v-layout column align-center>
               <v-flex>
-<!--       TODO: add :rules="usernameRules"         -->
-                <v-text-field vmodel="registerForm.username"  :counter="20" required label="Username"></v-text-field>
+                <!--       TODO: add :rules="usernameRules"         -->
+                <v-text-field v-model="registerForm.email" :counter="20" required label="Email"/>
               </v-flex>
-<!--       TODO: add :rules="passwordRules"         -->
               <v-flex>
-                <v-text-field  type="password" vmodel="registerForm.password" :counter="20" required label="Password"></v-text-field>
+                <!--       TODO: add :rules="usernameRules"         -->
+                <v-text-field v-model="registerForm.firstName" :counter="20" required label="First Name"/>
               </v-flex>
-<!--       TODO: add :rules="emailRules"         -->
               <v-flex>
-                <v-text-field vmodel="registerForm.email" required label="E-mail"></v-text-field>
+                <!--       TODO: add :rules="usernameRules"         -->
+                <v-text-field v-model="registerForm.lastName" :counter="20" required label="Last Name"/>
               </v-flex>
+              <!--       TODO: add :rules="passwordRules"         -->
+              <v-flex>
+                <v-text-field type="password" v-model="registerForm.password" :counter="20" required label="Password"/>
+              </v-flex>
+              <!--       TODO: add :rules="emailRules"         -->
               <v-flex>
                 <div>
                   <v-btn @click="register">Register</v-btn>
@@ -63,20 +71,24 @@
   </div>
 </template>
 
-<script>
-import { Auth } from 'aws-amplify'
+<script>/* eslint-disable */
+
+import {Auth} from 'aws-amplify'
+
 export default {
   name: 'LoginPage',
-  data () {
+  data() {
     return {
       loginForm: {
         isValid: false,
-        username: '',
+        firstName: '',
+        lastName: '',
         password: ''
       },
       registerForm: {
         isValid: false,
-        username: '',
+        firstName: '',
+        lastName: '',
         password: '',
         email: ''
       },
@@ -86,31 +98,36 @@ export default {
     }
   },
   methods: {
-    register () {
+    register() {
       Auth.signUp({
-        username: this.registerForm.email,
+        username: this.registerForm.firstName + this.registerForm.lastName,
         password: this.registerForm.password,
         attributes: {
+          // user_id: this.registerForm.email,
+          given_name: this.registerForm.firstName,
+          family_name: this.registerForm.lastName,
           email: this.registerForm.email // optional
         },
         validationData: [] // optional
       })
-        .then(data => console.log(data))
-        .catch(err => console.log(err))
+        .then(data => console.log("successful registration data", data))
+        .catch(err => console.log("failed registration data", err))
     },
-    login () {
-      if (this.loginForm.username !== '' && this.loginForm.password !== '' && this.authenticate()) {
-        this.$router.push({ name: 'HomePage' })
+    login() {
+      if (this.loginForm.email !== '' && this.loginForm.password !== '' && this.loginForm.password !== '') {
+        Auth.signIn({
+          username: this.loginForm.firstName + this.loginForm.lastName,
+          password: this.loginForm.password,
+        })
+          .then(data => {
+            console.log("successful login data", data);
+            this.$router.push({name: 'HomePage'});
+          })
+          .catch(err => console.log("failed login data", err))
       } else {
-        this.msg = 'Incorrect username and/or password!'
+        this.msg = 'Incorrect firstName and/or password!'
       }
     },
-    // TODO: change this function to whatever function validates username and password
-    authenticate () {
-      if (this.loginForm.username === 'tom.gropper' && this.loginForm.password === '12345') {
-        return true
-      }
-    }
   }
 }
 </script>
