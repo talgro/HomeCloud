@@ -2,7 +2,6 @@
 <template>
   <div class="login-page">
     <amplify-authenticator></amplify-authenticator>
-    <amplify-confirm-sign-up></amplify-confirm-sign-up>
     <v-container>
       <v-layout row justify-center>
         <v-flex xs6>
@@ -71,8 +70,8 @@
   </div>
 </template>
 
-<script>/* eslint-disable */
-
+<script>
+/* eslint-disable */
 import {Auth} from 'aws-amplify'
 
 export default {
