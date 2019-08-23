@@ -1,4 +1,4 @@
-package com.homecloud.backend.home.server.entities;
+package com.homecloud.backend.home_server.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
