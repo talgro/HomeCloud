@@ -45,10 +45,9 @@ export default {
     })
     Auth.currentAuthenticatedUser().then(user => {
       this.signedIn = true
-      this.$router.push('/')
+      this.$router.push('/home-page')
     }).catch(() => {
       this.signedIn = false
-      this.$router.push('/home-page')
     })
   }
 }
