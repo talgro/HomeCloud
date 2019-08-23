@@ -24,23 +24,31 @@ export default {
   },
   data () {
     return {
-      //
+      signedIn: false
     }
   },
   beforeCreate () {
+    console.log('hello?')
+    AmplifyEventBus.$on('')
     AmplifyEventBus.$on('authState', info => {
       if (info === 'signedIn') {
+        console.log('logged in')
         this.signedIn = true
         this.$router.push('/home-page')
       }
       if (info === 'signedOut') {
+        console.log('not logged in')
         this.$router.push('/')
         this.signedIn = false
       }
+      console.log('not either')
     })
     Auth.currentAuthenticatedUser().then(user => {
       this.signedIn = true
-    }).catch(() => { this.signedIn = false })
+      this.$router.push('/home-page')
+    }).catch(() => {
+      this.signedIn = false
+    })
   }
 }
 </script>
