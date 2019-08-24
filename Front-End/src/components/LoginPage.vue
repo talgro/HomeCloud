@@ -1,7 +1,7 @@
 /* eslint-disable */
 <template>
   <div class="login-page">
-    <amplify-authenticator></amplify-authenticator>
+    <amplify-authenticator :auth-config="auth.authConfig"></amplify-authenticator>
     <v-container>
       <v-layout row justify-center>
         <v-flex xs6>
@@ -92,8 +92,25 @@ export default {
         email: ''
       },
       msg: '',
+      auth: {
+        signedIn: false,
+        authConfig: {
+          signUpConfig: {
+            signUpFields: [
+              // TODO: complete this
+              {
+                label: 'Email',
+                key: 'email',
+                required: true,
+                displayOrder: 1,
+                type: 'string',
+                signUpWith: true
+              },
+            hiddenDefaults: ['username', 'phone_number']
+          }
+        }
+      },
       registerDialog: false,
-      signedIn: false
     }
   },
   methods: {
