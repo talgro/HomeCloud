@@ -1,4 +1,4 @@
-package com.homecloud.backend.home.server;
+package com.homecloud.backend.home_server;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -22,4 +22,5 @@ public class HomeServerController {
     public void updateConnection(@PathVariable("serverId") int serverId, @PathVariable("address") String address) {
         this.homeServerService.updateConnection(serverId, address);
     }
+
 }

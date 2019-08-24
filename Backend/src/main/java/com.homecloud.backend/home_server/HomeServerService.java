@@ -1,6 +1,6 @@
-package com.homecloud.backend.home.server;
+package com.homecloud.backend.home_server;
 
-import com.homecloud.backend.home.server.entities.HomeServerConnection;
+import com.homecloud.backend.home_server.entities.HomeServerConnection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.time.LocalDate;
