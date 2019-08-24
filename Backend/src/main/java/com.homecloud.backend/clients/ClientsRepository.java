@@ -1,12 +1,12 @@
 package com.homecloud.backend.clients;
 
-import com.homecloud.backend.clients.entities.HomeServerConnection;
+import com.homecloud.backend.clients.entities.UsersServers;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ClientsRepository extends JpaRepository<HomeServerConnection, Integer> {
+public interface ClientsRepository extends JpaRepository<UsersServers, Integer> {
 
-    HomeServerConnection getByHomeServerId(int id);
+    UsersServers getByUserId(String id);
 
 }

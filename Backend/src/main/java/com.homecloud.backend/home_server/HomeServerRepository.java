@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface HomeServerRepository extends JpaRepository<HomeServerConnection, Integer> {
 
-    HomeServerConnection getByHomeServerId(int id);
+    HomeServerConnection getByHomeServerId(String id);
 
 }

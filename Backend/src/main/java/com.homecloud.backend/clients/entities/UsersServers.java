@@ -1,27 +1,24 @@
-package com.homecloud.backend.home_server.entities;
+package com.homecloud.backend.clients.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.time.LocalDate;
 
-@Entity(name = "home_servers_connections")
+@Entity(name = "users_servers")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class HomeServerConnection {
+public class UsersServers {
 
     @Id
+    @Column(name = "user_id")
+    private String userId;
+
     @Column(name = "home_server_id")
     private String homeServerId;
-
-    @Column(name = "last_address_update")
-    private LocalDate lastAddressUpdate;
-
-    @Column(name = "address")
-    private String address;
 
 }

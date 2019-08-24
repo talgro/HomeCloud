@@ -1,10 +1,7 @@
 package com.homecloud.backend.clients;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 public class ClientsController {
@@ -17,13 +14,9 @@ public class ClientsController {
     }
 
     @RequestMapping(value = "{userId}/getHomeServerAddress", method = RequestMethod.GET)
-    public String getHomeServerAddress() {
-        return this.clientsService.getHomeServerAddress;
+    public String getHomeServerAddress(@PathVariable("userId") String userId) {
+        return this.clientsService.getHomeServerAddress(userId);
     }
 
-    @RequestMapping(value = "{serverId}/ /{address}", method = RequestMethod.POST)
-    public void updateConnection(@PathVariable("serverId") int serverId, @PathVariable("address") String address) {
-        this.clientsService.updateConnection(serverId, address);
-    }
 
 }
