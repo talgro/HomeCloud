@@ -129,7 +129,6 @@ export default {
     }
   },
   created () {
-    // TODO: change every http call to on with .then
     // this.updateCurrFolder(this.address + 'root/')
     this.curr_folder = JSON.parse('{' +
           '    "numOfItems": 4,' +

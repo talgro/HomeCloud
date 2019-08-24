@@ -95,18 +95,41 @@ export default {
       auth: {
         signedIn: false,
         authConfig: {
+          usernameAttributes: 'E-mail',
           signUpConfig: {
+            hideAllDefaults: true,
             signUpFields: [
-              // TODO: complete this
               {
-                label: 'Email',
+                label: 'E-mail',
                 key: 'email',
                 required: true,
                 displayOrder: 1,
-                type: 'string',
-                signUpWith: true
+                type: 'string'
               },
-            hiddenDefaults: ['username', 'phone_number']
+              {
+                  label: 'First Name',
+                  key: 'firstName',
+                  required: true,
+                  displayOrder: 2,
+                  type: 'string',
+                  custom: true
+              },
+              {
+                  label: 'Last Name',
+                  key: 'lastName',
+                  required: true,
+                  displayOrder: 3,
+                  type: 'string',
+                  custom: true
+              },
+              {
+                  label: 'Password',
+                  key: 'password',
+                  required: true,
+                  displayOrder: 4,
+                  type: 'password'
+              }
+            ]
           }
         }
       },
