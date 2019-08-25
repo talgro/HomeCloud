@@ -24,8 +24,9 @@ import org.springframework.util.FileSystemUtils;
 @Service /*This annotation acts as a Singleton */
 public class LocalFileService {
 
-	//TODO: this needs to be dynamic
-	private final String _root = "C:\\Users\\danie\\Desktop\\testFolder"; 
+	private final String _root = new File(System.getProperty("user.home")).getParentFile().getParent() + 
+			File.separator + "homeServer" + File.separator + "root"; 
+	
 	SimpleDateFormat _sdf = new SimpleDateFormat("dd/MM/yyyy HH:mm:ss");
 
 	public final static byte SUCCESS = 0;
@@ -69,7 +70,7 @@ public class LocalFileService {
 			}
 			files.add(new LocalFile(name, type, size, lastModifiedDate, createdDate));
 		}
-		
+
 		return new DataResponse(files);
 	}
 
@@ -86,12 +87,16 @@ public class LocalFileService {
 			return ERROR;
 		return SUCCESS;		
 	}
-	
+
 	//This method changes the name of folder/file at "filePath" to "newFileName"
 	public byte updateFile(String filePath, String newFileName) {
-		String fullPath = _root + "\\" +filePath;
+		String fullPath = _root + "\\" + filePath;
 		File oldFileName = new File(fullPath);
-		File newFileNameFile = new File(_root + "\\" +newFileName);
+		String fullNewFilePath = "";
+		if(filePath.contains("/"))
+			fullNewFilePath = filePath.substring(0, filePath.lastIndexOf('/')) + "\\";
+		fullNewFilePath += newFileName;
+		File newFileNameFile = new File(_root + "\\" + fullNewFilePath);
 		if(!oldFileName.exists())
 			return NOT_FOUND;
 		//fileName already exists
@@ -100,6 +105,17 @@ public class LocalFileService {
 		}
 		boolean sucess = oldFileName.renameTo(newFileNameFile);
 		return sucess ? SUCCESS : ERROR;
+	}
+
+	public void addUser(String userName) {
+		File newDirToCreate = new File(_root + File.separator + userName);
+		if(newDirToCreate.exists())
+			throw new RuntimeException("User '" + userName + "' Already exists!");
+		newDirToCreate.mkdir();
+		if(!newDirToCreate.exists()) {
+			throw new RuntimeException("Failed creating folder for '" + userName + "'");
+		}
+		
 	}
 	
 	//method to get file extension
@@ -149,9 +165,6 @@ public class LocalFileService {
 
 		return size.get();
 	}
-
-
-	
 
 
 	private void deleteFolderAndContent(File fileToDelete) {

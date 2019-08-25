@@ -18,7 +18,6 @@ public class LocalFile {
 		this.createDate = createDate;
 	}
 
-
 	public String getName() {
 		return name;
 	}
@@ -58,21 +57,5 @@ public class LocalFile {
 	public void setCreateDate(String createDate) {
 		this.createDate = createDate;
 	}
-	
-	
-
-
-
-	
-
-
-
-
-
-
-
-
-
-
 
 }

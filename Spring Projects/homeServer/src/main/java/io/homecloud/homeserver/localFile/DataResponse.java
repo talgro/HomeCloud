@@ -16,7 +16,7 @@ public class DataResponse {
 		totalSize = content.stream().mapToLong(x -> x.getSize()).sum();
 		numOfItems = content.size();
 	}
-	
+
 	public int getNumOfItems() {
 		return numOfItems;
 	}
@@ -39,6 +39,6 @@ public class DataResponse {
 
 	public void setContent(List<LocalFile> content) {
 		this.content = content;
-	}
+	}	
 
 }
