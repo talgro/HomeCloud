@@ -1,0 +1,9 @@
+{
+	"auth": {
+		"frontendd05dcb3a": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}

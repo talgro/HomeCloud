@@ -1,40 +1,54 @@
 <template>
   <v-app>
-    <app-header></app-header>
-    <v-content class="blue lighten-2">
-      <v-container class="my-5">
-        <router-view></router-view>
-      </v-container>
+    <nav-drawer></nav-drawer>
+    <nav-bar></nav-bar>
+    <v-content class="ma-3">
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
 
 <script>
-import NavBar from './components/NavigationBar.vue'
+import NavBar from './components/NavigationBar'
+import NavDrawer from './components/NavigationDrawer'
 import LoginPage from './components/LoginPage.vue'
-import RegisterPage from './components/Register.vue'
+import { AmplifyEventBus } from 'aws-amplify-vue'
+import { Auth } from 'aws-amplify'
 
 export default {
-  data () {
-    return {
-    }
-  },
+  name: 'App',
   components: {
     'login-page': LoginPage,
-    'register-page': RegisterPage,
-    'app-header': NavBar
+    'nav-bar': NavBar,
+    'nav-drawer': NavDrawer
   },
-  name: 'App'
+  data () {
+    return {
+      signedIn: false
+    }
+  },
+  beforeCreate () {
+    console.log('hello?')
+    AmplifyEventBus.$on('')
+    AmplifyEventBus.$on('authState', info => {
+      if (info === 'signedIn') {
+        console.log('logged in')
+        this.signedIn = true
+        this.$router.push('/home-page')
+      }
+      if (info === 'signedOut') {
+        console.log('not logged in')
+        this.$router.push('/')
+        this.signedIn = false
+      }
+      console.log('not either')
+    })
+    Auth.currentAuthenticatedUser().then(user => {
+      this.signedIn = true
+      this.$router.push('/home-page')
+    }).catch(() => {
+      this.signedIn = false
+    })
+  }
 }
 </script>
-
-<!--<style>-->
-<!--  #app {-->
-<!--    font-family: 'Avenir', Helvetica, Arial, sans-serif;-->
-<!--    -webkit-font-smoothing: antialiased;-->
-<!--    -moz-osx-font-smoothing: grayscale;-->
-<!--    text-align: center;-->
-<!--    color: #2c3e50;-->
-<!--    margin-top: 60px;-->
-<!--  }-->
-<!--</style>-->
