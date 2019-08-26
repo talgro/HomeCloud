@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Home Server
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: danie
+Implementation-Vendor-Id: io.homecloud.homeserver
+Build-Jdk: 1.8.0_171
+Implementation-URL: http://projects.spring.io/spring-boot/homeServer/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
