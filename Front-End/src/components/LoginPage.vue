@@ -107,27 +107,25 @@ export default {
                 type: 'string'
               },
               {
-                  label: 'First Name',
-                  key: 'firstName',
-                  required: true,
-                  displayOrder: 2,
-                  type: 'string',
-                  custom: true
+                label: 'First Name',
+                key: 'given_name',
+                required: true,
+                displayOrder: 2,
+                type: 'string'
               },
               {
-                  label: 'Last Name',
-                  key: 'lastName',
-                  required: true,
-                  displayOrder: 3,
-                  type: 'string',
-                  custom: true
+                label: 'Last Name',
+                key: 'family_name',
+                required: true,
+                displayOrder: 3,
+                type: 'string'
               },
               {
-                  label: 'Password',
-                  key: 'password',
-                  required: true,
-                  displayOrder: 4,
-                  type: 'password'
+                label: 'Password',
+                key: 'password',
+                required: true,
+                displayOrder: 4,
+                type: 'password'
               }
             ]
           }

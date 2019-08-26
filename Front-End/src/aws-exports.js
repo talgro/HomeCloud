@@ -3,8 +3,19 @@
 const awsmobile = {
   region: 'us-east-1',
   aws_project_region: 'us-east-1',
-  userPoolId: 'us-east-1_U592ehKyQ',
-  userPoolWebClientId: '1qt5j9jmrtfngb8ii92132mv6e'
+  userPoolId: 'us-east-1_yCMhOFJ2h',
+  userPoolWebClientId: '2s5i6tajs75gpgu3b3i4sta6q4',
+  cookieStorage: {
+    // REQUIRED - Cookie domain (only required if cookieStorage is provided)
+    domain: 'localhost',
+    // OPTIONAL - Cookie path
+    path: '/',
+    // OPTIONAL - Cookie expiration in days
+    expires: 365,
+    // OPTIONAL - Cookie secure flag
+    // Either true or false, indicating if the cookie transmission requires a secure protocol (https).
+    secure: false
+  }
 }
 
 export default awsmobile

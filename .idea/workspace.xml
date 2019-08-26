@@ -8,8 +8,13 @@
   <component name="ChangeListManager">
     <list default="true" id="df7ecbae-3ca0-40d4-afe5-20e99dd71143" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/aws-exports.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/aws-exports.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/src/components/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/HomePage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/src/components/LoginPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/LoginPage.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/components/NavigationDrawer.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/NavigationDrawer.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/store/store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,12 +66,6 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="744" />
-  </component>
   <component name="ProjectId" id="1OV1FoxAuIzwoDeWCfwUeZP1syk" />
   <component name="PropertiesComponent">
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
@@ -90,7 +89,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -213,6 +212,8 @@
       <workItem from="1566508815444" duration="10423000" />
       <workItem from="1566485177287" duration="3552000" />
       <workItem from="1566489087366" duration="12165000" />
+      <workItem from="1566669104649" duration="3087000" />
+      <workItem from="1566736577620" duration="15178000" />
     </task>
     <task id="LOCAL-00001" summary="Added LoginPage.vue in components">
       <created>1555601658825</created>
@@ -340,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1566576315504</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="continuing on aws">
+      <created>1566657352334</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1566657352334</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

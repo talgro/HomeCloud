@@ -5,32 +5,49 @@ Vue.use(Vuex)
 
 export const store = new Vuex.Store({
   state: {
+    // TODO: add option to get the serverDomain from AWS
+    serverDomain: '',
+    loggedIn: false,
     userInfo: {
       username: ''
     },
-    JWT: ''
+    mostFrequent: [ { url: 'root/folder1/folder2/file1.txt' }, { url: '' }, { url: '' }, { url: '' }, { url: '' } ]
   },
   getters: {
-    getJWT: state => {
-      return state.JWT
-    },
     getUsername: state => {
       return state.userInfo.username
+    },
+    getMostFrequent: state => {
+      return state.mostFrequent
+    },
+    getLoggedIn: state => {
+      return state.loggedIn
     }
   },
   mutations: {
     setUsername: (state, newUsername) => {
       state.userInfo.username = newUsername
     },
-    setJWT: (state, newJWT) => {
-      state.JWT = newJWT
+    pushFrequent: (state, url) => {
+      let found = false
+      for (let i = 0; i < state.mostFrequent.length; ++i) {
+        if (state.mostFrequent[i].url === url) {
+          found = true
+          break
+        }
+      }
+      if (!found) {
+        for (let i = 0; i < state.mostFrequent.length - 1; ++i) {
+          state.mostFrequent[i + 1] = state.mostFrequent[i]
+        }
+        state.mostFrequent[0] = { url: url }
+      }
+    },
+    setLoggedIn: (state, value) => {
+      state.loggedIn = value
     }
   },
   actions: {
-    updateJWT: ({ commit }) => {
-      // TODO: add tals' endpoint to get jwt from
-      let newJWT = ''
-      commit('setJWT')
-    }
+    //
   }
 })
