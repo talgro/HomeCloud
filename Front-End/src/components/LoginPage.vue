@@ -92,8 +92,48 @@ export default {
         email: ''
       },
       msg: '',
+      auth: {
+        signedIn: false,
+        authConfig: {
+          usernameAttributes: 'E-mail',
+          signUpConfig: {
+            hideAllDefaults: true,
+            signUpFields: [
+              {
+                label: 'E-mail',
+                key: 'email',
+                required: true,
+                displayOrder: 1,
+                type: 'string'
+              },
+              {
+                  label: 'First Name',
+                  key: 'firstName',
+                  required: true,
+                  displayOrder: 2,
+                  type: 'string',
+                  custom: true
+              },
+              {
+                  label: 'Last Name',
+                  key: 'lastName',
+                  required: true,
+                  displayOrder: 3,
+                  type: 'string',
+                  custom: true
+              },
+              {
+                  label: 'Password',
+                  key: 'password',
+                  required: true,
+                  displayOrder: 4,
+                  type: 'password'
+              }
+            ]
+          }
+        }
+      },
       registerDialog: false,
-      signedIn: false
     }
   },
   methods: {
