@@ -1,0 +1,6 @@
+-set max upload by availble free space in hard drive
+-login does authentication against AWS
+-send back to AWS userName, server-id, domainName.
+
+-check upload of same file name.
+-add /change endpoint to re-upload same file after editing it. for synched folder
