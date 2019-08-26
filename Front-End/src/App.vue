@@ -27,21 +27,31 @@ export default {
       signedIn: false
     }
   },
+  methods: {
+    createCookie (name, expDays) {
+      let cookies = document.cookie.split(';')
+      for (let i = 0; i < cookies.length; ++i) {
+        let cookie = cookies[i].split('=')
+        if (cookie[0].includes(name)) {
+          let d = new Date()
+          d.setTime(d.getTime() + (expDays * 24 * 60 * 60 * 1000))
+          document.cookie = name + '=' + cookie[1] + ';' + 'expires=' + d.toUTCString() + ';' + 'path=/'
+          return
+        }
+      }
+    }
+  },
   beforeCreate () {
-    console.log('hello?')
-    AmplifyEventBus.$on('')
     AmplifyEventBus.$on('authState', info => {
       if (info === 'signedIn') {
-        console.log('logged in')
+        this.createCookie('idToken', 365)
         this.signedIn = true
         this.$router.push('/home-page')
       }
       if (info === 'signedOut') {
-        console.log('not logged in')
         this.$router.push('/')
         this.signedIn = false
       }
-      console.log('not either')
     })
     Auth.currentAuthenticatedUser().then(user => {
       this.signedIn = true

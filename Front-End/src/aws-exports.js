@@ -7,7 +7,7 @@ const awsmobile = {
   userPoolWebClientId: '2s5i6tajs75gpgu3b3i4sta6q4',
   cookieStorage: {
     // REQUIRED - Cookie domain (only required if cookieStorage is provided)
-    domain: 'localhost',
+    domain: 'http://talgropper-vh3s.localhost.run/',
     // OPTIONAL - Cookie path
     path: '/',
     // OPTIONAL - Cookie expiration in days

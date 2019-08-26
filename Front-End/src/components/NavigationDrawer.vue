@@ -47,9 +47,6 @@ export default {
     mostFrequent () {
       return this.$store.getters.getMostFrequent
     }
-  },
-  created () {
-    console.log(this.$store.getters.getMostFrequent)
   }
 }
 </script>
