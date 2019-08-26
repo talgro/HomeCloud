@@ -43,13 +43,13 @@ public class AuthenticationByJwtFilter extends OncePerRequestFilter {
         String accessToken = getTokenFromCookie(request);
 
         try {
-            if (accessToken == null || !accessToken.isEmpty()) {
+            if (accessToken == null || accessToken.isEmpty()) {
                 log.info("JWT filter error: corrupted access token.");
                 throw new NoAccessTokenException();
             }
 
-            String kid = jwtUtils.getKey(accessToken);
-            if (!Arrays.asList(this.JWKs).contains(accessToken.toLowerCase())) {
+            String kid = jwtUtils.getKid(accessToken);
+            if (!Arrays.asList(this.JWKs).contains(kid)) {
                 log.info("JWT filter error: invalid access token.");
                 throw new NoAccessTokenException();
             }

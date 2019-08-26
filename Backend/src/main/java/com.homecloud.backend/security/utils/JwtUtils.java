@@ -2,36 +2,37 @@ package com.homecloud.backend.security.utils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.homecloud.backend.security.models.JwtTokenClaims;
+import com.homecloud.backend.security.models.JwtTokenHeader;
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.Header;
 import io.jsonwebtoken.Jwts;
 import org.springframework.stereotype.Component;
 
 @Component
 public class JwtUtils {
 
-    public String getKey(String token) {
-        return Jwts.jwsHeader().getKeyId();
+    public String getKid(String token) {
+        JwtTokenHeader r =  getHeaderClaims(token);
+        return r.getKid();
     }
 
     public String getUsername(String token) {
-        return getAllClaims(token).getEmail();
+        return getAllClaims(token).getUsername();
     }
 
     public String getUserId(String token) {
         return getAllClaims(token).getSub();
     }
 
-    public String getUserFirstName(String token) {
-        return getAllClaims(token).getGiven_name();
-    }
-
-    public String getUserLastName(String token) {
-        return getAllClaims(token).getFamily_name();
-    }
-
     private JwtTokenClaims getAllClaims(String token) {
         final ObjectMapper mapper = new ObjectMapper();
         Claims claims = Jwts.parser().parseClaimsJwt(token).getBody();
         return mapper.convertValue(claims, JwtTokenClaims.class);
+    }
+
+    private JwtTokenHeader getHeaderClaims(String token) {
+        final ObjectMapper mapper = new ObjectMapper();
+        Header claims = Jwts.parser().parseClaimsJwt(token).getHeader();
+        return mapper.convertValue(claims, JwtTokenHeader.class);
     }
 }

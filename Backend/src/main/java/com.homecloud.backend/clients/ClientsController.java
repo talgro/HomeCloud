@@ -1,9 +1,11 @@
 package com.homecloud.backend.clients;
 
+import com.homecloud.backend.exceptions.ClientServiceException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("clients")
 public class ClientsController {
 
     private ClientsService clientsService;
@@ -13,10 +15,9 @@ public class ClientsController {
         this.clientsService = clientsService;
     }
 
-    @RequestMapping(value = "{userId}/getHomeServerAddress", method = RequestMethod.GET)
-    public String getHomeServerAddress(@PathVariable("userId") String userId) {
+    @RequestMapping(value = "getHomeServerAddress/{userI3d}", method = RequestMethod.GET)
+    public String getHomeServerAddress(@PathVariable("userId") String userId) throws ClientServiceException {
         return this.clientsService.getHomeServerAddress(userId);
     }
-
 
 }

@@ -9,6 +9,11 @@ import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.web.cors.CorsConfiguration;
+import org.springframework.web.cors.CorsConfigurationSource;
+import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+
+import java.util.Arrays;
 
 @Configuration
 @EnableWebSecurity
@@ -27,9 +32,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         // A filter responsible for setting authentication.
-        AuthenticationByJwtFilter jwtAuthenticationFilter = new AuthenticationByJwtFilter(
-                this.jwtUtils
-        );
+        AuthenticationByJwtFilter jwtAuthenticationFilter = new AuthenticationByJwtFilter(this.jwtUtils);
 
         httpSecurity.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class);
 
@@ -39,14 +42,15 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         // An unauthenticated user should only access these paths
         httpSecurity.authorizeRequests()
                 //TODO: tal create relevant endpoints
-                .antMatchers("/users/me", "/pocs/myPocs", "/actuator/**").hasAnyRole("ANONYMOUS", "AUTHENTICATED")
+                .antMatchers("/clients", "/clients/**").hasAnyRole("ANONYMOUS", "AUTHENTICATED")
                 .anyRequest().hasRole("AUTHENTICATED");
     }
 
-//    @Override
-//    public void configure(WebSecurity web) {
-//        web.ignoring().antMatchers("/actuator/**");
-//    }
+    @Override
+    public void configure(WebSecurity web) {
+        web.ignoring().antMatchers("/actuator/**");
+//        web.ignoring().antMatchers("/**");
+    }
 
 //    @Bean
 //    CorsConfigurationSource corsConfigurationSource() {

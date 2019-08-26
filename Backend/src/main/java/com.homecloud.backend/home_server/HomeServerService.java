@@ -15,7 +15,7 @@ public class HomeServerService {
         this.homeServerRepository = homeServerRepository;
     }
 
-    public void updateConnection(int serverId, String address) {
+    public void updateConnection(String serverId, String address) {
         HomeServerConnection connection = new HomeServerConnection(serverId, LocalDate.now(), address);
         this.homeServerRepository.save(connection);
     }

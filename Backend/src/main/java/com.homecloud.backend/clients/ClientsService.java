@@ -12,15 +12,12 @@ public class ClientsService {
 
     private ClientsRepository clientsRepository;
     private HomeServerRepository homeServerRepository;
-    private ClientMapper clientMapper;
 
     @Autowired
     public ClientsService(ClientsRepository clientsRepository,
-                          HomeServerRepository homeServerRepository,
-                          ClientMapper clientMapper) {
+                          HomeServerRepository homeServerRepository) {
         this.clientsRepository = clientsRepository;
         this.homeServerRepository = homeServerRepository;
-        this.clientMapper = clientMapper;
     }
 
     public String getHomeServerAddress(String userId) throws ClientServiceException {
