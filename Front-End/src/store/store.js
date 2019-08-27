@@ -22,6 +22,15 @@ export const store = new Vuex.Store({
     },
     getLoggedIn: state => {
       return state.loggedIn
+    },
+    getCookie: state => {
+      let cookies = document.cookie.split(';')
+      for (let i = 0; i < cookies.length; ++i) {
+        let cookie = cookies[i].split('=')
+        if (cookie[0].includes('accessToken')) {
+          return cookie[1]
+        }
+      }
     }
   },
   mutations: {

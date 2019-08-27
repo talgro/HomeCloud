@@ -28,14 +28,16 @@ export default {
     }
   },
   methods: {
-    createCookie (name, expDays) {
+    createCookie (name, cookieName, expDays) {
       let cookies = document.cookie.split(';')
       for (let i = 0; i < cookies.length; ++i) {
         let cookie = cookies[i].split('=')
         if (cookie[0].includes(name)) {
           let d = new Date()
           d.setTime(d.getTime() + (expDays * 24 * 60 * 60 * 1000))
-          document.cookie = name + '=' + cookie[1] + ';' + 'expires=' + d.toUTCString() + ';' + 'path=/'
+          // + 'domain=' + '.talgropper-xxjz.localhost.run' + ';'
+          // document.cookie = cookieName + '=' + cookie[1] + ';' + 'expires=' + d.toUTCString() + ';' + 'path=/'
+          this.$cookies.set(cookieName, cookie[1], '1y')
           return
         }
       }
@@ -44,7 +46,7 @@ export default {
   beforeCreate () {
     AmplifyEventBus.$on('authState', info => {
       if (info === 'signedIn') {
-        this.createCookie('idToken', 365)
+        this.createCookie('accessToken', 'access_cookie', 365)
         this.signedIn = true
         this.$router.push('/home-page')
       }

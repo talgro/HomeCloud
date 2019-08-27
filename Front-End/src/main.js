@@ -10,13 +10,22 @@ import Amplify, * as AmplifyModules from 'aws-amplify'
 import { AmplifyPlugin } from 'aws-amplify-vue'
 import awsmobile from './aws-exports'
 import { store } from './store/store'
-
-Amplify.configure(awsmobile)
-Vue.use(AmplifyPlugin, AmplifyModules)
+import VueCookies from 'vue-cookies'
 
 Vue.config.productionTip = false
 Vue.use(VueResource)
 Vue.use(Vuetify)
+Vue.use(VueCookies)
+
+Amplify.configure(awsmobile)
+Vue.use(AmplifyPlugin, AmplifyModules)
+
+Vue.http.options.credentials = true
+Vue.http.options.xhr = {withCredentials: true}
+Vue.http.interceptors.push((request, next) => {
+  request.credentials = true
+  next()
+})
 
 /* eslint-disable no-new */
 new Vue({

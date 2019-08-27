@@ -128,11 +128,11 @@ export default {
       // this.$http.get(url, { withCredentials: true }).then(function (data) {
       //   this.curr_folder = data.body
       // })
-      console.log(document.cookie)
-      // this.$http.get('http://talgropper-vh3s.localhost.run/clients/getHomeServerAddress/123', { credentials: true }).then(function (data) {
-      // this.curr_folder = data.body
-      console.log('sent')
-      // })
+      this.$http.get('http://talgropper-c5dt.localhost.run/clients/getHomeServerAddress/123', { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (data) {
+        console.log(data)
+        // this.curr_folder = data.body
+      })
+      console.log('ends here')
     }
   },
   created () {
