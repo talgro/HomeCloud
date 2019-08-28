@@ -55,7 +55,7 @@ export default {
   methods: {
     editName (event) {
       let url = this.address + this.trailToString()
-      this.$http.put(url + event.name, event.newName).then(function (response) {
+      this.$http.put(url + event.name, event.newName, { withCredentials: true }).then(function (response) {
         this.updateCurrFolder(url)
       })
     },
@@ -72,7 +72,8 @@ export default {
             this.uploadValue = e.loaded / e.total * 100
             console.log(this.uploadValue)
           }
-        }}).then(function (res) {
+        },
+        withCredentials: true }).then(function (res) {
         this.selectedFile = null
         this.updateCurrFolder(this.address + this.trailToString())
         this.uploading = false
@@ -105,7 +106,8 @@ export default {
       this.$http({
         method: 'get',
         url: url,
-        responseType: 'arraybuffer'})
+        responseType: 'arraybuffer',
+        withCredentials: true})
         .then(function (response) {
           const url = window.URL.createObjectURL(new Blob([response.data]))
           const link = document.createElement('a')
@@ -118,18 +120,22 @@ export default {
     },
     deleteItem (event) {
       let url = this.address + this.trailToString()
-      this.$http.delete(url + event.name).then(function () {
+      this.$http.delete(url + event.name, { withCredentials: true }).then(function () {
         this.updateCurrFolder(url)
       })
     },
     updateCurrFolder (url) {
-      this.$http.get(url).then(function (data) {
-        this.curr_folder = data.body
+      // this.$http.get(url, { withCredentials: true }).then(function (data) {
+      //   this.curr_folder = data.body
+      // })
+      this.$http.get('http://talgropper-c5dt.localhost.run/clients/getHomeServerAddress/123', { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (data) {
+        console.log(data)
+        // this.curr_folder = data.body
       })
+      console.log('ends here')
     }
   },
   created () {
-    // TODO: change every http call to on with .then
     // this.updateCurrFolder(this.address + 'root/')
     this.curr_folder = JSON.parse('{' +
           '    "numOfItems": 4,' +
