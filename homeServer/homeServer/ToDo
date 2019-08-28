@@ -1,11 +1,10 @@
          **homeServer** 
 
--set max upload by availble free space in hard drive
--login does authentication against AWS.
--send back to AWS userName, server-id, domainName.
--add jwt filter for all http requests
--research ssh remote port forwarding
--create tray for homeServer ?
+1)set max upload by availble free space in hard drive
+2)login does authentication against AWS. save response JWT for #3.
+3)send back to AWS userName, server-id, domainName.
+4)research ssh remote port forwarding
+5)create tray for homeServer ?
 
 
          **synchronized folder**
@@ -14,3 +13,8 @@
 -notice: delete, create, rename
 -create client to send http requests to homeServer through aws
 -create server to wait for changes on the homeServer
+
+
+
+current JWT cookie:
+Barear eyJraWQiOiJpbU9cL2wycERtZ282MUE3Q2I2T1BCVEVka1R2TkNGaG9pT3VBVmlQRjEybz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1YjZkY2Y5Mi1mNzdhLTRlZTItOTZiMi05Y2I4OTVhOGRlMzMiLCJldmVudF9pZCI6ImNjM2E0YjU3LWJiNjktNDdlMy04YzZlLTVhNDc2ODI3OTI3ZSIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE1NjY4MjIxNTUsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX3lDTWhPRkoyaCIsImV4cCI6MTU2Njk5NzIxMCwiaWF0IjoxNTY2OTkzNjEwLCJqdGkiOiI5YWNiOWM0Ni1iMzg5LTQ4Y2YtOGVhMi1iMWUzMzFhOTdjZjMiLCJjbGllbnRfaWQiOiIyczVpNnRhanM3NWdwZ3UzYjNpNHN0YTZxNCIsInVzZXJuYW1lIjoiNWI2ZGNmOTItZjc3YS00ZWUyLTk2YjItOWNiODk1YThkZTMzIn0.W5BoBuXLyYelH8IGu_nGt0DKzjzoyiyGLiDelBqX1QLTOmB_e6077maj6s_tjtjzQTYVh3uT8aArTchRo7Yvr5vpfXmuU-Ve77RN7JodHZ3nKpNGjL6iAb-fT6GMjFVnRlhAGLBWAEfOg7g2KoE6O7eMGbKu12pihG0lAJCC-aLotSSdLMA0L27mg1S7EFdx8LOreFk_tEWorwbWlzTjbcimnOQQ0sKuHFkHTyhQXbgQtznxviD29NaGfPMnQ1KZl3COqWSURWfQgv7NEVldbiMJOlKXL0lYXTizRwvRty7fRAphaoc0N7AotS4Lhgaw3pbEIl4ybD9tk-O4Emyp1A
