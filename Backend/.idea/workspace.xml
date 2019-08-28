@@ -1,0 +1,1552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c091848b-e8c1-46d6-9903-8f58d563bcd7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/ToDo" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/security/AuthenticationByJwtFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/security/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/security/exceptions/NoAccessTokenException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/security/models/AuthenticationDetails.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/security/models/JwtTokenClaims.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/security/models/JwtTokenHeader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/security/utils/JwtUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/security/AuthenticationByJwtFilter.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/security/WebSecurityConfig.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/security/exceptions/NoAccessTokenException.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/security/models/AuthenticationDetails.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/security/models/JwtTokenClaims.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/security/models/JwtTokenHeader.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/security/utils/JwtUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.mylyn/repositories.xml.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.mylyn/repositories.xml.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/12/90a70c3be05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/12/90a70c3be05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/13/e0ace923e85a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/13/e0ace923e85a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/17/10737001e85a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/17/10737001e85a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/18/c09a783fc05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/18/c09a783fc05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/21/80725509eb5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/21/80725509eb5a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/22/70d036dedc5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/22/70d036dedc5a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/29/b040f9507e5b001918338b4fd3e41c71" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/29/b040f9507e5b001918338b4fd3e41c71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/2b/20218a3dd45a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/2b/20218a3dd45a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/2e/e081588f7e5b001918338b4fd3e41c71" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/2e/e081588f7e5b001918338b4fd3e41c71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/2f/b0c40e72e25a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/2f/b0c40e72e25a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/32/00ee022ae05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/32/00ee022ae05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/32/10941ab7df5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/32/10941ab7df5a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/3b/40659f53e05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/3b/40659f53e05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/3b/f0e17c61dc5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/3b/f0e17c61dc5a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/3e/70a62fcabd5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/3e/70a62fcabd5a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/3e/90fe5860e05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/3e/90fe5860e05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/4/e0abf751e45a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/4/e0abf751e45a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/43/a0cab75fe25a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/43/a0cab75fe25a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/49/b0e7a253e05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/49/b0e7a253e05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/4e/3090c974e85a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/4e/3090c974e85a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/52/d0b4c969e85a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/52/d0b4c969e85a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/53/8022b0f3c35a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/53/8022b0f3c35a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/57/e05eadebe15a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/57/e05eadebe15a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/5a/204875a7c15a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/5a/204875a7c15a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/5c/c02eca8ce25a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/5c/c02eca8ce25a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/5e/707015a3c15a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/5e/707015a3c15a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/6/007e2243c25a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/6/007e2243c25a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/6/60199603c05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/6/60199603c05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/6/f067eb7fe75a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/6/f067eb7fe75a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/63/a0f4f649c15a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/63/a0f4f649c15a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/67/10f8bb5fdc5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/67/10f8bb5fdc5a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/6a/0075892ce45a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/6a/0075892ce45a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/7/20599854bd5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/7/20599854bd5a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/7/40af7d73e85a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/7/40af7d73e85a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/7/80509a2f7e5b001918338b4fd3e41c71" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/7/80509a2f7e5b001918338b4fd3e41c71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/75/70bee77fe75a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/75/70bee77fe75a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/7c/20779354bd5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/7c/20779354bd5a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/7f/902f9b4de45a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/7f/902f9b4de45a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/7f/a0d1d327e35a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/7f/a0d1d327e35a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/81/d075c8097e5b001918338b4fd3e41c71" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/81/d075c8097e5b001918338b4fd3e41c71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/86/e029198cc45a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/86/e029198cc45a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/87/20a26f55c45a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/87/20a26f55c45a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/88/e0c0fdc8e35a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/88/e0c0fdc8e35a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/8a/700c843fc05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/8a/700c843fc05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/8d/40ba354ae05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/8d/40ba354ae05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/8d/90077d3fc05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/8d/90077d3fc05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/9/d014803fc05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/9/d014803fc05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/93/90be326ae25a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/93/90be326ae25a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/96/a010823fc05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/96/a010823fc05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/97/c0eb71a0e25a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/97/c0eb71a0e25a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/99/708d9b54bd5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/99/708d9b54bd5a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/9d/5067f105e85a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/9d/5067f105e85a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/a2/00627f5beb5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/a2/00627f5beb5a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/a8/70243456e15a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/a8/70243456e15a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/a8/c01ff5c7bd5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/a8/c01ff5c7bd5a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/af/0012fbd0e05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/af/0012fbd0e05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/b0/b09bbf67e25a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/b0/b09bbf67e25a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/be/30e9964be65a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/be/30e9964be65a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/c3/807ffc4fe15a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/c3/807ffc4fe15a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/ca/709695f5e65a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/ca/709695f5e65a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/ce/80eeca3be05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/ce/80eeca3be05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/cf/90b39cd1bc5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/cf/90b39cd1bc5a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/d/00eb5b3fc05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/d/00eb5b3fc05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/d3/20badac7e25a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/d3/20badac7e25a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/d3/20ce06e0df5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/d3/20ce06e0df5a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/d3/c0d0eb457e5b001918338b4fd3e41c71" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/d3/c0d0eb457e5b001918338b4fd3e41c71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/d7/b0e47a3fc05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/d7/b0e47a3fc05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/d9/70721ed67d5b001918338b4fd3e41c71" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/d9/70721ed67d5b001918338b4fd3e41c71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/db/007052a6e25a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/db/007052a6e25a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/de/e0f88d54bd5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/de/e0f88d54bd5a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/e9/90ac5970e05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/e9/90ac5970e05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/fc/808a1fa8c45a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/fc/808a1fa8c45a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.projects/Servers/.indexes/48/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.projects/Servers/.indexes/48/history.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.indexes/af/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.indexes/af/history.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.indexes/e4/b9/22/26/b6/e2/59/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.indexes/e4/b9/22/26/b6/e2/59/history.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.indexes/e4/b9/22/26/b6/e2/79/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.indexes/e4/b9/22/26/b6/e2/79/history.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.indexes/e4/b9/22/26/b6/e2/9c/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.indexes/e4/b9/22/26/b6/e2/9c/history.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.indexes/e4/b9/22/26/b6/e2/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.indexes/e4/b9/22/26/b6/e2/history.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.indexes/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.indexes/history.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.indexes/properties.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.markers" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.markers" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/org.eclipse.jdt.core/state.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/org.eclipse.jdt.core/state.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/history.version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.root/.indexes/properties.version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.root/2.tree" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.root/2.tree" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.safetable/org.eclipse.core.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ajdt.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ajdt.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.debug.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.egit.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.egit.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.junit.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.junit.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.launching.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jdt.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jsch.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jsch.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jst.jsp.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.jst.jsp.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.m2e.discovery.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.context.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.context.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.java.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.java.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.monitor.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.monitor.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.mylyn.tasks.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.pde.api.tools.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.pde.api.tools.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.rse.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.browser.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.browser.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.editors.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.ide.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.ui.workbench.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.jsdt.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.jsdt.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.server.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.server.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.sse.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.sse.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.ws.service.policy.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.eclipse.wst.ws.service.policy.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springframework.ide.eclipse.imports.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springframework.ide.eclipse.imports.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springsource.ide.eclipse.commons.configurator.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springsource.ide.eclipse.commons.configurator.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springsource.ide.eclipse.commons.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springsource.ide.eclipse.commons.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springsource.ide.eclipse.commons.frameworks.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springsource.ide.eclipse.commons.frameworks.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springsource.ide.eclipse.commons.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springsource.ide.eclipse.commons.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springsource.ide.eclipse.dashboard.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.runtime/.settings/org.springsource.ide.eclipse.dashboard.ui.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.debug.core/.launches/homeServerApp.launch" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.debug.core/.launches/homeServerApp.launch" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.debug.ui/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.debug.ui/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.debug.ui/launchConfigurationHistory.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.e4.workbench/workbench.xmi" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.equinox.p2.discovery.compatibility/cache/discovery-2100034307" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.equinox.p2.discovery.compatibility/cache/discovery-2100034307" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.equinox.p2.discovery.compatibility/cache/discovery531271705" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.equinox.p2.discovery.compatibility/cache/discovery531271705" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/100574398.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/100574398.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/1093488887.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/1093488887.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/1110873530.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/1110873530.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/1177904427.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/1177904427.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/1204375214.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/1204375214.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/1280376989.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/1280376989.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/1324437252.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/1324437252.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/138139876.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/138139876.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/1430167630.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/1430167630.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/1442192001.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/1442192001.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/1474273577.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/1474273577.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/1487427307.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/1487427307.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/1504793936.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/1504793936.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/1530070625.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/1530070625.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/157050885.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/157050885.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/165278798.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/165278798.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/1660725254.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/1660725254.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/1795120282.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/1795120282.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/2024221598.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/2024221598.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/2043626465.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/2043626465.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/205334609.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/205334609.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/2088728460.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/2088728460.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/2432457046.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/2432457046.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/2552942750.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/2552942750.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/2569137926.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/2569137926.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/2823008776.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/2823008776.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/2872033403.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/2872033403.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/2980490172.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/2980490172.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/3122965129.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/3122965129.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/3177659594.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/3177659594.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/3273689814.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/3273689814.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/3363692690.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/3363692690.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/342540531.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/342540531.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/3487609244.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/3487609244.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/3609888128.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/3609888128.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/3947625687.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/3947625687.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/4121661813.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/4121661813.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/4130096959.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/4130096959.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/454718147.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/454718147.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/457151372.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/457151372.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/483082276.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/483082276.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/648696757.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/648696757.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/670215870.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/670215870.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/700191357.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/700191357.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/710797068.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/710797068.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/806062888.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/806062888.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/823384711.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/823384711.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/890887124.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/890887124.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/916900781.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/916900781.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/939468681.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/939468681.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/index.db" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/index.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/variablesAndContainers.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.launching/.install.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.launching/libraryInfos.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.ui/OpenTypeHistory.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.ui/QualifiedTypeNameHistory.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.ui/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/homeServer/2019/4/15/refactorings.history" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/homeServer/2019/4/15/refactorings.history" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/homeServer/2019/4/15/refactorings.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.ltk.core.refactoring/.refactorings/homeServer/2019/4/15/refactorings.index" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core.ui/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core.ui/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/homeServer.lifecyclemapping" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/homeServer.lifecyclemapping" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/lifecycle-mapping-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/lifecycle-mapping-metadata.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_0.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_0.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_0_1.del" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_0_1.del" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_1.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_1.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments.gen" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments.gen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments_3" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments_3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/write.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/write.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/_3c.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/_3c.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/_3c_1.del" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/_3c_1.del" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/_3d.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/_3d.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/segments.gen" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/segments.gen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/segments_33" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/segments_33" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/write.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/write.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_0.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_0.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_0_1.del" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_0_1.del" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_1.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_1.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_1_1.del" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_1_1.del" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_2.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_2.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_3.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_3.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_4.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_4.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5.cfs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments.gen" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments.gen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments_7" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments_7" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/write.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/write.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/workspacestate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/workspacestate.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.jdt/homeServer.container" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.jdt/homeServer.container" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.11.0.20190220-2119.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.11.0.20190220-2119.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.rse.core/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.rse.core/.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.rse.core/initializerMarks/org.eclipse.rse.internal.core.RSELocalConnectionInitializer.mark" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.rse.core/initializerMarks/org.eclipse.rse.internal.core.RSELocalConnectionInitializer.mark" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.tm.terminal.view.ui/.executables/data.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.tm.terminal.view.ui/.executables/data.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.ui.workbench/workingsets.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.ui/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.ui/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.wst.internet.cache/cache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.wst.internet.cache/cache.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.wst.jsdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.wst.jsdt.core/externalLibsTimeStamps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/baseBrowserLibrary.js" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/baseBrowserLibrary.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/browserWindow.js" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/browserWindow.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/dom5.js" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/dom5.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/system.js" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/system.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/xhr.js" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.wst.jsdt.core/libraries/xhr.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.wst.jsdt.core/variablesAndContainers.dat" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.wst.jsdt.core/variablesAndContainers.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.wst.jsdt.ui/OpenTypeHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.wst.jsdt.ui/OpenTypeHistory.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.wst.jsdt.ui/QualifiedTypeNameHistory.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.wst.jsdt.ui/QualifiedTypeNameHistory.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.wst.server.core/servers.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.wst.server.core/servers.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.wst.sse.core/task-tags.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.wst.sse.ui/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.wst.sse.ui/dialog_settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.wst.xml.core/default_catalog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.wst.xml.core/default_catalog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.wst.xml.core/system_catalog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.wst.xml.core/system_catalog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springframework.ide.eclipse.aop.core/.state" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springframework.ide.eclipse.aop.core/.state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springframework.ide.eclipse.beans.core.metadata/metadata/.state" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springframework.ide.eclipse.beans.core.metadata/metadata/.state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springframework.ide.eclipse.beans.core.metadata/properties/.state" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springframework.ide.eclipse.beans.core.metadata/properties/.state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/bootstrap/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/bootstrap/css/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/bootstrap/css/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/bootstrap/js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/bootstrap/js/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/bootstrap/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/application.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/application.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/blog.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/blog.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/buttons.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/buttons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/dashboard.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/docs.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/docs.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/flexbox.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/flexbox.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/fontcustom.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/fontcustom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/highlight.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/highlight.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/homepage.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/homepage.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/icons.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/icons.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/markdown-content.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/markdown-content.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/panes.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/panes.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/projects.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/projects.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/responsive.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/tools.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/tools.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/typography.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/css/typography.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/font-awesome/css/font-awesome.css" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/font-awesome/css/font-awesome.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/font-custom/fontcustom.woff" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/font-custom/fontcustom.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/blog.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/blog.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/blog_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/blog_32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/bug_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/bug_32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/comparison_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/comparison_32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/compass.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/compass.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/compass_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/compass_32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/extension.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/extension.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/extension_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/extension_32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/favicon.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/favicon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/forum.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/forum.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/forum_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/forum_32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/guides.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/guides.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/guides_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/guides_32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/loading.gif" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/loading.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/logo_bigleaf.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/logo_bigleaf.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/logo_spring.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/logo_spring.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/logo_sts.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/logo_sts.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/new_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/new_32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/overlay-incoming.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/overlay-incoming.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/question.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/question.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/spring-logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/spring-logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/springdocs.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/springdocs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/springdocs_32.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/img/springdocs_32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/js/application.js" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/js/application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/js/filter.js" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/js/filter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/js/guide.js" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/js/guide.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/js/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/js/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/js/modernizer.flexbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/common/js/modernizer.flexbox.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.commons.gettingstarted/dashboard/1554810253257/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.dashboard.ui/feeds/dashboard.feeds.blogs/-549550714.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.dashboard.ui/feeds/dashboard.feeds.blogs/-549550714.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.springsource.ide.eclipse.dashboard.ui/feeds/dashboard.feeds.update/-1223306788.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.springsource.ide.eclipse.dashboard.ui/feeds/dashboard.feeds.update/-1223306788.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/version.ini" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/version.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/Servers/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/Servers/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/Servers/.settings/org.eclipse.wst.server.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/Servers/.settings/org.eclipse.wst.server.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/Servers/Pivotal tc Server Developer Edition v4.0-config/catalina.policy" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/Servers/Pivotal tc Server Developer Edition v4.0-config/catalina.policy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/Servers/Pivotal tc Server Developer Edition v4.0-config/catalina.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/Servers/Pivotal tc Server Developer Edition v4.0-config/catalina.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/Servers/Pivotal tc Server Developer Edition v4.0-config/context.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/Servers/Pivotal tc Server Developer Edition v4.0-config/context.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/Servers/Pivotal tc Server Developer Edition v4.0-config/jmxremote.access" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/Servers/Pivotal tc Server Developer Edition v4.0-config/jmxremote.access" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/Servers/Pivotal tc Server Developer Edition v4.0-config/jmxremote.password" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/Servers/Pivotal tc Server Developer Edition v4.0-config/jmxremote.password" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/Servers/Pivotal tc Server Developer Edition v4.0-config/server.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/Servers/Pivotal tc Server Developer Edition v4.0-config/server.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/Servers/Pivotal tc Server Developer Edition v4.0-config/tomcat-users.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/Servers/Pivotal tc Server Developer Edition v4.0-config/tomcat-users.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/Servers/Pivotal tc Server Developer Edition v4.0-config/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/Servers/Pivotal tc Server Developer Edition v4.0-config/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/.classpath" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/.classpath" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/.project" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/.settings/org.eclipse.core.resources.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/.settings/org.eclipse.core.resources.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/.settings/org.eclipse.jdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/.settings/org.eclipse.jdt.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/.settings/org.eclipse.m2e.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/.settings/org.eclipse.m2e.core.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/.settings/org.eclipse.wst.common.project.facet.core.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/.settings/org.eclipse.wst.common.project.facet.core.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/.settings/org.springframework.ide.eclipse.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/.settings/org.springframework.ide.eclipse.prefs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/ToDo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/homeServer.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/homeServer.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/homeServerIcon.png" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/homeServerIcon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/META-INF/maven/io.homecloud.homeserver/homeServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/src/main/java/Filters/CORSFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/Filters/CORSFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/src/main/java/Startup/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/Startup/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/src/main/java/Startup/dirChooser.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/Startup/dirChooser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/src/main/java/System/Tray/TrayClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/System/Tray/TrayClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/src/main/java/System/Tray/guiIcon.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/System/Tray/guiIcon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/src/main/java/io/homecloud/homeserver/homeServerApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/homeServerApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/src/main/java/io/homecloud/homeserver/localFile/DataResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/localFile/DataResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/src/main/java/io/homecloud/homeserver/localFile/FileSystemStorageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/localFile/FileSystemStorageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/src/main/java/io/homecloud/homeserver/localFile/LocalFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/localFile/LocalFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/src/main/java/io/homecloud/homeserver/localFile/LocalFileController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/localFile/LocalFileController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/src/main/java/io/homecloud/homeserver/localFile/LocalFileService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/localFile/LocalFileService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/src/main/java/io/homecloud/homeserver/localFile/homeServerStarter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/localFile/homeServerStarter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/Filters/CORSFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/Filters/CORSFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/META-INF/maven/io.homecloud.homeserver/homeServer/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/META-INF/maven/io.homecloud.homeserver/homeServer/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/META-INF/maven/io.homecloud.homeserver/homeServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/Startup/LoginPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/Startup/LoginPage$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/Startup/LoginPage$2$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/Startup/LoginPage$2$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/Startup/LoginPage$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/Startup/LoginPage$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/Startup/LoginPage$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/Startup/LoginPage$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/Startup/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/Startup/LoginPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/Startup/dirChooser.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/Startup/dirChooser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/System/Tray/TrayClass$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/System/Tray/TrayClass$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/System/Tray/TrayClass$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/System/Tray/TrayClass$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/System/Tray/TrayClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/System/Tray/TrayClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/System/Tray/guiIcon$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/System/Tray/guiIcon$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/System/Tray/guiIcon.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/System/Tray/guiIcon.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/io/homecloud/homeserver/homeServerApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/homeServerApp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/io/homecloud/homeserver/localFile/DataResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/localFile/DataResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/io/homecloud/homeserver/localFile/FileSystemStorageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/localFile/FileSystemStorageService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/io/homecloud/homeserver/localFile/LocalFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/localFile/LocalFile.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/io/homecloud/homeserver/localFile/LocalFileController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/localFile/LocalFileController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/io/homecloud/homeserver/localFile/LocalFileService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/localFile/LocalFileService$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/io/homecloud/homeserver/localFile/LocalFileService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/localFile/LocalFileService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/io/homecloud/homeserver/localFile/homeServerStarter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/localFile/homeServerStarter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/homeServer-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/homeServer-0.0.1-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Backend" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Backend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Backend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Backend" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="33" column="43" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientsService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="67">
+              <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/AuthenticationByJwtFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="885">
+              <caret line="59" selection-start-line="59" selection-end-line="59" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1494#1495#0" expanded="true" />
+                <element signature="e#1534#1535#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.1.8.RELEASE/4e19ca13005f5175b8cf87c0d3a0df681d2e55c/spring-web-5.1.8.RELEASE-sources.jar!/org/springframework/web/util/WebUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7890">
+              <caret line="567" column="30" selection-start-line="567" selection-start-column="26" selection-end-line="567" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>local</find>
+      <find>AuthenticationByJwtFilter</find>
+      <find>WebUtils</find>
+      <find>dashboard.cors.urls</find>
+      <find>compile</find>
+      <find>EnableWebSecurity</find>
+      <find>JwtAuthenticationFilter</find>
+      <find>@EnableResourceServer</find>
+      <find>@SpringBootApplication</find>
+      <find>setAuthentication</find>
+      <find>AuthenticationDetails</find>
+      <find>ExpiredJwtException</find>
+      <find>io.jsonwebto</find>
+      <find>dependencies {</find>
+      <find>erverConnection connection = new HomeServerConnection(s</find>
+      <find>eturn this.clientsService.getHomeServerAddress(userId</find>
+      <find>ClientServiceException</find>
+      <find>lic String getHomeServerAddress(@PathVariable(&quot;userId&quot;) String userId) throws Client</find>
+      <find>is.homeServerService.updateConnection(serverId, add</find>
+      <find>mapper</find>
+      <find>direct_url</find>
+      <find>3579</find>
+      <find>127</find>
+      <find>onfigure(HttpSecurit</find>
+      <find>jsonwebtoken</find>
+      <find>getKey</find>
+      <find>3759</find>
+      <find>entity</find>
+      <find>setAllowCredentia</find>
+      <find>cook</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>AuthenticationByJwtFilter</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/home/server/GreetingController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/home/server/HomeServerConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/home/server/HomeServerRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/home/server/HomeServerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/home/server/entities/HomeServerConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/home/server/HomeServerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/server/HomeServerRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/HomeServerRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/DTOs/AuthorizedPocDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/SecurityMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/exceptions/NoAccessToken_exception.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/exceptions/NoAccessTokenException.java" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_1.json" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/entities/HomeServerConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/entities/UsersServers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientsRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/DTOs/UsersServersDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/PocMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClitentMapper.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/exceptions/ClientServiceException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/exceptions/GlobalExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/HomeServerService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/models/JwtTokenHeader.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/utils/JwtUtils.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/models/JwtTokenClaims.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/models/AuthenticationDetails.java" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/entities/HomeServerConnection.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/HomeServerRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/WebSecurityConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/AuthenticationByJwtFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/HomeServerController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/entities/serverUsers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/entities/ServerUsers.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/DTOs/NewUserForServerDto.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientsController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ServerUsersRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientsService.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="834" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="Scope" currentSubView="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope" proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Backend" type="58d84e3e:PackageViewProjectNode" />
+              <item name="Backend.main" type="616d4139:PackageViewModuleNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
+          <expand>
+            <path>
+              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+            </path>
+            <path>
+              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com.homecloud.backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com.homecloud.backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="clients" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com.homecloud.backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="clients" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="DTOs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com.homecloud.backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="clients" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="entities" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com.homecloud.backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="home_server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="com.homecloud.backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="home_server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="entities" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Backend" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Backend" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="com.homecloud.backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567014120964" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.homecloud.backend.clients.DTOs" />
+      <recent name="com.homecloud.backend.security.models" />
+      <recent name="com.homecloud.backend.exceptions" />
+      <recent name="com.homecloud.backend.clients" />
+      <recent name="com.homecloud.backend.security" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com.homecloud.backend" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.backend">
+    <configuration name="Backend [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="Application" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Backend.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.homecloud.backend.Application" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="backend" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="Backend.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.homecloud.backend.Application" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Twisted Trial">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Gradle.Backend [jar]" />
+      <item itemvalue="Spring Boot.Application" />
+      <item itemvalue="Spring Boot.backend" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.Backend [jar]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c091848b-e8c1-46d6-9903-8f58d563bcd7" name="Default Changelist" comment="" />
+      <created>1565627133198</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1565627133198</updated>
+      <workItem from="1565627172004" duration="6829000" />
+      <workItem from="1565783890294" duration="1461000" />
+      <workItem from="1565786005531" duration="1741000" />
+      <workItem from="1565788297507" duration="376000" />
+      <workItem from="1565790433651" duration="599000" />
+      <workItem from="1565791765529" duration="1774000" />
+      <workItem from="1565978964621" duration="91000" />
+      <workItem from="1566165728819" duration="734000" />
+      <workItem from="1566248277328" duration="3000" />
+      <workItem from="1566545212969" duration="286000" />
+      <workItem from="1566568935406" duration="10226000" />
+      <workItem from="1566630580388" duration="12974000" />
+      <workItem from="1566645360503" duration="1762000" />
+      <workItem from="1566647419941" duration="63000" />
+      <workItem from="1566647789051" duration="872000" />
+      <workItem from="1566667325669" duration="1986000" />
+      <workItem from="1566738519036" duration="685000" />
+      <workItem from="1566745604650" duration="36000" />
+      <workItem from="1566751912858" duration="6188000" />
+      <workItem from="1566817226231" duration="103000" />
+      <workItem from="1566820251017" duration="2037000" />
+      <workItem from="1566822393913" duration="1103000" />
+      <workItem from="1566926549851" duration="8373000" />
+      <workItem from="1566939289717" duration="933000" />
+      <workItem from="1566980463005" duration="285000" />
+      <workItem from="1567006835794" duration="3637000" />
+    </task>
+    <task id="LOCAL-00001" summary="- installed jpa and lombok&#10;-configured home server repository, service and controller">
+      <created>1565735113883</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1565735113883</updated>
+    </task>
+    <task id="LOCAL-00002" summary="-fixed spring configuration">
+      <created>1565792223518</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1565792223518</updated>
+    </task>
+    <task id="LOCAL-00003" summary="-update connection endpoint&#10;-">
+      <created>1566165837904</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1566165837904</updated>
+    </task>
+    <task id="LOCAL-00004" summary="-update connection endpoint&#10;-">
+      <created>1566576915172</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1566576915172</updated>
+    </task>
+    <task id="LOCAL-00005" summary="-created jwt handler&#10;-clients endpoints">
+      <created>1566576967797</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1566576967797</updated>
+    </task>
+    <task id="LOCAL-00006" summary="-created jwt handler&#10;-clients endpoints">
+      <created>1566577004424</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1566577004424</updated>
+    </task>
+    <task id="LOCAL-00007" summary=".">
+      <created>1566644391034</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1566644391034</updated>
+    </task>
+    <task id="LOCAL-00008" summary=".">
+      <created>1566822196318</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1566822196318</updated>
+    </task>
+    <task id="LOCAL-00009" summary=".">
+      <created>1566822458796</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1566822458796</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Merge branch 'master' of https://github.com/talgro/HomeCloud&#10;&#10;# Conflicts:&#10;#&#9;Backend/src/main/resources/application.properties">
+      <created>1566822582706</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1566822582706</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Merge branch 'master' of https://github.com/talgro/HomeCloud&#10;&#10;# Conflicts:&#10;#&#9;Backend/src/main/resources/application.properties">
+      <created>1566980505352</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1566980505352</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Merge branch 'master' of https://github.com/talgro/HomeCloud&#10;&#10;# Conflicts:&#10;#&#9;Backend/src/main/resources/application.properties">
+      <created>1567013795884</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1567013795884</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="65157000" />
+  </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1440" height="834" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2299427" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733475" weight="0.43492407" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7063037" weight="0.4272237" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Build" order="6" sideWeight="0.495702" weight="0.2897574" />
+      <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49856734" weight="0.32884097" />
+      <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.49928367" weight="0.32884097" />
+      <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51790833" side_tool="true" visible="true" weight="0.26415095" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4820917" visible="true" weight="0.26415095" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" sideWeight="0.49946696" weight="0.329718" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49641833" weight="0.32749325" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Scheme.REPL" order="5" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Gradle" order="7" weight="0.32942432" />
+      <window_info anchor="right" id="SciView" order="8" />
+      <window_info anchor="right" id="Database" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+      <window_info anchor="right" id="Theme Preview" order="11" />
+      <window_info anchor="right" id="Bean Validation" order="12" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3409742" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43530998" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info active="true" anchor="bottom" id="Build" order="7" visible="true" weight="0.4097035" />
+      <window_info anchor="bottom" id="Spring" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Docker" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
+      <window_info anchor="bottom" id="Java Enterprise" order="12" />
+      <window_info anchor="bottom" id="Database Changes" order="13" />
+      <window_info anchor="bottom" id="Version Control" order="14" weight="0.32884097" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Scheme.REPL" order="5" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Gradle" order="7" visible="true" weight="0.3295129" />
+      <window_info anchor="right" id="SciView" order="8" />
+      <window_info anchor="right" id="Database" order="9" />
+      <window_info anchor="right" id="Palette&#9;" order="10" />
+      <window_info anchor="right" id="Theme Preview" order="11" />
+      <window_info anchor="right" id="Bean Validation" order="12" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="- installed jpa and lombok&#10;-configured home server repository, service and controller" />
+    <MESSAGE value="-fixed spring configuration" />
+    <MESSAGE value="-update connection endpoint&#10;-" />
+    <MESSAGE value="-created jwt handler&#10;-clients endpoints" />
+    <MESSAGE value="." />
+    <MESSAGE value="Merge branch 'master' of https://github.com/talgro/HomeCloud&#10;&#10;# Conflicts:&#10;#&#9;Backend/src/main/resources/application.properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/talgro/HomeCloud&#10;&#10;# Conflicts:&#10;#&#9;Backend/src/main/resources/application.properties" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>request.getHeader(&quot;authorization&quot;)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="124" column="19" selection-start-line="124" selection-start-column="19" selection-end-line="124" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.projectlombok/lombok/1.18.8/1aa07070912b2caee846638641606f3b2f1f440a/lombok-1.18.8-sources.jar!/lombok/AllArgsConstructor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="11" column="1" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt/0.2/5de5a553f0113806091ec69512d6f96cb2fcef62/jjwt-0.2-sources.jar!/io/jsonwebtoken/Jwt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="38" column="6" selection-start-line="38" selection-start-column="6" selection-end-line="38" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.mapstruct/mapstruct/1.3.0.Final/c7310f7c84342b8ba0feffa046b6778c9dc52de8/mapstruct-1.3.0.Final-sources.jar!/org/mapstruct/Mapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="49" column="11" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/SecurityMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/exceptions/NoAccessTokenException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.slf4j/slf4j-api/1.7.26/21c84cdf9da108216b5e402611d4af479b60cb8/slf4j-api-1.7.26-sources.jar!/org/slf4j/MDC.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="63" column="13" selection-start-line="63" selection-start-column="13" selection-end-line="63" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="58" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt/0.2/5de5a553f0113806091ec69512d6f96cb2fcef62/jjwt-0.2-sources.jar!/io/jsonwebtoken/Jwts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="103" column="5" lean-forward="true" selection-start-line="103" selection-start-column="5" selection-end-line="103" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2436#2437#0" expanded="true" />
+            <element signature="e#2481#2482#0" expanded="true" />
+            <element signature="e#3885#3886#0" expanded="true" />
+            <element signature="e#3930#3931#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt/0.2/5de5a553f0113806091ec69512d6f96cb2fcef62/jjwt-0.2-sources.jar!/io/jsonwebtoken/JwtParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-369">
+          <caret line="221" column="26" selection-start-line="221" selection-start-column="26" selection-end-line="221" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/DTOs/ServerUsersDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/exceptions/ClientServiceException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="47" lean-forward="true" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-config/5.1.5.RELEASE/69763102fb37f1b5b9828707c232b07881580529/spring-security-config-5.1.5.RELEASE-sources.jar!/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="235" column="27" selection-start-line="235" selection-start-column="27" selection-end-line="235" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/HomeServerService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt/0.9.1/4341772ad269e161a35d2d0ad66f4f6d2f5e79b9/jjwt-0.9.1-sources.jar!/io/jsonwebtoken/JwsHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="31" column="31" lean-forward="true" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt/0.9.1/4341772ad269e161a35d2d0ad66f4f6d2f5e79b9/jjwt-0.9.1-sources.jar!/io/jsonwebtoken/Jwts.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="63" column="23" lean-forward="true" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+          <folding>
+            <element signature="e#2464#2465#0" expanded="true" />
+            <element signature="e#2509#2510#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt/0.9.1/4341772ad269e161a35d2d0ad66f4f6d2f5e79b9/jjwt-0.9.1-sources.jar!/io/jsonwebtoken/Jwt.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-11.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/Map.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="242" column="6" selection-start-line="242" selection-start-column="6" selection-end-line="242" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt/0.9.1/4341772ad269e161a35d2d0ad66f4f6d2f5e79b9/jjwt-0.9.1-sources.jar!/io/jsonwebtoken/Header.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="39" column="17" selection-start-line="39" selection-start-column="17" selection-end-line="39" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/models/JwtTokenHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.security/spring-security-core/5.1.5.RELEASE/48ad8a299212cef3d4601b2154c9ea5c64a27f85/spring-security-core-5.1.5.RELEASE-sources.jar!/org/springframework/security/core/userdetails/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="83" column="11" selection-start-line="83" selection-start-column="11" selection-end-line="83" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/models/AuthenticationDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/exceptions/GlobalExceptionHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="39" column="36" lean-forward="true" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="1" lean-forward="true" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/models/JwtTokenClaims.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.1.8.RELEASE/4e19ca13005f5175b8cf87c0d3a0df681d2e55c/spring-web-5.1.8.RELEASE-sources.jar!/org/springframework/web/filter/OncePerRequestFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="348">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/utils/JwtUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="24" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+            <element signature="e#670#671#0" expanded="true" />
+            <element signature="e#721#722#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/AuthenticationByJwtFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" selection-start-line="59" selection-end-line="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1494#1495#0" expanded="true" />
+            <element signature="e#1534#1535#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.1.8.RELEASE/4e19ca13005f5175b8cf87c0d3a0df681d2e55c/spring-web-5.1.8.RELEASE-sources.jar!/org/springframework/web/util/WebUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7890">
+          <caret line="567" column="30" selection-start-line="567" selection-start-column="26" selection-end-line="567" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/HomeServerController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/entities/HomeServerConnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/DTOs/NewUserForServerDto.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="12" column="24" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.1.8.RELEASE/4e19ca13005f5175b8cf87c0d3a0df681d2e55c/spring-web-5.1.8.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="184" column="7" selection-start-line="184" selection-start-column="7" selection-end-line="184" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="33" column="43" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/entities/ServerUsers.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/HomeServerConnectionRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ServerUsersRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="67">
+          <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Python 3.7 interpreter library</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Backend</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Gradle: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>
