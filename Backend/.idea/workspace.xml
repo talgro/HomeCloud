@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c091848b-e8c1-46d6-9903-8f58d563bcd7" name="Default Changelist" comment="">
+    <list default="true" id="c091848b-e8c1-46d6-9903-8f58d563bcd7" name="Default Changelist" comment="Merge branch 'master' of https://github.com/talgro/HomeCloud&#10;&#10;# Conflicts:&#10;#&#9;Backend/src/main/resources/application.properties">
       <change afterPath="$PROJECT_DIR$/../.project" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.classpath" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.project" afterDir="false" />
@@ -20,7 +20,10 @@
       <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/security/models/JwtTokenClaims.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/security/models/JwtTokenHeader.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/security/utils/JwtUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/gc.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.mylyn/repositories.xml.zip" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.mylyn/repositories.xml.zip" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/12/90a70c3be05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/12/90a70c3be05a0019174499764da23f3e" afterDir="false" />
@@ -30,10 +33,10 @@
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/21/80725509eb5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/21/80725509eb5a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/22/70d036dedc5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/22/70d036dedc5a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/29/b040f9507e5b001918338b4fd3e41c71" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/29/b040f9507e5b001918338b4fd3e41c71" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/2b/20218a3dd45a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/2b/20218a3dd45a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/2b/20218a3dd45a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/vcs-1/gc.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/2e/e081588f7e5b001918338b4fd3e41c71" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/2e/e081588f7e5b001918338b4fd3e41c71" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/2f/b0c40e72e25a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/2f/b0c40e72e25a0019174499764da23f3e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/32/00ee022ae05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/32/00ee022ae05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/32/00ee022ae05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/32/10941ab7df5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/32/10941ab7df5a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/3b/40659f53e05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/3b/40659f53e05a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/3b/f0e17c61dc5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/3b/f0e17c61dc5a0019174499764da23f3e" afterDir="false" />
@@ -44,7 +47,7 @@
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/49/b0e7a253e05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/49/b0e7a253e05a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/4e/3090c974e85a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/4e/3090c974e85a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/52/d0b4c969e85a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/52/d0b4c969e85a0019174499764da23f3e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/53/8022b0f3c35a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/53/8022b0f3c35a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/53/8022b0f3c35a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/2b/20218a3dd45a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/57/e05eadebe15a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/57/e05eadebe15a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/5a/204875a7c15a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/5a/204875a7c15a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/5c/c02eca8ce25a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/5c/c02eca8ce25a0019174499764da23f3e" afterDir="false" />
@@ -52,7 +55,7 @@
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/6/007e2243c25a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/6/007e2243c25a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/6/60199603c05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/6/60199603c05a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/6/f067eb7fe75a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/6/f067eb7fe75a0019174499764da23f3e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/63/a0f4f649c15a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/63/a0f4f649c15a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/63/a0f4f649c15a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/32/00ee022ae05a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/67/10f8bb5fdc5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/67/10f8bb5fdc5a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/6a/0075892ce45a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/6a/0075892ce45a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/7/20599854bd5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/7/20599854bd5a0019174499764da23f3e" afterDir="false" />
@@ -93,7 +96,7 @@
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/d9/70721ed67d5b001918338b4fd3e41c71" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/d9/70721ed67d5b001918338b4fd3e41c71" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/db/007052a6e25a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/db/007052a6e25a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/de/e0f88d54bd5a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/de/e0f88d54bd5a0019174499764da23f3e" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/e9/90ac5970e05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/e9/90ac5970e05a0019174499764da23f3e" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/e9/90ac5970e05a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/53/8022b0f3c35a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.history/fc/808a1fa8c45a0019174499764da23f3e" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/fc/808a1fa8c45a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.projects/Servers/.indexes/48/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.projects/Servers/.indexes/48/history.index" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.indexes/af/history.index" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.projects/homeServer/.indexes/af/history.index" afterDir="false" />
@@ -200,7 +203,7 @@
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/assumedExternalFilesCache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/externalFilesCache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/externalLibsTimeStamps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/index.db" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/index.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/index.db" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/63/a0f4f649c15a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/javaLikeNames.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/nonChainingJarsCache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/savedIndexNames.txt" afterDir="false" />
@@ -220,13 +223,13 @@
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_1.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/_1.cfs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments.gen" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments.gen" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments_3" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/segments_3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/write.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/write.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/write.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.core.resources/.history/e9/90ac5970e05a0019174499764da23f3e" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/_3c.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/_3c.cfs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/_3c_1.del" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/_3c_1.del" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/_3d.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/_3d.cfs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/segments.gen" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/segments.gen" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/segments_33" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/segments_33" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/write.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/write.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/write.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.jdt.core/index.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_0.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_0.cfs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_0_1.del" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_0_1.del" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_1.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_1.cfs" afterDir="false" />
@@ -237,15 +240,15 @@
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5.cfs" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/_5.cfs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments.gen" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments.gen" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments_7" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/segments_7" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/write.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/write.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/write.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/05b0fe8524860bd73cbb07ef30fb34cc/write.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.core/workspacestate.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/workspacestate.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.jdt/homeServer.container" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.jdt/homeServer.container" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.logback.configuration/0.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.11.0.20190220-2119.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.logback.configuration/logback.1.11.0.20190220-2119.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.pde.core/.cache/clean-cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.rse.core/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.rse.core/.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.rse.core/initializerMarks/org.eclipse.rse.internal.core.RSELocalConnectionInitializer.mark" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.rse.core/initializerMarks/org.eclipse.rse.internal.core.RSELocalConnectionInitializer.mark" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.rse.core/.log" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/14505e6985a5042b00664b210ec79fe8/write.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.rse.core/initializerMarks/org.eclipse.rse.internal.core.RSELocalConnectionInitializer.mark" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.m2e.core/nexus/830bc118332e77292949ed1e6d2fabe0/write.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.tm.terminal.view.ui/.executables/data.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.tm.terminal.view.ui/.executables/data.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.ui.ide/dialog_settings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.ui.workbench/dialog_settings.xml" afterDir="false" />
@@ -387,9 +390,9 @@
       <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/classes/io/homecloud/homeserver/localFile/homeServerStarter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/localFile/homeServerStarter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/homeServer-0.0.1-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/homeServer-0.0.1-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.rse.core/.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Spring Projects/homeServer/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/.metadata/.plugins/org.eclipse.rse.core/initializerMarks/org.eclipse.rse.internal.core.RSELocalConnectionInitializer.mark" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -730,7 +733,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567014120964" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567014165162" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -910,7 +913,7 @@
       <workItem from="1566926549851" duration="8373000" />
       <workItem from="1566939289717" duration="933000" />
       <workItem from="1566980463005" duration="285000" />
-      <workItem from="1567006835794" duration="3637000" />
+      <workItem from="1567006835794" duration="3894000" />
     </task>
     <task id="LOCAL-00001" summary="- installed jpa and lombok&#10;-configured home server repository, service and controller">
       <created>1565735113883</created>
@@ -1000,7 +1003,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65157000" />
+    <option name="totallyTimeSpent" value="65414000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -1014,7 +1017,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2299427" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2299427" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -1032,11 +1035,11 @@
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49856734" weight="0.32884097" />
       <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.49928367" weight="0.32884097" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51790833" side_tool="true" visible="true" weight="0.26415095" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.4820917" visible="true" weight="0.26415095" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.51862466" side_tool="true" visible="true" weight="0.7264151" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.48137537" visible="true" weight="0.7264151" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49641833" weight="0.32749325" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.495702" weight="0.32614556" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
