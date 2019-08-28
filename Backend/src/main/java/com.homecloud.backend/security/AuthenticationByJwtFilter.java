@@ -88,12 +88,8 @@ public class AuthenticationByJwtFilter extends OncePerRequestFilter {
     }
 
     private String getTokenFromCookie(HttpServletRequest request) {
-        Cookie accessCookie = WebUtils.getCookie(request, this.ACCESS_COOCKIE_NAME);
-        if (accessCookie == null) {
-            return null;
-        }
-        String signedToken = accessCookie.getValue();
-        int i = signedToken.lastIndexOf('.');
-        return signedToken.substring(0, i + 1);
+        String accessCookie = request.getHeader("authorization").substring(7);
+        int i = accessCookie.lastIndexOf('.');
+        return accessCookie.substring(0, i + 1);
     }
 }

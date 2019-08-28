@@ -15,7 +15,7 @@ public class ClientsController {
         this.clientsService = clientsService;
     }
 
-    @RequestMapping(value = "getHomeServerAddress/{userI3d}", method = RequestMethod.GET)
+    @RequestMapping(value = "getHomeServerAddress/{userId}", method = RequestMethod.GET)
     public String getHomeServerAddress(@PathVariable("userId") String userId) throws ClientServiceException {
         return this.clientsService.getHomeServerAddress(userId);
     }
