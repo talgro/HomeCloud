@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("home_servers")
 public class HomeServerController {
 
     private HomeServerService homeServerService;
@@ -13,14 +14,9 @@ public class HomeServerController {
         this.homeServerService = homeServerService;
     }
 
-    @RequestMapping(value = "{serverId}/testConnection", method = RequestMethod.GET)
-    public int testConnection(@PathVariable("serverId") int serverId) {
-        return serverId;
-    }
-
-    @RequestMapping(value = "{serverId}/ /{address}", method = RequestMethod.POST)
-    public void updateConnection(@PathVariable("serverId") String serverId, @PathVariable("address") String address) {
-        this.homeServerService.updateConnection(serverId, address);
+    @RequestMapping(value = "updateAddress/{serverId}/{address}", method = RequestMethod.POST)
+    public void updateAddress(@PathVariable("serverId") String serverId, @PathVariable("address") String address) {
+        this.homeServerService.updateAddress(serverId, address);
     }
 
 }

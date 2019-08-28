@@ -1,10 +1,10 @@
 package com.homecloud.backend.clients;
 
-import com.homecloud.backend.clients.DTOs.UsersServersDto;
-import com.homecloud.backend.clients.entities.UsersServers;
+import com.homecloud.backend.clients.DTOs.ServerUsersDto;
+import com.homecloud.backend.clients.entities.ServerUsers;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface ClientMapper {
-    UsersServersDto toUsersServersDto(UsersServers usersServers);
+    ServerUsersDto toUsersServersDto(ServerUsers usersServers);
 }

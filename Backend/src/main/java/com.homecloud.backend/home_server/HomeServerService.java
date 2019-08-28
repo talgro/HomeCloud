@@ -8,15 +8,15 @@ import java.time.LocalDate;
 @Service
 public class HomeServerService {
 
-    private HomeServerRepository homeServerRepository;
+    private HomeServerConnectionRepository homeServerConnectionRepository;
 
     @Autowired
-    public HomeServerService(HomeServerRepository homeServerRepository) {
-        this.homeServerRepository = homeServerRepository;
+    public HomeServerService(HomeServerConnectionRepository homeServerConnectionRepository) {
+        this.homeServerConnectionRepository = homeServerConnectionRepository;
     }
 
-    public void updateConnection(String serverId, String address) {
+    public void updateAddress(String serverId, String address) {
         HomeServerConnection connection = new HomeServerConnection(serverId, LocalDate.now(), address);
-        this.homeServerRepository.save(connection);
+        this.homeServerConnectionRepository.save(connection);
     }
 }

@@ -12,7 +12,7 @@ import javax.persistence.Id;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-public class UsersServers {
+public class ServerUsers {
 
     @Id
     @Column(name = "user_id")
