@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c091848b-e8c1-46d6-9903-8f58d563bcd7" name="Default Changelist" comment="Merge branch 'master' of https://github.com/talgro/HomeCloud&#10;&#10;# Conflicts:&#10;#&#9;Backend/src/main/resources/application.properties">
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/cognito/AuthHttpClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/cognito/AuthenticationHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/cognito/CognitoHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/cognito/CognitoJWTParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/cognito/CognitoSignIn.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/cognito/Constants.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/resources/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/cognito/AuthHttpClient.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/cognito/AuthenticationHelper$1.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/cognito/AuthenticationHelper$Hkdf.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/cognito/AuthenticationHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/cognito/CognitoHelper.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/cognito/CognitoJWTParser.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/cognito/CognitoSignIn.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/cognito/Constants.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homeServer/homeServer/ToDo" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/ToDo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homeServer/homeServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/security/AuthenticationByJwtFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/security/AuthenticationByJwtFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/src/main/java/io/homecloud/homeserver/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/META-INF/maven/io.homecloud.homeserver/homeServer/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/META-INF/maven/io.homecloud.homeserver/homeServer/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/META-INF/maven/io.homecloud.homeserver/homeServer/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/META-INF/maven/io.homecloud.homeserver/homeServer/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/security/AuthenticationByJwtFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/security/AuthenticationByJwtFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/../homeServer/homeServer/target/classes/io/homecloud/homeserver/security/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -367,7 +343,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567014528314" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567015129617" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -547,7 +523,7 @@
       <workItem from="1566926549851" duration="8373000" />
       <workItem from="1566939289717" duration="933000" />
       <workItem from="1566980463005" duration="285000" />
-      <workItem from="1567006835794" duration="4217000" />
+      <workItem from="1567006835794" duration="4683000" />
     </task>
     <task id="LOCAL-00001" summary="- installed jpa and lombok&#10;-configured home server repository, service and controller">
       <created>1565735113883</created>
@@ -644,7 +620,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65737000" />
+    <option name="totallyTimeSpent" value="66203000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -657,6 +633,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2299427" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
