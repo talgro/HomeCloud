@@ -1,0 +1,16 @@
+         **homeServer** 
+
+-set max upload by availble free space in hard drive
+-login does authentication against AWS.
+-send back to AWS userName, server-id, domainName.
+-add jwt filter for all http requests
+-research ssh remote port forwarding
+-create tray for homeServer ?
+
+
+         **synchronized folder**
+
+-create synchronized folder and record changes
+-notice: delete, create, rename
+-create client to send http requests to homeServer through aws
+-create server to wait for changes on the homeServer
