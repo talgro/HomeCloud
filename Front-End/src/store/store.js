@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import VueResource from 'vue-resource'
 
 Vue.use(Vuex)
+Vue.use(VueResource)
 
 export const store = new Vuex.Store({
   state: {
@@ -11,7 +13,7 @@ export const store = new Vuex.Store({
     userInfo: {
       username: ''
     },
-    mostFrequent: [ { url: 'root/folder1/folder2/file1.txt' }, { url: '' }, { url: '' }, { url: '' }, { url: '' } ]
+    mostFrequent: [ { url: 'root/folder1/folder2/file1.txt' }, { url: 'root/folder1/folder2/file2.txt' }, { url: 'root/folder1/folder2/file3.txt' }, { url: '' }, { url: '' } ]
   },
   getters: {
     getUsername: state => {
@@ -31,6 +33,20 @@ export const store = new Vuex.Store({
           return cookie[1]
         }
       }
+    },
+    requestServerDomain: (state, getters) => {
+      // TODO: fill in correct url to aws
+      Vue.http.get('clients/getHomeServerAddress', { headers: { Authorization: 'Bearer ' + getters.getCookie } })
+        .then(function (response) {
+          return response.bodyText
+        },
+        response => {
+          console.log(response)
+          return ''
+        })
+    },
+    getServerDomain: state => {
+      return state.serverDomain
     }
   },
   mutations: {
@@ -54,9 +70,15 @@ export const store = new Vuex.Store({
     },
     setLoggedIn: (state, value) => {
       state.loggedIn = value
+    },
+    setServerDomain: (state, value) => {
+      state.serverDomain = value
     }
   },
   actions: {
-    //
+    updateServerDomain: ({ commit, getters }) => {
+      let serverDomain = getters.requestServerDomain
+      commit('setServerDomain', serverDomain)
+    }
   }
 })

@@ -23,9 +23,7 @@ export default {
     'nav-drawer': NavDrawer
   },
   data () {
-    return {
-      signedIn: false
-    }
+    //
   },
   methods: {
     createCookie (name, cookieName, expDays) {
@@ -35,8 +33,6 @@ export default {
         if (cookie[0].includes(name)) {
           let d = new Date()
           d.setTime(d.getTime() + (expDays * 24 * 60 * 60 * 1000))
-          // + 'domain=' + '.talgropper-xxjz.localhost.run' + ';'
-          // document.cookie = cookieName + '=' + cookie[1] + ';' + 'expires=' + d.toUTCString() + ';' + 'path=/'
           this.$cookies.set(cookieName, cookie[1], '1y')
           return
         }
@@ -46,20 +42,22 @@ export default {
   beforeCreate () {
     AmplifyEventBus.$on('authState', info => {
       if (info === 'signedIn') {
-        this.createCookie('accessToken', 'access_cookie', 365)
-        this.signedIn = true
+        // this.createCookie('accessToken', 'access_cookie', 365)
+        this.$store.commit('setLoggedIn', true)
+        this.$store.dispatch('updateServerDomain')
         this.$router.push('/home-page')
       }
       if (info === 'signedOut') {
+        this.$store.commit('setLoggedIn', false)
         this.$router.push('/')
-        this.signedIn = false
       }
     })
     Auth.currentAuthenticatedUser().then(user => {
-      this.signedIn = true
+      this.$store.commit('setLoggedIn', true)
+      this.$store.dispatch('updateServerDomain')
       this.$router.push('/home-page')
     }).catch(() => {
-      this.signedIn = false
+      this.$store.commit('setLoggedIn', false)
     })
   }
 }

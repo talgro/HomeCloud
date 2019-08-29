@@ -8,14 +8,13 @@
       <v-list class="px-3">
         <template v-for="(item, index) in mostFrequent">
           <v-list-tile
-            :key="item.url"
-          >
+            :key="index">
             <v-list-tile-content>
               <v-list-tile-title>{{ truncateBeginning(30, item.url) }}</v-list-tile-title>
             </v-list-tile-content>
           </v-list-tile>
           <v-divider
-            v-if="index + 1 < mostFrequent"
+            v-if="index + 1 < mostFrequent.length"
             :key="index"
           ></v-divider>
         </template>

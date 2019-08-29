@@ -47,7 +47,7 @@ export default {
       curr_folder: '',
       trail: [{text: 'root', disabled: false, pos: 0}],
       selectedFile: null,
-      address: 'http://danie.localhost.run/',
+      address: '',
       uploadValue: 0,
       uploading: false
     }
@@ -55,7 +55,7 @@ export default {
   methods: {
     editName (event) {
       let url = this.address + this.trailToString()
-      this.$http.put(url + event.name, event.newName, { withCredentials: true }).then(function (response) {
+      this.$http.put(url + event.name, event.newName, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (response) {
         this.updateCurrFolder(url)
       })
     },
@@ -73,7 +73,7 @@ export default {
             console.log(this.uploadValue)
           }
         },
-        withCredentials: true }).then(function (res) {
+        headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (res) {
         this.selectedFile = null
         this.updateCurrFolder(this.address + this.trailToString())
         this.uploading = false
@@ -106,6 +106,7 @@ export default {
       this.$http({
         method: 'get',
         url: url,
+        headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie },
         responseType: 'arraybuffer',
         withCredentials: true})
         .then(function (response) {
@@ -116,16 +117,15 @@ export default {
           document.body.appendChild(link)
           link.click()
         })
-      // TODO: check if this works
     },
     deleteItem (event) {
       let url = this.address + this.trailToString()
-      this.$http.delete(url + event.name, { withCredentials: true }).then(function () {
+      this.$http.delete(url + event.name, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function () {
         this.updateCurrFolder(url)
       })
     },
     updateCurrFolder (url) {
-      // this.$http.get(url, { withCredentials: true }).then(function (data) {
+      // this.$http.get(url, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (data) {
       //   this.curr_folder = data.body
       // })
       this.$http.get('http://talgropper-c5dt.localhost.run/clients/getHomeServerAddress/123', { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (data) {
@@ -136,6 +136,7 @@ export default {
     }
   },
   created () {
+    this.address = this.$store.getters.getServerDomain
     // this.updateCurrFolder(this.address + 'root/')
     this.curr_folder = JSON.parse('{' +
           '    "numOfItems": 4,' +
