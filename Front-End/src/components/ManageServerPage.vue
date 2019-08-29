@@ -5,6 +5,7 @@
           xs12 md6
         >
           <v-text-field
+            v-model="this.newUser"
             label="Enter a user to add:"
             placeholder="example@example.com"
           ></v-text-field>
@@ -15,6 +16,7 @@
           <v-btn
             fab
             small
+            @click="addUser"
           >
             <v-icon>add</v-icon>
           </v-btn>
@@ -36,6 +38,7 @@
               <v-list-tile-action>
                 <v-btn
                   icon
+                  @click="deleteUser(user.email)"
                 >
                   <v-icon>clear</v-icon>
                 </v-btn>
@@ -56,6 +59,7 @@ export default {
   name: 'manageServerPage',
   data () {
     return {
+      newUser: '',
       // TODO: get from AWS the list of users
       users: [{ email: 'test@test.com' },
         { email: 'test2@test.com' },
@@ -64,7 +68,31 @@ export default {
     }
   },
   methods: {
-    // TODO: call function that sends a delete request to AWS on selected user
+    addUser () {
+      // TODO: add AWS address
+      this.$http.post('', this.newUser, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } })
+        .then(function (response) {
+          if (response.body === true) {
+            // TODO add daniel address
+            this.$http.post('', this.newUser, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } })
+              .then(function (response) {
+                this.getUsers()
+              })
+          }
+        })
+    },
+    // TODO: add AWS address
+    deleteUser (userId) {
+      this.$http.delete('', { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function () {
+        this.getUsers()
+      })
+    },
+    getUsers () {
+      // TODO:
+      this.$http.get('', { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (response) {
+        this.users = response.body.users
+      })
+    }
   },
   created () {
     // TODO: call function to get users from AWS

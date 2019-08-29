@@ -7,17 +7,19 @@ Vue.use(VueResource)
 
 export const store = new Vuex.Store({
   state: {
-    // TODO: add option to get the serverDomain from AWS
-    serverDomain: '',
+    serverInfo: {
+      serverName: '',
+      serverAddress: ''
+    },
     loggedIn: false,
     userInfo: {
-      username: ''
+      userId: ''
     },
     mostFrequent: [ { url: 'root/folder1/folder2/file1.txt' }, { url: 'root/folder1/folder2/file2.txt' }, { url: 'root/folder1/folder2/file3.txt' }, { url: '' }, { url: '' } ]
   },
   getters: {
     getUsername: state => {
-      return state.userInfo.username
+      return state.userInfo.userId
     },
     getMostFrequent: state => {
       return state.mostFrequent
@@ -34,24 +36,16 @@ export const store = new Vuex.Store({
         }
       }
     },
-    requestServerDomain: (state, getters) => {
-      // TODO: fill in correct url to aws
-      Vue.http.get('clients/getHomeServerAddress', { headers: { Authorization: 'Bearer ' + getters.getCookie } })
-        .then(function (response) {
-          return response.bodyText
-        },
-        response => {
-          console.log(response)
-          return ''
-        })
+    getServerAddress: state => {
+      return state.serverInfo.serverAddress
     },
-    getServerDomain: state => {
-      return state.serverDomain
+    getServerName: state => {
+      return state.serverInfo.serverName
     }
   },
   mutations: {
-    setUsername: (state, newUsername) => {
-      state.userInfo.username = newUsername
+    setUserId: (state, newUserId) => {
+      state.userInfo.userId = newUserId
     },
     pushFrequent: (state, url) => {
       let found = false
@@ -71,14 +65,11 @@ export const store = new Vuex.Store({
     setLoggedIn: (state, value) => {
       state.loggedIn = value
     },
-    setServerDomain: (state, value) => {
-      state.serverDomain = value
-    }
-  },
-  actions: {
-    updateServerDomain: ({ commit, getters }) => {
-      let serverDomain = getters.requestServerDomain
-      commit('setServerDomain', serverDomain)
+    setServerAddress: (state, value) => {
+      state.serverInfo.serverAddress = value
+    },
+    setServerName: (state, newServerName) => {
+      state.serverInfo.serverName = newServerName
     }
   }
 })

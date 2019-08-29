@@ -37,14 +37,22 @@ export default {
           return
         }
       }
+    },
+    InitUserData () {
+      // TODO: fill in full url to AWS
+      this.$http.get('client/getMyHomeServerDetails', { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (response) {
+        this.$store.commit('setUserId', response.body.user_d)
+        this.$store.commit('setServerDomain', response.body.home_server_address)
+        this.$store.commit('setLoggedIn', true)
+        this.$store.commit('setServerName', response.body.home_server_name)
+      })
     }
   },
   beforeCreate () {
     AmplifyEventBus.$on('authState', info => {
       if (info === 'signedIn') {
         // this.createCookie('accessToken', 'access_cookie', 365)
-        this.$store.commit('setLoggedIn', true)
-        this.$store.dispatch('updateServerDomain')
+        this.initUserData()
         this.$router.push('/home-page')
       }
       if (info === 'signedOut') {
