@@ -202,11 +202,10 @@ export default {
     },
     updateCurrFolder (url) {
       // TODO: replace url with this.$store.getters.getServerAddress
-      this.$http.get('http://talgropper-c5dt.localhost.run/clients/getHomeServerAddress/123', { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (data) {
-        console.log(data)
-        // this.curr_folder = data.body
+      this.$http.get(url, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (data) {
+        // console.log(data)
+        this.curr_folder = data.body
       })
-      console.log('ends here')
     }
   },
   computed: {

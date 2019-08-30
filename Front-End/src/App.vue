@@ -38,13 +38,17 @@ export default {
         }
       }
     },
-    InitUserData () {
+    initUserData () {
       // TODO: fill in full url to AWS
-      this.$http.get('client/getMyHomeServerDetails', { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (response) {
-        this.$store.commit('setUserId', response.body.user_d)
+      this.$http.get(this.$store.getters.getBackendURL + 'client/getMyHomeServerDetails', { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (response) {
+        console.log(response)
+        this.$store.commit('setUserId', response.body.user_id)
         this.$store.commit('setServerDomain', response.body.home_server_address)
         this.$store.commit('setLoggedIn', true)
         this.$store.commit('setServerName', response.body.home_server_name)
+        console.log(this.$store.getters.getUsername)
+        console.log(this.$store.getters.getServerAddress)
+        console.log(this.$store.getters.getServerName)
       })
     }
   },
@@ -61,8 +65,7 @@ export default {
       }
     })
     Auth.currentAuthenticatedUser().then(user => {
-      this.$store.commit('setLoggedIn', true)
-      this.$store.dispatch('updateServerDomain')
+      this.initUserData()
       this.$router.push('/home-page')
     }).catch(() => {
       this.$store.commit('setLoggedIn', false)

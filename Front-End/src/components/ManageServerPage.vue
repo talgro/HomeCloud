@@ -69,33 +69,34 @@ export default {
   },
   methods: {
     addUser () {
-      // TODO: add AWS address
-      this.$http.post('', this.newUser, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } })
+      // TODO: add AWS endpoint
+      this.$http.post(this.$store.getters.getBackendURL, this.newUser, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } })
         .then(function (response) {
           if (response.body === true) {
-            // TODO add daniel address
-            this.$http.post('', this.newUser, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } })
+            // TODO add daniel endpoint
+            this.$http.post(this.$store.getters.getServerAddress, this.newUser, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } })
               .then(function (response) {
                 this.getUsers()
               })
           }
         })
     },
-    // TODO: add AWS address
+    // TODO: add AWS endpoint
     deleteUser (userId) {
-      this.$http.delete('', { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function () {
+      this.$http.delete(this.$store.getters.getBackendURL, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function () {
         this.getUsers()
       })
     },
     getUsers () {
-      // TODO:
-      this.$http.get('', { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (response) {
+      // TODO: add aws endpoint
+      this.$http.get(this.$store.getters.getBackendURL, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (response) {
         this.users = response.body.users
       })
     }
   },
   created () {
     // TODO: call function to get users from AWS
+    this.getUsers()
   }
 }
 </script>

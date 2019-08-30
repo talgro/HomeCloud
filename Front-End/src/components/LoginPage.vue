@@ -2,7 +2,9 @@
 <template>
   <div class="login-page, text-align: center">
     <center>
-      <amplify-authenticator></amplify-authenticator>
+      <amplify-authenticator
+        class="mt-5"
+      ></amplify-authenticator>
     </center>
 <!--    <v-container>-->
 <!--      <v-layout row justify-center>-->

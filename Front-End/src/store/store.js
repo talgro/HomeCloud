@@ -7,6 +7,7 @@ Vue.use(VueResource)
 
 export const store = new Vuex.Store({
   state: {
+    backendURL: '',
     serverInfo: {
       serverName: '',
       serverAddress: ''
@@ -18,6 +19,9 @@ export const store = new Vuex.Store({
     mostFrequent: [ { url: 'root/folder1/folder2/file1.txt' }, { url: 'root/folder1/folder2/file2.txt' }, { url: 'root/folder1/folder2/file3.txt' }, { url: '' }, { url: '' } ]
   },
   getters: {
+    getBackendURL: state => {
+      return state.backendURL
+    },
     getUsername: state => {
       return state.userInfo.userId
     },
