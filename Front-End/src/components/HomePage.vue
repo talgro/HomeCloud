@@ -1,6 +1,7 @@
 /* eslint-disable */
 <template>
   <div>
+    <amplify-sign-out></amplify-sign-out>
     <div
       v-if="this.$store.getters.getServerAddress === null"
       class="mt-5"
@@ -121,7 +122,7 @@ export default {
   data () {
     return {
       curr_folder: '',
-      trail: [{text: 'root', disabled: false, pos: 0}],
+      trail: [{text: this.$store.getters.getUsername, disabled: false, pos: 0}],
       selectedFile: null,
       uploadValue: 0,
       uploading: false
@@ -129,7 +130,7 @@ export default {
   },
   methods: {
     editName (event) {
-      let url = this.address + '/' + this.userId + '/' + this.trailToString()
+      let url = this.address + '/' + this.trailToString()
       this.$http.put(url + event.name, event.newName, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (response) {
         this.updateCurrFolder(url)
       })
@@ -138,7 +139,7 @@ export default {
     uploadFile () {
       this.uploading = true
       this.uploadValue = 0
-      let url = this.address + '/' + this.userId + '/upload/' + this.trailToString()
+      let url = this.address + '/upload/' + this.trailToString()
       const fd = new FormData()
       fd.append('file', this.selectedFile, this.selectedFile.name)
       this.$http.post(url, fd,
@@ -151,7 +152,7 @@ export default {
         headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } })
         .then(function (res) {
           this.selectedFile = null
-          this.updateCurrFolder(this.address + this.trailToString())
+          this.updateCurrFolder(this.address + '/' + this.trailToString())
           this.uploading = false
         })
     },
@@ -161,8 +162,9 @@ export default {
     },
     breadcrumbsNavigateTo (pos) {
       this.trail = this.trail.slice(0, pos + 1)
-      console.log(this.trail)
-      let url = this.address + this.trailToString()
+      console.log(this.trailToString())
+      let url = this.address + '/' + this.trailToString()
+      console.log(url)
       this.updateCurrFolder(url)
     },
     trailToString () {
@@ -173,12 +175,12 @@ export default {
       return ret
     },
     navigateTo (event) {
-      let url = this.address + '/' + this.userId + '/' + this.trailToString() + event.name
+      let url = this.address + '/' + this.trailToString() + event.name
       this.trail.push({text: event.name, disabled: false, pos: this.trail.length})
       this.updateCurrFolder(url)
     },
     downloadFile (event) {
-      let url = this.address + '/' + this.userId + '/' + 'download/' + this.trailToString() + event.name
+      let url = this.address + '/' + 'download/' + this.trailToString() + event.name
       this.$http({
         method: 'get',
         url: url,
@@ -191,20 +193,22 @@ export default {
           link.href = url
           link.setAttribute('download', event.name)
           document.body.appendChild(link)
+          console.log('url?', url)
           link.click()
         })
     },
     deleteItem (event) {
-      let url = this.address + '/' + this.userId + '/' + this.trailToString()
+      let url = this.address + '/' + this.trailToString()
       this.$http.delete(url + event.name, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function () {
         this.updateCurrFolder(url)
       })
     },
     updateCurrFolder (url) {
-      // TODO: replace url with this.$store.getters.getServerAddress
-      this.$http.get(url, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (data) {
-        // console.log(data)
-        this.curr_folder = data.body
+      // TODO: replace the address back to url
+      this.$http.get(url, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (response) {
+        console.log('response:', response)
+        console.log('url:', url)
+        this.curr_folder = response.body
       })
     }
   },
@@ -213,67 +217,66 @@ export default {
       return this.$store.getters.getServerAddress
     },
     userId () {
-      return this.$store.getters.getUserPoolId
+      return this.$store.getters.getUsername
     }
   },
   created () {
-    // this.address = this.$store.getters.getServerDomain
-    // this.updateCurrFolder(this.address + 'root/')
-    this.curr_folder = JSON.parse('{' +
-          '    "numOfItems": 4,' +
-          '    "totalSize": 55330266,' +
-          '    "content": [' +
-          '        {' +
-          '            "name": "folder",' +
-          '            "type": "folder",' +
-          '            "size": 29081154,' +
-          '            "lastModified": "21/07/2019 15:47:08",' +
-          '            "createDate": "18/07/2019 17:37:22"' +
-          '        },' +
-          '        {' +
-          '            "name": "folder2",' +
-          '            "type": "folder",' +
-          '            "size": 26248994,' +
-          '            "lastModified": "21/07/2019 15:35:16",' +
-          '            "createDate": "21/07/2019 12:06:19"' +
-          '        },' +
-          '        {' +
-          '            "name": "test.txt",' +
-          '            "type": "txt",' +
-          '            "size": 59,' +
-          '            "lastModified": "21/07/2019 19:24:33",' +
-          '            "createDate": "21/07/2019 19:24:24"' +
-          '        },' +
-          '        {' +
-          '            "name": "test2.txt",' +
-          '            "type": "txt",' +
-          '            "size": 59,' +
-          '            "lastModified": "21/07/2019 19:24:33",' +
-          '            "createDate": "21/07/2019 19:25:56"' +
-          '        },' +
-          '        {' +
-                '            "name": "folder6",' +
-                '            "type": "folder",' +
-                '            "size": 29081154,' +
-                '            "lastModified": "21/07/2019 15:47:08",' +
-                '            "createDate": "18/07/2019 17:37:22"' +
-                '        },' +
-                '        {' +
-                '            "name": "folder7",' +
-                '            "type": "folder",' +
-                '            "size": 26248994,' +
-                '            "lastModified": "21/07/2019 15:35:16",' +
-                '            "createDate": "21/07/2019 12:06:19"' +
-                '        },' +
-                '        {' +
-                '            "name": "test6.txt",' +
-                '            "type": "txt",' +
-                '            "size": 59,' +
-                '            "lastModified": "21/07/2019 19:24:33",' +
-                '            "createDate": "21/07/2019 19:24:24"' +
-                '        }' +
-          '    ]' +
-          '}')
+    this.updateCurrFolder(this.$store.getters.getServerAddress + '/' + this.$store.getters.getUsername)
+    // this.curr_folder = JSON.parse('{' +
+    //       '    "numOfItems": 4,' +
+    //       '    "totalSize": 55330266,' +
+    //       '    "content": [' +
+    //       '        {' +
+    //       '            "name": "folder",' +
+    //       '            "type": "folder",' +
+    //       '            "size": 29081154,' +
+    //       '            "lastModified": "21/07/2019 15:47:08",' +
+    //       '            "createDate": "18/07/2019 17:37:22"' +
+    //       '        },' +
+    //       '        {' +
+    //       '            "name": "folder2",' +
+    //       '            "type": "folder",' +
+    //       '            "size": 26248994,' +
+    //       '            "lastModified": "21/07/2019 15:35:16",' +
+    //       '            "createDate": "21/07/2019 12:06:19"' +
+    //       '        },' +
+    //       '        {' +
+    //       '            "name": "test.txt",' +
+    //       '            "type": "txt",' +
+    //       '            "size": 59,' +
+    //       '            "lastModified": "21/07/2019 19:24:33",' +
+    //       '            "createDate": "21/07/2019 19:24:24"' +
+    //       '        },' +
+    //       '        {' +
+    //       '            "name": "test2.txt",' +
+    //       '            "type": "txt",' +
+    //       '            "size": 59,' +
+    //       '            "lastModified": "21/07/2019 19:24:33",' +
+    //       '            "createDate": "21/07/2019 19:25:56"' +
+    //       '        },' +
+    //       '        {' +
+    //             '            "name": "folder6",' +
+    //             '            "type": "folder",' +
+    //             '            "size": 29081154,' +
+    //             '            "lastModified": "21/07/2019 15:47:08",' +
+    //             '            "createDate": "18/07/2019 17:37:22"' +
+    //             '        },' +
+    //             '        {' +
+    //             '            "name": "folder7",' +
+    //             '            "type": "folder",' +
+    //             '            "size": 26248994,' +
+    //             '            "lastModified": "21/07/2019 15:35:16",' +
+    //             '            "createDate": "21/07/2019 12:06:19"' +
+    //             '        },' +
+    //             '        {' +
+    //             '            "name": "test6.txt",' +
+    //             '            "type": "txt",' +
+    //             '            "size": 59,' +
+    //             '            "lastModified": "21/07/2019 19:24:33",' +
+    //             '            "createDate": "21/07/2019 19:24:24"' +
+    //             '        }' +
+    //       '    ]' +
+    //       '}')
   },
   name: 'HomePage',
   components: {

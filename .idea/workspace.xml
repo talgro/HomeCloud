@@ -9,9 +9,9 @@
     <list default="true" id="df7ecbae-3ca0-40d4-afe5-20e99dd71143" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Front-End/src/aws-exports.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/aws-exports.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/src/components/HomePage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/HomePage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/src/components/LoginPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/LoginPage.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Front-End/src/components/ManageServerPage.vue" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/components/ManageServerPage.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Front-End/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/Front-End/src/store/store.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -211,7 +211,8 @@
       <workItem from="1566485177287" duration="3552000" />
       <workItem from="1566489087366" duration="12165000" />
       <workItem from="1567069435329" duration="15901000" />
-      <workItem from="1567158722241" duration="1334000" />
+      <workItem from="1567158722241" duration="2920000" />
+      <workItem from="1567162194769" duration="8582000" />
     </task>
     <task id="LOCAL-00001" summary="Added LoginPage.vue in components">
       <created>1555601658825</created>
@@ -346,7 +347,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567089116618</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="added ManageServerPage">
+      <created>1567160234842</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1567160234842</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

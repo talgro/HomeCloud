@@ -40,23 +40,27 @@ export default {
     },
     initUserData () {
       // TODO: fill in full url to AWS
-      this.$http.get(this.$store.getters.getBackendURL + 'client/getMyHomeServerDetails', { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (response) {
-        console.log(response)
-        this.$store.commit('setUserId', response.body.user_id)
-        this.$store.commit('setServerDomain', response.body.home_server_address)
-        this.$store.commit('setLoggedIn', true)
+      console.log('before init: ', this.$store.getters.getCookie)
+      this.$http.get(this.$store.getters.getBackendURL + '/clients/getMyHomeServerDetails', { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (response) {
+        console.log('initData response: ', response)
+        // this.$store.commit('setUserId', response.body.username)
+        this.$store.commit('setUserId', 'tomgr')
+        // this.$store.commit('setServerAddress', response.body.home_server_address)
+        this.$store.commit('setServerAddress', 'https://danie-ko4x.localhost.run')
         this.$store.commit('setServerName', response.body.home_server_name)
         console.log(this.$store.getters.getUsername)
         console.log(this.$store.getters.getServerAddress)
         console.log(this.$store.getters.getServerName)
-      })
+      }).catch(err => console.log('failed:', err))
     }
   },
   beforeCreate () {
     AmplifyEventBus.$on('authState', info => {
       if (info === 'signedIn') {
         // this.createCookie('accessToken', 'access_cookie', 365)
+        this.$store.commit('setLoggedIn', true)
         this.initUserData()
+        console.log('in $on: ', this.$store.getters.getCookie)
         this.$router.push('/home-page')
       }
       if (info === 'signedOut') {
@@ -70,6 +74,15 @@ export default {
     }).catch(() => {
       this.$store.commit('setLoggedIn', false)
     })
+    // console.log('after all: ', this.$store.getters.getCookie)
+    // console.log(Auth.currentSession().then(res => {
+    //   let accessToken = res.getAccessToken()
+    //   let jwt = accessToken.getJwtToken()
+    //   console.log('test jwt: ', jwt)
+    // }))
+    if (this.$store.getters.getLoggedIn === true) {
+      this.initUserData()
+    }
   }
 }
 </script>

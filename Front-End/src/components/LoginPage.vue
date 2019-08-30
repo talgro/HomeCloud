@@ -3,6 +3,7 @@
   <div class="login-page, text-align: center">
     <center>
       <amplify-authenticator
+        :auth-config="auth.authConfig"
         class="mt-5"
       ></amplify-authenticator>
     </center>
@@ -112,19 +113,17 @@ export default {
               },
               {
                 label: 'First Name',
-                key: 'firstName',
+                key: 'given_name',
                 required: true,
                 displayOrder: 2,
-                type: 'string',
-                custom: true
+                type: 'string'
               },
               {
                 label: 'Last Name',
-                key: 'lastName',
+                key: 'family_name',
                 required: true,
                 displayOrder: 3,
-                type: 'string',
-                custom: true
+                type: 'string'
               },
               {
                 label: 'Password',

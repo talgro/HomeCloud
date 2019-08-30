@@ -7,7 +7,7 @@ Vue.use(VueResource)
 
 export const store = new Vuex.Store({
   state: {
-    backendURL: '',
+    backendURL: 'http://talgropper-s7in.localhost.run',
     serverInfo: {
       serverName: '',
       serverAddress: ''
@@ -35,7 +35,8 @@ export const store = new Vuex.Store({
       let cookies = document.cookie.split(';')
       for (let i = 0; i < cookies.length; ++i) {
         let cookie = cookies[i].split('=')
-        if (cookie[0].includes('accessToken')) {
+        if (cookie[0].includes('idToken')) {
+          console.log('getCookie passed', cookie)
           return cookie[1]
         }
       }
