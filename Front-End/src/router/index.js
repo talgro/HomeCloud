@@ -4,6 +4,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import LoginPage from '../components/LoginPage.vue'
 import HomePage from '../components/HomePage.vue'
+import ManageServerPage from "../components/ManageServerPage";
 
 Vue.use(Router)
 
@@ -20,6 +21,12 @@ const router = new Router({
       name: 'HomePage',
       meta: { requireAuth: true },
       component: HomePage
+    },
+    {
+      path: '/manage',
+      name: 'manageServer',
+      meta: { requireAuth: true },
+      component: ManageServerPage
     }
   ]
 })

@@ -1,21 +1,25 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import VueResource from 'vue-resource'
 
 Vue.use(Vuex)
+Vue.use(VueResource)
 
 export const store = new Vuex.Store({
   state: {
-    // TODO: add option to get the serverDomain from AWS
-    serverDomain: '',
+    serverInfo: {
+      serverName: '',
+      serverAddress: ''
+    },
     loggedIn: false,
     userInfo: {
-      username: ''
+      userId: ''
     },
-    mostFrequent: [ { url: 'root/folder1/folder2/file1.txt' }, { url: '' }, { url: '' }, { url: '' }, { url: '' } ]
+    mostFrequent: [ { url: 'root/folder1/folder2/file1.txt' }, { url: 'root/folder1/folder2/file2.txt' }, { url: 'root/folder1/folder2/file3.txt' }, { url: '' }, { url: '' } ]
   },
   getters: {
     getUsername: state => {
-      return state.userInfo.username
+      return state.userInfo.userId
     },
     getMostFrequent: state => {
       return state.mostFrequent
@@ -31,11 +35,17 @@ export const store = new Vuex.Store({
           return cookie[1]
         }
       }
+    },
+    getServerAddress: state => {
+      return state.serverInfo.serverAddress
+    },
+    getServerName: state => {
+      return state.serverInfo.serverName
     }
   },
   mutations: {
-    setUsername: (state, newUsername) => {
-      state.userInfo.username = newUsername
+    setUserId: (state, newUserId) => {
+      state.userInfo.userId = newUserId
     },
     pushFrequent: (state, url) => {
       let found = false
@@ -54,9 +64,12 @@ export const store = new Vuex.Store({
     },
     setLoggedIn: (state, value) => {
       state.loggedIn = value
+    },
+    setServerAddress: (state, value) => {
+      state.serverInfo.serverAddress = value
+    },
+    setServerName: (state, newServerName) => {
+      state.serverInfo.serverName = newServerName
     }
-  },
-  actions: {
-    //
   }
 })
