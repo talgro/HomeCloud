@@ -7,12 +7,17 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Synchronized Folder</name>
 	<description>This is the syncronized part of the project</description>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>com.amazonaws</groupId>
 			<artifactId>aws-java-sdk</artifactId>
 			<version>1.11.620</version>
+		</dependency>
+		<dependency>
+			<groupId>net.contentobjects.jnotify</groupId>
+			<artifactId>jnotify</artifactId>
+			<version>0.94</version>
 		</dependency>
 	</dependencies>
 

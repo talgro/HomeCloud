@@ -1,4 +1,4 @@
-package io.homecloud.synchronizedFolder.utils;
+package io.homecloud.homeserver.utils;
 
 import java.time.LocalDate;
 import java.time.zone.ZoneOffsetTransitionRule.TimeDefinition;
@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class NotifyMessage {
+public class SNSMessage {
 	@JsonProperty("Type")
 	private String Type;
 	@JsonProperty("UnsubscribeURL")

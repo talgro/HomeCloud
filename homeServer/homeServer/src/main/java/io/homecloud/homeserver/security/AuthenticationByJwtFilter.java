@@ -26,7 +26,7 @@ import java.util.List;
 
 @Slf4j
 public class AuthenticationByJwtFilter extends OncePerRequestFilter {
-	private static final boolean debug = true;
+	private static final boolean debug = false;
 	private JwtUtils jwtUtils;
 	private final String ACCESS_COOCKIE_NAME = "access_cookie";
 	private final String REFRESH_TOKEN_URL = "";
@@ -91,8 +91,14 @@ public class AuthenticationByJwtFilter extends OncePerRequestFilter {
 	}
 
 	private String getTokenFromCookie(HttpServletRequest request) {
-		String accessCookie = request.getHeader("authorization").substring(7);
-		int i = accessCookie.lastIndexOf('.');
-		return accessCookie.substring(0, i + 1);
+		try {
+			String accessCookie = request.getHeader("authorization").substring(7);
+			int i = accessCookie.lastIndexOf('.');
+			return accessCookie.substring(0, i + 1);
+		}
+		catch (NullPointerException e) {
+			return null;
+		}
+
 	}
 }

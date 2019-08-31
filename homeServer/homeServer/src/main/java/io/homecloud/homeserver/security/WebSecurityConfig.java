@@ -44,14 +44,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		//TODO: tal create relevant endpoints
 		.antMatchers("/clients", "/clients/**").hasAnyRole("ANONYMOUS", "AUTHENTICATED")
 		.anyRequest().hasRole("AUTHENTICATED");
-
-
 	}
 
 	@Override
 	public void configure(WebSecurity web) {
-		web.ignoring().antMatchers("/actuator/**");
-		//        web.ignoring().antMatchers("/**");
+		web.ignoring().antMatchers("/actuator/**","/SNSNotification");
 	}
 
 	@Bean

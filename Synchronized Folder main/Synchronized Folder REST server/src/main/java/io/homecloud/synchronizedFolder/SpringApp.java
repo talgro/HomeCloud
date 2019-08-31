@@ -12,9 +12,13 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
 
+import io.homecloud.synchronizedFolder.sns.snsSubscribe;
+
 @SpringBootApplication
 public class SpringApp {
 
+	private static final String subscribeTopicArn = "arn:aws:sns:us-east-2:977623331286:homeServer_changes";
+	
 	public static void main(String[] args) {
 		SpringApplication application = new SpringApplication(SpringApp.class, args);
 
@@ -32,12 +36,14 @@ public class SpringApp {
 			BufferedReader stdInput = new BufferedReader(new InputStreamReader(p.getInputStream()));
 			String s = null;
 			System.out.println("\n\n");
-
 			while ((s = stdInput.readLine()) != null) {
 				System.out.println(ANSI_RED + s + ANSI_RESET);
 				String[] splitcmdOutPut = s.split(" ");
 				domain = splitcmdOutPut[4];
-				//TODO:send to aws
+				
+				//subscribe to aws sns topic
+				snsSubscribe subscriber = new snsSubscribe(subscribeTopicArn);
+				System.out.println(subscriber.subscibeDomain(domain + "/SNSNotification"));
 			}
 
 			BufferedReader stdError = new BufferedReader(new InputStreamReader(p.getErrorStream()));

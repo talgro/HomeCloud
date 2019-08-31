@@ -4,11 +4,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class SNSService {
-	
-	//TODO: implement
-	public int performSNSUpdate(String userName, SNSUpdate update) {
-		// TODO Auto-generated method stub
-		return 0;
+
+	public void handleSNSNotification(String subject, String message) {
+		System.out.println("******/n/n GOT Notification ********/n");
+		System.out.println("Subject: " + subject + "\nMessage: " + message);	
 	}
 	
 	
