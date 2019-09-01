@@ -20,17 +20,21 @@
 V  -ignore jwt filter on /SNSNotification homeserver
 V  -subscribe to sns on homeServer
 V  -publish to sns uppon request homeServer
--verify circle of update from sync folder - POST from sync folder goes to diff end point which dosent publish to sns
+V  -verify circle of update from sync folder - using GET not POST
 V  -implement changes from subscribed sns homeServer
--Send GET from homeServer to syncFolder REST and get a file(in SNShandler)
+V  -Send GET from homeServer to syncFolder REST and get a file(in SNShandler)
 V  -create endpoint in syncFolder REST for GET of file (handle users in syncFolder??)
--implement changes from subscribed sns syncFolder
--publish to sns uppon change from folderListner(detect changes from folder with folderListner)
+V  -implement changes from subscribed sns syncFolder(from REST sync)
+V  -publish to sns uppon change from folderListner(detect changes from folder with folderListner)
 V -check tom connects to homeServer with JWT
--implement uploud POST file from synchronized folder
--implemenet donwload GET file from synchronized folder
+V  -implemenet download GET file from synchronized folder
+-test sync and homeServer running together with SNS(from file)
 -run folderListner and sync REST from threads in one project
 -from homeServer: updte aws with name, address
+-handle JWT when sending files between homeServer and syncFolder
+-BUG rename inside folder of user
+-function to initilize folder(download all files...)
+-handle rename,create of new folder homeServer
 
 
 current JWT cookie:

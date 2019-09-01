@@ -1,3 +1,5 @@
+import java.io.File;
+
 import io.homecloud.synchronizedFolder.sns.SNSPublish;
 import net.contentobjects.jnotify.JNotify;
 import net.contentobjects.jnotify.JNotifyException;
@@ -27,7 +29,6 @@ public class FolderListner implements Runnable {
 		try {
 			int watchID = JNotify.addWatch(_folder, mask, watchSubtree, new Listener());
 		} catch (JNotifyException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		while(true) { }
@@ -38,18 +39,24 @@ public class FolderListner implements Runnable {
 		public void fileRenamed(int wd, String rootPath, String oldName,
 				String newName) {
 			print("renamed " + rootPath + " : " + oldName + " -> " + newName);
-			//TODO publish to sns
+			oldName = oldName.replace("\\", File.separator);
+			newName = newName.replace("\\", File.separator);
+			newName = newName.substring(newName.lastIndexOf(File.separator)+1, newName.length());
+			System.out.println("oldName: " +oldName +", newName: " +newName);
+			publisher.publish("PUT", oldName + "," + newName);
 		}
 		public void fileModified(int wd, String rootPath, String name) {
 			print("modified " + rootPath + " : " + name);
 		}
 		public void fileDeleted(int wd, String rootPath, String name) {
 			print("deleted " + rootPath + " : " + name);
-			//TODO publish to sns
+			publisher.publish("DELETE", name);
 		}
 		public void fileCreated(int wd, String rootPath, String name) {
 			print("created " + rootPath + " : " + name);
-			//TODO publish to sns
+			name = name.replace("\\", File.separator);
+			System.out.println(name);
+			publisher.publish("GET", name);
 		}
 		void print(String msg) {
 			System.err.println(msg);

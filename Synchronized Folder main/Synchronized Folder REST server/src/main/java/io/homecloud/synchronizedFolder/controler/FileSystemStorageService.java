@@ -18,7 +18,6 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class FileSystemStorageService {
 
-	//TODO get root of syncFolder
 	private final static String folder_dir = System.getProperty("user.home") + File.separator + "homeServer"; 
 
 	public void store(MultipartFile file, Path uploadLocation) {

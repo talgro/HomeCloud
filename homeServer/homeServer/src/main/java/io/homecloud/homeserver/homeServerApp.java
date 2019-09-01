@@ -45,8 +45,8 @@ public class homeServerApp {
 				String[] splitcmdOutPut = s.split(" ");
 				String domain = splitcmdOutPut[4];
 				//subscirbe homeServer to sns of sync folder
-//				snsSubscribe subscriber = new snsSubscribe(subscribeTopicArn);
-//				System.out.println(subscriber.subscibeDomain(domain + "/SNSNotification"));
+				snsSubscribe subscriber = new snsSubscribe(subscribeTopicArn);
+				System.out.println(subscriber.subscibeDomain(domain + "/SNSNotification"));
 				//TODO: send awsDomain userName, serverId , domain
 				//System.out.println("userName: " + userName + ", serverId: " + serverId + ", AWSdomain:" + awsDomain + ", homeServer domain: " + domain);
 			}

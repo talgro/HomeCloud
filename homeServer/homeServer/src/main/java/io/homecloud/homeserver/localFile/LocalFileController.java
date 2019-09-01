@@ -185,16 +185,19 @@ public class LocalFileController {
 		Gson gson = builder.create(); 
 		SNSMessage mssg = gson.fromJson(payload, SNSMessage.class);
 		
-		if(requstedHeader.equals("SubscriptionConfirmation")) {		
+		if(requstedHeader.equals("SubscriptionConfirmation")) {	
+			System.out.println("Subscribing to SNS...");
 			String urlToSubscribe = mssg.getSubscribeURL();
-			System.out.println("url: " + urlToSubscribe);
 
 			//send GET to urlToSubscribe inorder to subscribe
 			HTTPHandller handler = new HTTPHandller(urlToSubscribe);
 			try {
 				handler.openConnection();
 				String response = handler.sendGET();
-				System.out.println(response);
+				if(response.contains("Error status: "))
+					System.out.println("Error subscribing to SNS. " + response);
+				else
+					System.out.println("Successfully subscibed to SNS");
 
 			} catch (IOException e) {
 				e.printStackTrace();
@@ -211,8 +214,7 @@ public class LocalFileController {
 			System.out.println("*POST SNS Notification*\nSubject: " + subject + "\nMessage: " + message);
 			return(_service.handleSNSNotification(subject, message));
 		}
-		//TODO return right response
-		return ResponseEntity.ok().build();
+		return ResponseEntity.badRequest().build();
 	}
 	
 	

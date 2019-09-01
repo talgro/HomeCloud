@@ -41,7 +41,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
 		// An unauthenticated user should only access these paths
 		httpSecurity.authorizeRequests()
-		//TODO: tal create relevant endpoints
 		.antMatchers("/clients", "/clients/**").hasAnyRole("ANONYMOUS", "AUTHENTICATED")
 		.anyRequest().hasRole("AUTHENTICATED");
 	}

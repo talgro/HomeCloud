@@ -48,16 +48,18 @@ public class MainController {
 		SNSMessage mssg = gson.fromJson(payload, SNSMessage.class);
 		
 		if(requstedHeader.equals("SubscriptionConfirmation")) {		
+			System.out.println("Subscribing to SNS...");
 			String urlToSubscribe = mssg.getSubscribeURL();
-			System.out.println("url: " + urlToSubscribe);
 
 			//send GET to urlToSubscribe inorder to subscribe
 			HTTPHandller handler = new HTTPHandller(urlToSubscribe);
 			try {
 				handler.openConnection();
 				String response = handler.sendGET();
-				System.out.println(response);
-
+				if(response.contains("Error status: "))
+					System.out.println("Error subscribing to SNS. " + response);
+				else
+					System.out.println("Successfully subscibed to SNS");
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
@@ -70,14 +72,12 @@ public class MainController {
 
 			String subject = mssg.getSubject();
 			String message = mssg.getMessage();
-			_service.handleSNSNotification(subject, message);
+			System.out.println("*POST SNS Notification*\nSubject: " + subject + "\nMessage: " + message);
+			return(_service.handleSNSNotification(subject, message));
 		}
-		//TODO return right response
-		return ResponseEntity.ok().build();
+		return ResponseEntity.badRequest().build();
 	}
 
-	
-	//TODO test this end point
 	// GET - /download/{userName}/..
 	//GET request for downloading file(for web client) 
 	@RequestMapping(value = "download/{userName}/**", method = RequestMethod.GET)
