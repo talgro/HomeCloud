@@ -18,6 +18,5 @@
 	</classpathentry>
 	<classpathentry kind="lib" path="C:/Users/danie/Desktop/Studies/Year 3/Final Project/Project/HomeCloud/Synchronized Folder main/Synchronized Folder listner/lib/httpclient-4.5.9.jar"/>
 	<classpathentry kind="lib" path="C:/Users/danie/Desktop/Studies/Year 3/Final Project/Project/HomeCloud/Synchronized Folder main/Synchronized Folder listner/lib/httpmime-4.5.9.jar"/>
-	<classpathentry kind="lib" path="C:/Users/danie/Desktop/Studies/Year 3/Final Project/Project/HomeCloud/Synchronized Folder main/Synchronized Folder listner/lib/jnotify-0.94.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

@@ -12,9 +12,12 @@ import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
 
 import io.homecloud.homeserver.Filters.CORSFilter;
+import io.homecloud.homeserver.utils.snsSubscribe;
 
 @SpringBootApplication
 public class homeServerApp {
+
+	private static final String subscribeTopicArn = "arn:aws:sns:us-east-2:977623331286:synchronizedFolder_changes";
 
 	public static final String ANSI_RED = "\u001B[31m";
 	public static final String ANSI_RESET = "\u001B[0m";
@@ -41,6 +44,9 @@ public class homeServerApp {
 				System.out.println(ANSI_RED + s + ANSI_RESET);
 				String[] splitcmdOutPut = s.split(" ");
 				String domain = splitcmdOutPut[4];
+				//subscirbe homeServer to sns of sync folder
+				snsSubscribe subscriber = new snsSubscribe(subscribeTopicArn);
+				System.out.println(subscriber.subscibeDomain(domain + "/SNSNotification"));
 				//TODO: send awsDomain userName, serverId , domain
 				//System.out.println("userName: " + userName + ", serverId: " + serverId + ", AWSdomain:" + awsDomain + ", homeServer domain: " + domain);
 			}
@@ -58,16 +64,17 @@ public class homeServerApp {
 
 	}
 
-	//This is for creating the CORS filter
-	@Bean
-	public FilterRegistrationBean corsFilterRegistration() {
-		FilterRegistrationBean registrationBean =
-				new FilterRegistrationBean(new CORSFilter());
-		registrationBean.setName("CORS Filter");
-		registrationBean.addUrlPatterns("/*");
-		registrationBean.setOrder(1);
-		return registrationBean;
-	}
+	//** commented out becuase of jwt filter which does the job
+	//	//This is for creating the CORS filter
+	//	@Bean
+	//	public FilterRegistrationBean corsFilterRegistration() {
+	//		FilterRegistrationBean registrationBean =
+	//				new FilterRegistrationBean(new CORSFilter());
+	//		registrationBean.setName("CORS Filter");
+	//		registrationBean.addUrlPatterns("/*");
+	//		registrationBean.setOrder(1);
+	//		return registrationBean;
+	//	}
 
 
 

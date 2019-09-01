@@ -6,25 +6,27 @@ import java.util.Arrays;
 import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.Resource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+import org.springframework.web.util.UriComponentsBuilder;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
-import io.homecloud.synchronizedFolder.utils.NotifyMessage;
-
-//import com.fasterxml.jackson.core.JsonParseException;
-//import com.fasterxml.jackson.databind.JsonMappingException;
-//import com.fasterxml.jackson.databind.ObjectMapper;
-
+import io.homecloud.synchronizedFolder.utils.HTTPHandller;
+import io.homecloud.synchronizedFolder.utils.SNSMessage;
 import io.homecloud.synchronizedFolder.utils.SNSService;
-import io.homecloud.synchronizedFolder.utils.SNSUpdate;
+import io.homecloud.synchronizedFolder.controler.FileSystemStorageService;
+import io.homecloud.synchronizedFolder.sns.*;
 
 @RestController
 public class MainController {
@@ -32,58 +34,70 @@ public class MainController {
 	@Autowired
 	private SNSService _service;
 
+	@Autowired /*A Singleton object */
+	private FileSystemStorageService _storageService;
+	
 	@RequestMapping(value = "SNSNotification", method = RequestMethod.POST)
 	public ResponseEntity updateSNS(@RequestHeader Map<String, String> headers, @RequestBody String payload) { 
 		System.out.println("POST to /SNSNotification");
+		
 		String requstedHeader = headers.get("x-amz-sns-message-type");
-		System.out.println("header: " + requstedHeader);
 		GsonBuilder builder = new GsonBuilder(); 
 		builder.setPrettyPrinting(); 
 		Gson gson = builder.create(); 
-		NotifyMessage mssg = gson.fromJson(payload, NotifyMessage.class);
+		SNSMessage mssg = gson.fromJson(payload, SNSMessage.class);
+		
 		if(requstedHeader.equals("SubscriptionConfirmation")) {		
+			System.out.println("Subscribing to SNS...");
 			String urlToSubscribe = mssg.getSubscribeURL();
 
-			//			String subString = payload.substring(payload.indexOf("SubscribeURL"));
-			//			String urlToSubscribe = subString.split("\"")[4];
-
+			//send GET to urlToSubscribe inorder to subscribe
 			HTTPHandller handler = new HTTPHandller(urlToSubscribe);
 			try {
 				handler.openConnection();
 				String response = handler.sendGET();
-				System.out.println(response);
-
+				if(response.contains("Error status: "))
+					System.out.println("Error subscribing to SNS. " + response);
+				else
+					System.out.println("Successfully subscibed to SNS");
 			} catch (IOException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 			finally {
 				handler.disconnect();
 			}
-
 		}
 
 		else { //equals "Notification"
 
 			String subject = mssg.getSubject();
 			String message = mssg.getMessage();
-			System.out.println("Subject: " + subject);
-			System.out.println("message: " + message);
-
+			System.out.println("*POST SNS Notification*\nSubject: " + subject + "\nMessage: " + message);
+			return(_service.handleSNSNotification(subject, message));
 		}
-		return ResponseEntity.ok().build();
+		return ResponseEntity.badRequest().build();
 	}
 
-	@RequestMapping(value = "SNSNotification", method = RequestMethod.GET)
+	// GET - /download/{userName}/..
+	//GET request for downloading file(for web client) 
+	@RequestMapping(value = "download/{userName}/**", method = RequestMethod.GET)
 	@ResponseBody
-	public String print() {
-		return "hello";
+	public ResponseEntity<Resource> serveFile(@PathVariable("userName") String userName) {
+		String downloadPath = getCurentPath();
+		System.out.println("GET to: " + downloadPath);
+		downloadPath = downloadPath.substring(9);
+		//downloadPath = removeRoot(downloadPath);
+		Resource file = _storageService.loadAsResource(downloadPath);
+		return ResponseEntity.ok()
+				.header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + file.getFilename() + "\"")
+				.body(file);
 	}
-
-	@RequestMapping(value = "get", method = RequestMethod.GET)
-	@ResponseBody
-	public String print2() {
-		return "hello";
+	
+	//This function is to get the current path URI
+	private String getCurentPath() {
+		UriComponentsBuilder builder = ServletUriComponentsBuilder.fromCurrentRequest();
+		String filePath = builder.buildAndExpand().getPath();
+		return filePath;
 	}
-
+	
 }

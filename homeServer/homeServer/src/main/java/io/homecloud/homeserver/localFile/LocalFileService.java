@@ -93,8 +93,8 @@ public class LocalFileService {
 		String fullPath = _root + "\\" + filePath;
 		File oldFileName = new File(fullPath);
 		String fullNewFilePath = "";
-		if(filePath.contains("/"))
-			fullNewFilePath = filePath.substring(0, filePath.lastIndexOf('/')) + "\\";
+		if(filePath.contains("\\"))
+			fullNewFilePath = filePath.substring(0, filePath.lastIndexOf('\\')) + "\\";
 		fullNewFilePath += newFileName;
 		File newFileNameFile = new File(_root + "\\" + fullNewFilePath);
 		if(!oldFileName.exists())

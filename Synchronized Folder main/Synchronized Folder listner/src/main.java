@@ -39,7 +39,7 @@ public class main {
 //			System.out.println(h.sendPOST(file));
 //			System.out.println("\n\ndone");
 //		} catch (IOException e) {
-//			// TODO Auto-generated catch block
+//			
 //			e.printStackTrace();
 //		}
 

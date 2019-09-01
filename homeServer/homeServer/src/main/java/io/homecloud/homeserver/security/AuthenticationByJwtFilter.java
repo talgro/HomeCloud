@@ -91,8 +91,14 @@ public class AuthenticationByJwtFilter extends OncePerRequestFilter {
 	}
 
 	private String getTokenFromCookie(HttpServletRequest request) {
-		String accessCookie = request.getHeader("authorization").substring(7);
-		int i = accessCookie.lastIndexOf('.');
-		return accessCookie.substring(0, i + 1);
+		try {
+			String accessCookie = request.getHeader("authorization").substring(7);
+			int i = accessCookie.lastIndexOf('.');
+			return accessCookie.substring(0, i + 1);
+		}
+		catch (NullPointerException e) {
+			return null;
+		}
+
 	}
 }
