@@ -5,15 +5,14 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class ServerUsersDto {
+public class UsersDto {
 
-  @JsonProperty("user_id")
-  private String userId;
-
-  @JsonProperty("home_server_id")
-  private String homeServerId;
+  @JsonProperty("users")
+  private List<String> usernames;
 
 }

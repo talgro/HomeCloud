@@ -30,7 +30,7 @@ public class AuthenticationByJwtFilter extends OncePerRequestFilter {
     private final String ACCESS_COOCKIE_NAME = "access_cookie";
     private final String REFRESH_TOKEN_URL = "";
     private final String[] JWKs =
-            {"JU/xcxir19xop/pRxbQ1ulSujIZPr03vr9ggNPw8+dg=", "imO/l2pDmgo61A7Cb6OPBTEdkTvNCFhoiOuAViPF12o="};
+            {"XI+FVVV4srAPoJQcFKjHD+KlxpoMZjhVIhL71ahArpo=", "8TSQdx7EIr7wH5vOOB/Z8k4IUeV5+6t3aeYySiChxhM="};
 
     public AuthenticationByJwtFilter(JwtUtils jwtUtils) {
         this.jwtUtils = jwtUtils;
@@ -89,7 +89,10 @@ public class AuthenticationByJwtFilter extends OncePerRequestFilter {
 
     private String getTokenFromCookie(HttpServletRequest request) {
         String accessCookie = request.getHeader("authorization").substring(7);
-        int i = accessCookie.lastIndexOf('.');
-        return accessCookie.substring(0, i + 1);
+        if (accessCookie != null){
+            int i = accessCookie.lastIndexOf('.');
+            return accessCookie.substring(0, i + 1);
+        }
+        return null;
     }
 }

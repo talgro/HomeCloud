@@ -1,5 +1,6 @@
-package com.homecloud.backend.home_server;
+package com.homecloud.backend.clients.controllers;
 
+import com.homecloud.backend.clients.services.HomeServerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
