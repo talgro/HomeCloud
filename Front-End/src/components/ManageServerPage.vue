@@ -18,7 +18,7 @@
             small
             @click="addUser"
           >
-            <v-icon>add</v-icon>
+            <v-icon>person_add</v-icon>
           </v-btn>
         </v-flex>
       </v-layout>

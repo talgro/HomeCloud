@@ -47,17 +47,31 @@
         class="mb-3"
       >
         <v-flex
-          xs1>
+          xs1
+          class="ma-1"
+        >
+          <v-btn
+            @click="newFolderDialog = true"
+            fab
+          >
+            <v-icon>create_new_folder</v-icon>
+          </v-btn>
+        </v-flex>
+        <v-flex
+          xs1
+          class="ma-1"
+        >
           <!--    TODO: make it so the button does not stay clicked (fab button bug, consider switching design)    -->
           <v-btn
             @click="$refs.fileInput.click()"
             fab
           >
-            <v-icon>add</v-icon>
+            <v-icon>cloud_upload</v-icon>
           </v-btn>
         </v-flex>
         <!--   TODO: discuss how to do search and if necessary at all   -->
         <v-flex
+          class="ma-1"
           xs4>
           <v-text-field
             prepend-icon="search"
@@ -110,6 +124,24 @@
           ></item>
         </v-flex>
       </v-layout>
+      <v-dialog v-model="newFolderDialog" width="400">
+        <v-card>
+          <v-card-title class="headline" primary-title>
+            Enter a new folder name:
+          </v-card-title>
+          <v-divider></v-divider>
+          <v-text-field v-model="newFolderName" label="Enter a new folder name" single-line></v-text-field>
+          <v-card-actions>
+            <v-btn flat @click="editName">
+              Create
+            </v-btn>
+            <v-spacer></v-spacer>
+            <v-btn flat @click="editDialog = false">
+              Cancel
+            </v-btn>
+          </v-card-actions>
+        </v-card>
+      </v-dialog>
     </div>
   </div>
 </template>
@@ -125,10 +157,19 @@ export default {
       trail: [{text: this.$store.getters.getUsername, disabled: false, pos: 0}],
       selectedFile: null,
       uploadValue: 0,
-      uploading: false
+      uploading: false,
+      newFolderDialog: false,
+      newFolderName: ''
     }
   },
   methods: {
+    createFolder () {
+      // TODO: ask daniel for the right url
+      let url = this.address + '/' + this.trailToString()
+      this.$http.post('', this.newFolderName).then(function (response) {
+        this.updateCurrFolder(url)
+      })
+    },
     editName (event) {
       let url = this.address + '/' + this.trailToString()
       this.$http.put(url + event.name, event.newName, { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (response) {
