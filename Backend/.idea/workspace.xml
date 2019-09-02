@@ -2,7 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c091848b-e8c1-46d6-9903-8f58d563bcd7" name="Default Changelist" comment="Merge branch 'master' of https://github.com/talgro/HomeCloud&#10;&#10;# Conflicts:&#10;#&#9;Backend/src/main/resources/application.properties">
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Backend.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Backend.main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/Backend.test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/Backend.test.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/clients/ClientMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/clients/ClientsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/clients/ClientsRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/clients/ClientsService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/clients/DTOs/UsersServersDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/clients/entities/UsersServers.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/home_server/HomeServerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/home_server/HomeServerRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/home_server/HomeServerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/home_server/entities/HomeServerConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/security/AuthenticationByJwtFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/security/AuthenticationByJwtFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/security/WebSecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/security/WebSecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/security/models/JwtTokenClaims.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/security/models/JwtTokenClaims.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/security/utils/JwtUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/homecloud/backend/security/utils/JwtUtils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -57,23 +81,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientsController.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/controllers/ClientsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="379">
-              <caret line="33" column="43" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="43" />
+            <state relative-caret-position="87">
+              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#746#747#0" expanded="true" />
+                <element signature="e#798#799#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientsService.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/services/ClientsService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="67">
-              <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+            <state relative-caret-position="133">
+              <caret line="56" column="5" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -84,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/AuthenticationByJwtFilter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="885">
-              <caret line="59" selection-start-line="59" selection-end-line="59" />
+            <state relative-caret-position="228">
+              <caret line="96" column="9" lean-forward="true" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1494#1495#0" expanded="true" />
@@ -96,10 +122,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.1.8.RELEASE/4e19ca13005f5175b8cf87c0d3a0df681d2e55c/spring-web-5.1.8.RELEASE-sources.jar!/org/springframework/web/util/WebUtils.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7890">
-              <caret line="567" column="30" selection-start-line="567" selection-start-column="26" selection-end-line="567" selection-end-column="30" />
+            <state>
+              <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -187,7 +222,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/entities/HomeServerConnection.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/HomeServerRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/WebSecurityConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/AuthenticationByJwtFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/HomeServerController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/entities/serverUsers.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/entities/ServerUsers.java" />
@@ -195,6 +229,7 @@
         <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientsController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ServerUsersRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientsService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/AuthenticationByJwtFilter.java" />
       </list>
     </option>
   </component>
@@ -226,67 +261,6 @@
             <path>
               <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.homecloud.backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.homecloud.backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="clients" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.homecloud.backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="clients" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="DTOs" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.homecloud.backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="clients" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="entities" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.homecloud.backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="home_server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="Backend" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="Backend" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="main" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="com.homecloud.backend" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="home_server" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="entities" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -343,7 +317,7 @@
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567015129617" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1567445893113" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="JSON" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -616,11 +590,18 @@
       <option name="project" value="LOCAL" />
       <updated>1567014374977</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Merge branch 'master' of https://github.com/talgro/HomeCloud&#10;&#10;# Conflicts:&#10;#&#9;Backend/src/main/resources/application.properties">
+      <created>1567445312888</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1567445312888</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66203000" />
+    <option name="totallyTimeSpent" value="68053000" />
   </component>
   <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
@@ -633,9 +614,8 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="834" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2299427" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18481375" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -643,22 +623,22 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" sideWeight="0.49928367" weight="0.32884097" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733475" weight="0.43492407" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.7063037" weight="0.4272237" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.70487106" weight="0.4272237" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Build" order="6" sideWeight="0.495702" weight="0.2897574" />
       <window_info anchor="bottom" id="TODO" order="7" sideWeight="0.49856734" weight="0.32884097" />
       <window_info anchor="bottom" id="Spring" order="8" sideWeight="0.49928367" weight="0.32884097" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.519341" side_tool="true" visible="true" weight="0.7264151" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.48065904" visible="true" weight="0.7264151" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5050143" side_tool="true" visible="true" weight="0.32614556" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.47994268" weight="0.7264151" />
       <window_info anchor="bottom" id="Java Enterprise" order="12" sideWeight="0.49946696" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="13" />
-      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.495702" weight="0.32614556" />
+      <window_info anchor="bottom" id="Version Control" order="14" sideWeight="0.49498567" visible="true" weight="0.32614556" />
+      <window_info anchor="bottom" id="Messages" order="15" sideWeight="0.49928367" weight="0.32884097" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -666,7 +646,7 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Scheme.REPL" order="5" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="right" id="Gradle" order="7" weight="0.32942432" />
+      <window_info anchor="right" id="Gradle" order="7" weight="0.32879657" />
       <window_info anchor="right" id="SciView" order="8" />
       <window_info anchor="right" id="Database" order="9" />
       <window_info anchor="right" id="Palette&#9;" order="10" />
@@ -812,37 +792,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientMapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/DTOs/ServerUsersDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="29" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientMapper.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/DTOs/ServerUsersDto.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/exceptions/ClientServiceException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
           <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="47" lean-forward="true" selection-start-line="6" selection-start-column="47" selection-end-line="6" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -853,16 +808,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/HomeServerService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/HomeServerService.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.jsonwebtoken/jjwt/0.9.1/4341772ad269e161a35d2d0ad66f4f6d2f5e79b9/jjwt-0.9.1-sources.jar!/io/jsonwebtoken/JwsHeader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -971,18 +917,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/AuthenticationByJwtFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1494#1495#0" expanded="true" />
-            <element signature="e#1534#1535#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.1.8.RELEASE/4e19ca13005f5175b8cf87c0d3a0df681d2e55c/spring-web-5.1.8.RELEASE-sources.jar!/org/springframework/web/util/WebUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7890">
@@ -990,33 +924,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/HomeServerController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/entities/HomeServerConnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="5" lean-forward="true" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/DTOs/NewUserForServerDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="12" column="24" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/HomeServerController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/entities/HomeServerConnection.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/DTOs/NewUserForServerDto.java" />
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-web/5.1.8.RELEASE/4e19ca13005f5175b8cf87c0d3a0df681d2e55c/spring-web-5.1.8.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="138">
@@ -1034,49 +944,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="379">
-          <caret line="33" column="43" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/entities/ServerUsers.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientsController.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/entities/ServerUsers.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/HomeServerConnectionRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ServerUsersRepository.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientsService.java" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_3.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/security/AuthenticationByJwtFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="96" column="9" lean-forward="true" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1494#1495#0" expanded="true" />
+            <element signature="e#1534#1535#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/home_server/HomeServerConnectionRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state>
+          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ServerUsersRepository.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/controllers/ClientsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com.homecloud.backend/clients/ClientsService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="67">
-          <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+        <state relative-caret-position="87">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#746#747#0" expanded="true" />
+            <element signature="e#798#799#0" expanded="true" />
           </folding>
         </state>
       </provider>
