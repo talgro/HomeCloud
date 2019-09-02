@@ -1,26 +1,16 @@
-/* eslint-disable */
-import TreeNode from './TreeNode.js'
-
-export default class Tree {
-  constructor (json) {
-    this.root = new TreeNode('root')
-    if (json === undefined) {
-      this.children = []
-    } else {
-      this.root.children = this.buildSubTree(json.children)
-    }
+import { Auth } from 'aws-amplify'
+const fs = require('fs')
+fs.readFile('credentials.txt', 'utf-8', (err, data) => {
+  if (err) throw err
+  else {
+    let credentials = data.split(';')
+    Auth.signIn({
+      username: credentials[0],
+      password: credentials[1]
+    })
+      .then(data => {
+        fs.writeFile('jwt.txt', )
+      })
+      .catch(err => console.log("failed login data", err))
   }
-
-  buildSubTree (json) {
-    let sub_tree = []
-    if (json.length === 0) {
-      return []
-    }
-    for (let child in json) {
-      let child_sub_tree = this.buildSubTree(child.children)
-      let node = new TreeNode(child.name, child_sub_tree)
-      sub_tree.push(node)
-    }
-    return sub_tree
-  }
-}
+})

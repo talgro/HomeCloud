@@ -23,9 +23,7 @@ export default {
     'nav-drawer': NavDrawer
   },
   data () {
-    return {
-      signedIn: false
-    }
+    //
   },
   methods: {
     createCookie (name, cookieName, expDays) {
@@ -35,32 +33,56 @@ export default {
         if (cookie[0].includes(name)) {
           let d = new Date()
           d.setTime(d.getTime() + (expDays * 24 * 60 * 60 * 1000))
-          // + 'domain=' + '.talgropper-xxjz.localhost.run' + ';'
-          // document.cookie = cookieName + '=' + cookie[1] + ';' + 'expires=' + d.toUTCString() + ';' + 'path=/'
           this.$cookies.set(cookieName, cookie[1], '1y')
           return
         }
       }
+    },
+    initUserData () {
+      // TODO: fill in full url to AWS
+      console.log('before init: ', this.$store.getters.getCookie)
+      this.$http.get(this.$store.getters.getBackendURL + '/clients/getMyHomeServerDetails', { headers: { Authorization: 'Bearer ' + this.$store.getters.getCookie } }).then(function (response) {
+        console.log('initData response: ', response)
+        // this.$store.commit('setUserId', response.body.username)
+        this.$store.commit('setUserId', 'tomgr')
+        // this.$store.commit('setServerAddress', response.body.home_server_address)
+        this.$store.commit('setServerAddress', 'https://danie-ko4x.localhost.run')
+        this.$store.commit('setServerName', response.body.home_server_name)
+        console.log(this.$store.getters.getUsername)
+        console.log(this.$store.getters.getServerAddress)
+        console.log(this.$store.getters.getServerName)
+      }).catch(err => console.log('failed:', err))
     }
   },
   beforeCreate () {
     AmplifyEventBus.$on('authState', info => {
       if (info === 'signedIn') {
-        this.createCookie('accessToken', 'access_cookie', 365)
-        this.signedIn = true
+        // this.createCookie('accessToken', 'access_cookie', 365)
+        this.$store.commit('setLoggedIn', true)
+        this.initUserData()
+        console.log('in $on: ', this.$store.getters.getCookie)
         this.$router.push('/home-page')
       }
       if (info === 'signedOut') {
+        this.$store.commit('setLoggedIn', false)
         this.$router.push('/')
-        this.signedIn = false
       }
     })
     Auth.currentAuthenticatedUser().then(user => {
-      this.signedIn = true
+      this.initUserData()
       this.$router.push('/home-page')
     }).catch(() => {
-      this.signedIn = false
+      this.$store.commit('setLoggedIn', false)
     })
+    // console.log('after all: ', this.$store.getters.getCookie)
+    // console.log(Auth.currentSession().then(res => {
+    //   let accessToken = res.getAccessToken()
+    //   let jwt = accessToken.getJwtToken()
+    //   console.log('test jwt: ', jwt)
+    // }))
+    if (this.$store.getters.getLoggedIn === true) {
+      this.initUserData()
+    }
   }
 }
 </script>

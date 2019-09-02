@@ -1,17 +1,29 @@
 <template>
-  <div id="NavBar">
-    <nav>
-      <v-toolbar clipped-left app>
-        <v-toolbar-title class="text-uppercase">
-          <span class="font-weight-thin">Home</span><span class="font-weight-bold">Cloud</span>
-        </v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-toolbar-items>
-<!--          TODO: add a variable so this component can access it-->
-          <amplify-sign-out v-if="true"></amplify-sign-out>
-        </v-toolbar-items>
-      </v-toolbar>
-    </nav>
+  <div
+    id="NavBar">
+    <v-toolbar
+      clipped-left
+      app
+      >
+      <v-toolbar-title
+        class="text-uppercase">
+        <span
+          class="font-weight-thin">Home</span><span class="font-weight-bold">Cloud</span>
+      </v-toolbar-title>
+      <v-spacer></v-spacer>
+      <v-toolbar-items
+        v-if="this.$store.getters.getLoggedIn">
+        <v-btn
+          flat
+          @click="$router.push({name: 'HomePage'})">Browse</v-btn>
+        <v-btn
+          flat
+          @click="$router.push({name: 'manageServer'})">
+          Manage server</v-btn>
+        <amplify-sign-out
+          v-if="this.$store.getters.getLoggedIn"></amplify-sign-out>
+      </v-toolbar-items>
+    </v-toolbar>
   </div>
 </template>
 
