@@ -90,7 +90,8 @@ public class AuthenticationByJwtFilter extends OncePerRequestFilter {
     }
 
     private String getTokenFromCookie(HttpServletRequest request) {
-        String accessCookie = request.getHeader("authorization").substring(7);
+        String header = request.getHeader("authorization");
+        String accessCookie = header.substring(7);
         if (accessCookie != null) {
             int i = accessCookie.lastIndexOf('.');
             return accessCookie.substring(0, i + 1);
