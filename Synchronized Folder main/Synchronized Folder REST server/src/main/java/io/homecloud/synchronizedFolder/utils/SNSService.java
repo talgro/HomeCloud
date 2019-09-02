@@ -9,7 +9,9 @@ import java.nio.file.Path;
 import java.util.Comparator;
 import java.util.HashMap;
 
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -87,7 +89,13 @@ public class SNSService {
 				e.printStackTrace();
 				return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.toString());
 			}
-
+		case "FOLDER":
+			//message = filePath,newFolderName
+			String[] splitMssg2 = message.split(",");
+			String folderPath = splitMssg2[0];
+			String newFolderName = splitMssg2[1];
+			File newFolder = new File(folder_dir + File.separator + folderPath + File.separator + newFolderName);
+			newFolder.mkdir();
 		default:
 			break;
 		}
@@ -96,6 +104,7 @@ public class SNSService {
 
 	}
 
+	//TODO Test this! (get homeServer domain from aws)
 	private String getDomainFromAws() {
 		HashMap<String, String> map = getAwsAndTokenFromXML();
 		String awsDomain = map.get("awsDomain");
@@ -104,11 +113,12 @@ public class SNSService {
 		String uri = awsDomain + endPoint;
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
-		headers.add("Authorization", "Barear " + token);
+		headers.set("Authorization", "Barear " + token);
+		HttpEntity request = new HttpEntity(headers);
 
-		HomeServerConnectionDetailsDto response = restTemplate.getForObject(uri, HomeServerConnectionDetailsDto.class,
-				headers);
-		return response.getHomeServerAddress();
+		ResponseEntity<HomeServerConnectionDetailsDto> response = restTemplate.exchange(uri, HttpMethod.GET, request,
+				HomeServerConnectionDetailsDto.class);
+		return response.getBody().getHomeServerAddress();
 	}
 
 	private HashMap<String, String> getAwsAndTokenFromXML() {

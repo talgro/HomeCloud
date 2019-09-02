@@ -17,7 +17,10 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
@@ -51,17 +54,17 @@ public class SyncFolderRESTStarter {
 		String token = config.get("AWS").get("JWT");
 
 		//*****  Downloading all files to HomeCloud folder from homeServer
-//		String AwsEndPoint = "/clients/getMyHomeServerDetails";
-//		String homeServerDomain = getHomeServerDomainFromAws(awsDomain + AwsEndPoint, token);
-//		String endPoint = "/" + userName;
-//
-//		try {
-//			getAllFiles(homeServerDomain, endPoint , homeServerDir + File.separator + userName);
-//			System.out.println("Done downloading all files to HomeCloud folder.");
-//		} catch (IOException e) {
-//			System.out.println("Error downloading all files");
-//			e.printStackTrace();
-//		}
+		String AwsEndPoint = "/clients/getMyHomeServerDetails";
+		String homeServerDomain = getHomeServerDomainFromAws(awsDomain + AwsEndPoint, token);
+		String endPoint = "/" + userName;
+
+		try {
+			getAllFiles(homeServerDomain, endPoint , homeServerDir + File.separator + userName);
+			System.out.println("Done downloading all files to HomeCloud folder.");
+		} catch (IOException e) {
+			System.out.println("Error downloading all files");
+			e.printStackTrace();
+		}
 
 		//*** start folder listner
 		Runnable folderListnerRun = new FolderListner(homeServerDir + File.separator + userName);
@@ -75,11 +78,12 @@ public class SyncFolderRESTStarter {
 	private static String getHomeServerDomainFromAws(String uri, String token) {
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
-		headers.add("Authorization", "Barear " + token);
+		headers.set("Authorization", "Barear " + token);
+		HttpEntity request = new HttpEntity(headers);
 
-		HomeServerConnectionDetailsDto response = restTemplate.getForObject(uri, HomeServerConnectionDetailsDto.class,
-				headers);
-		return response.getHomeServerAddress();
+		ResponseEntity<HomeServerConnectionDetailsDto> response = restTemplate.exchange(uri, HttpMethod.GET, request,
+				HomeServerConnectionDetailsDto.class);
+		return response.getBody().getHomeServerAddress();
 	}
 
 		public static HashMap<String, HashMap<String, String>> readXML(String xmlFile) {

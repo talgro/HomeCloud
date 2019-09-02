@@ -180,6 +180,11 @@ public class LocalFileService {
 		}
 	}
 
+	public void createFolder(String path, String folderName) {
+		File newFolder = new File(_root + File.separator + path + File.separator + folderName);
+		newFolder.mkdir();	
+	}
+
 
 
 }

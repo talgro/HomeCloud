@@ -7,7 +7,9 @@ import java.io.IOException;
 import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -90,7 +92,13 @@ public class SNSService {
 				e.printStackTrace();
 				return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(e.toString());
 			}
-
+		case "FOLDER":
+			//message = filePath,newFolderName
+			String[] splitMssg2 = message.split(",");
+			String folderPath = splitMssg2[0];
+			String newFolderName = splitMssg2[1];
+			File newFolder = new File(_root + File.separator + folderPath + File.separator + newFolderName);
+			newFolder.mkdir();
 		default:
 			break;
 		}
@@ -98,6 +106,7 @@ public class SNSService {
 		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();//500
 	}
 
+	//TODO Test this (getting SyncFolder domain name)
 	private String getDomainFromAws() {
 		HashMap<String, String> map = getAwsAndTokenFromXML();
 		String awsDomain = map.get("awsDomain");
@@ -106,11 +115,11 @@ public class SNSService {
 		String uri = awsDomain + endPoint;
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
-		headers.add("Authorization", "Barear " + token);
-
-		SyncedFolderConnectionDetailsDto response = restTemplate.getForObject(uri, SyncedFolderConnectionDetailsDto.class,
-				headers);
-		return response.getHomeServerAddress();
+		headers.set("Authorization", "Barear " + token);
+		HttpEntity request = new HttpEntity(headers);
+		ResponseEntity<SyncedFolderConnectionDetailsDto> response = restTemplate.exchange(uri, HttpMethod.GET, request,
+				SyncedFolderConnectionDetailsDto.class);
+		return response.getBody().getHomeServerAddress();
 	}
 
 	private HashMap<String, String> getAwsAndTokenFromXML() {

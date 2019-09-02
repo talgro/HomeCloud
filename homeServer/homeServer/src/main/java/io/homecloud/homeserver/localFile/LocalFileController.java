@@ -217,6 +217,25 @@ public class LocalFileController {
 		return ResponseEntity.ok().build();//200
 	}
 
+	//POST - /addUser
+	//POST for adding new user
+	@RequestMapping(value = "newFolder/**", method = RequestMethod.POST)
+	public ResponseEntity<Void> addFolder(@RequestBody String folderName) {
+		String path = "";
+		try {
+			path = getCurentPath();
+		} catch (UnsupportedEncodingException e) {
+			System.out.println("Error decoding url");
+			e.printStackTrace();
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		}
+		
+		path = path.substring(10);
+		_localFileService.createFolder(path, folderName);
+		publisher.publish("FOLDER", path + "," + folderName);
+		return ResponseEntity.ok().build();//200
+	}
+	
 
 	//############################### for SNS #########################################
 	@RequestMapping(value = "SNSNotification", method = RequestMethod.POST)

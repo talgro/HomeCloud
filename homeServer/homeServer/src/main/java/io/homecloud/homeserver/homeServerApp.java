@@ -10,7 +10,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.web.client.RestTemplate;
 
 import io.homecloud.homeserver.Filters.CORSFilter;
@@ -72,14 +74,15 @@ public class homeServerApp {
 
 	}
 
-	//TODO test this function
+	//TODO test this function(post homeServer domain to aws)
 	private static void postToAws(String uri, String domain, String serverId, String token) {
 		RegisterHomeServer register = new RegisterHomeServer(domain, serverId);
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
-		headers.add("Authorization", "Barear " + token);
-		headers.add(HttpHeaders.CONTENT_TYPE, "application/json");
-		restTemplate.postForObject(uri, register, RegisterHomeServer.class, headers);
+		headers.set("Authorization", "Barear " + token);
+		headers.setContentType(MediaType.APPLICATION_JSON);
+		HttpEntity<RegisterHomeServer> request = new HttpEntity<>(register, headers);
+		restTemplate.postForObject(uri, request, RegisterHomeServer.class);
 	}
 
 	//** commented out becuase of jwt filter which does the job

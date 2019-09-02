@@ -35,7 +35,7 @@ V(enter in xml)  -handle JWT when sending files between homeServer and syncFolde
 V  -BUG rename inside folder of user
 V  -function to initilize folder(download all files...)
 -test AWS connections
-X  -handle create of new folder homeServer ?
+V  -handle create of new folder homeServer ?
 V  -get homeServer addrrs from aws
 V  -get Sync REST from aws
 V  -add JWT filter to syncFolderREST

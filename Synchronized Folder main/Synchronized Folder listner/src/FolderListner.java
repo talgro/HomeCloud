@@ -42,21 +42,21 @@ public class FolderListner implements Runnable {
 			oldName = oldName.replace("\\", File.separator);
 			newName = newName.replace("\\", File.separator);
 			newName = newName.substring(newName.lastIndexOf(File.separator)+1, newName.length());
-			System.out.println("oldName: " +oldName +", newName: " +newName);
-			publisher.publish("PUT", oldName + "," + newName);
+			//publisher.publish("PUT", oldName + "," + newName);
 		}
 		public void fileModified(int wd, String rootPath, String name) {
 			print("modified " + rootPath + " : " + name);
 		}
 		public void fileDeleted(int wd, String rootPath, String name) {
 			print("deleted " + rootPath + " : " + name);
-			publisher.publish("DELETE", name);
+			//publisher.publish("DELETE", name);
 		}
 		public void fileCreated(int wd, String rootPath, String name) {
 			print("created " + rootPath + " : " + name);
 			name = name.replace("\\", File.separator);
-			System.out.println(name);
-			publisher.publish("GET", name);
+			if(new File(rootPath + File.separator + name).isDirectory())
+				System.out.println("Is Dir!");
+			//publisher.publish("GET", name);
 		}
 		void print(String msg) {
 			System.err.println(msg);

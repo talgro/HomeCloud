@@ -17,7 +17,14 @@ public class main {
 	private final static String folder_dir = System.getProperty("user.home") + File.separator + "HomeCloud";
 	private final static String user = "talgrop";
 	public static void main(String[] args) {
-
+//		FolderListner f = new FolderListner(folder_dir);
+//		f.run();
+		String name = "daniel\\binyamin\\newFolder";
+		System.out.println(name);
+		name = name.replace("\\", File.separator);
+		String dir = name.substring(0, name.lastIndexOf(File.separator));
+		String folderName = name.substring(name.lastIndexOf(File.separator)+1, name.length());
+		System.out.println(dir + "," + folderName);
 		//		Runnable loginRun = new LoginPage();
 		//		Thread loginThread = new Thread(loginRun);
 		//		loginThread.start();
@@ -34,17 +41,17 @@ public class main {
 		//			syncFolder.mkdir();
 		//		}
 
-		File syncFolderUser = new File(folder_dir + File.separator + user);
-		if(!syncFolderUser.exists())
-			syncFolderUser.mkdir();
-		String domain = "https://danie-ck7m.localhost.run";
-		String endPoint = "/" + user;
-		try {
-			getAllFiles(domain, endPoint , folder_dir + File.separator + user);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		System.out.println("\n\nDone.");
+		//		File syncFolderUser = new File(folder_dir + File.separator + user);
+		//		if(!syncFolderUser.exists())
+		//			syncFolderUser.mkdir();
+		//		String domain = "https://danie-ck7m.localhost.run";
+		//		String endPoint = "/" + user;
+		//		try {
+		//			getAllFiles(domain, endPoint , folder_dir + File.separator + user);
+		//		} catch (IOException e) {
+		//			e.printStackTrace();
+		//		}
+		//		System.out.println("\n\nDone.");
 
 		//		Runnable folderListner = new FolderListner(folder_dir);		
 		//		folderListner = new FolderListner(folder_dir);

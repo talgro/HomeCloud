@@ -45,7 +45,6 @@ public class FolderListner implements Runnable {
 			oldName = oldName.replace("\\", File.separator);
 			newName = newName.replace("\\", File.separator);
 			newName = newName.substring(newName.lastIndexOf(File.separator)+1, newName.length());
-			System.out.println("oldName: " +oldName +", newName: " +newName);
 			publisher.publish("PUT", _userName + oldName + "," + newName);
 		}
 		public void fileModified(int wd, String rootPath, String name) {
@@ -58,7 +57,12 @@ public class FolderListner implements Runnable {
 		public void fileCreated(int wd, String rootPath, String name) {
 			print("created " + rootPath + " : " + name);
 			name = name.replace("\\", File.separator);
-			System.out.println(name);
+			if(new File(rootPath + File.separator + name).isDirectory()) {
+				name = name.replace("\\", File.separator);
+				String dir = name.substring(0, name.lastIndexOf(File.separator));
+				String folderName = name.substring(name.lastIndexOf(File.separator)+1, name.length());
+				publisher.publish("FOLDER", dir + "," + folderName);
+			}
 			publisher.publish("GET", _userName +name);
 		}
 		void print(String msg) {

@@ -11,7 +11,9 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.PropertySource;
 import org.springframework.core.env.Environment;
+import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.web.client.RestTemplate;
 
 import io.homecloud.synchronizedFolder.sns.snsSubscribe;
@@ -40,12 +42,12 @@ public class SyncFolderRESTApp {
 				String domain = splitcmdOutPut[4];
 
 				//subscribe to aws sns topic
-				//snsSubscribe subscriber = new snsSubscribe(subscribeTopicArn);
-				//System.out.println(subscriber.subscibeDomain(domain + "/SNSNotification"));
+				snsSubscribe subscriber = new snsSubscribe(subscribeTopicArn);
+				System.out.println(subscriber.subscibeDomain(domain + "/SNSNotification"));
 				
 				//update AWS with syncFolder ssh address
-				//String endpoint = "/clients/registerNewSyncedFolder";
-				//postToAws(awsDomain + endpoint, domain, token);
+				String endpoint = "/clients/registerNewSyncedFolder";
+				postToAws(awsDomain + endpoint, domain, token);
 			}
 
 			BufferedReader stdError = new BufferedReader(new InputStreamReader(p.getErrorStream()));
@@ -60,13 +62,15 @@ public class SyncFolderRESTApp {
 		
 	}
 
+	//TODO Test this! (post SyncFOlder domain to aws)
 	private static void postToAws(String uri, String domain, String token) {
 		RegisterSyncFolderServer register = new RegisterSyncFolderServer(domain);
 		RestTemplate restTemplate = new RestTemplate();
 		HttpHeaders headers = new HttpHeaders();
-		headers.add("Authorization", "Barear " + token);
-		headers.add(HttpHeaders.CONTENT_TYPE, "application/json");
-		restTemplate.postForObject(uri, register, RegisterSyncFolderServer.class, headers);		
+		headers.set("Authorization", "Barear " + token);
+		headers.setContentType(MediaType.APPLICATION_JSON);
+		HttpEntity<RegisterSyncFolderServer> request = new HttpEntity<>(register, headers);
+		restTemplate.postForObject(uri, request, RegisterSyncFolderServer.class);		
 	}
 
 }
