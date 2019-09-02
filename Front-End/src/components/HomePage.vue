@@ -1,7 +1,6 @@
 /* eslint-disable */
 <template>
   <div>
-    <amplify-sign-out></amplify-sign-out>
     <div
       v-if="this.$store.getters.getServerAddress === null"
       class="mt-5"
