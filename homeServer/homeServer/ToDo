@@ -26,16 +26,16 @@ V  -Send GET from homeServer to syncFolder REST and get a file(in SNShandler)
 V  -create endpoint in syncFolder REST for GET of file (handle users in syncFolder??)
 V  -implement changes from subscribed sns syncFolder(from REST sync)
 V  -publish to sns uppon change from folderListner(detect changes from folder with folderListner)
-V -check tom connects to homeServer with JWT
+V  -check tom connects to homeServer with JWT
 V  -implemenet download GET file from synchronized folder
--test sync and homeServer running together with SNS(from file)
--run folderListner and sync REST from threads in one project
--from homeServer: updte aws with name, address
--handle JWT when sending files between homeServer and syncFolder
--BUG rename inside folder of user
--function to initilize folder(download all files...)
--handle rename,create of new folder homeServer
-
-
-current JWT cookie:
-Barear eyJraWQiOiJpbU9cL2wycERtZ282MUE3Q2I2T1BCVEVka1R2TkNGaG9pT3VBVmlQRjEybz0iLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI1YjZkY2Y5Mi1mNzdhLTRlZTItOTZiMi05Y2I4OTVhOGRlMzMiLCJldmVudF9pZCI6ImNjM2E0YjU3LWJiNjktNDdlMy04YzZlLTVhNDc2ODI3OTI3ZSIsInRva2VuX3VzZSI6ImFjY2VzcyIsInNjb3BlIjoiYXdzLmNvZ25pdG8uc2lnbmluLnVzZXIuYWRtaW4iLCJhdXRoX3RpbWUiOjE1NjY4MjIxNTUsImlzcyI6Imh0dHBzOlwvXC9jb2duaXRvLWlkcC51cy1lYXN0LTEuYW1hem9uYXdzLmNvbVwvdXMtZWFzdC0xX3lDTWhPRkoyaCIsImV4cCI6MTU2Njk5NzIxMCwiaWF0IjoxNTY2OTkzNjEwLCJqdGkiOiI5YWNiOWM0Ni1iMzg5LTQ4Y2YtOGVhMi1iMWUzMzFhOTdjZjMiLCJjbGllbnRfaWQiOiIyczVpNnRhanM3NWdwZ3UzYjNpNHN0YTZxNCIsInVzZXJuYW1lIjoiNWI2ZGNmOTItZjc3YS00ZWUyLTk2YjItOWNiODk1YThkZTMzIn0.W5BoBuXLyYelH8IGu_nGt0DKzjzoyiyGLiDelBqX1QLTOmB_e6077maj6s_tjtjzQTYVh3uT8aArTchRo7Yvr5vpfXmuU-Ve77RN7JodHZ3nKpNGjL6iAb-fT6GMjFVnRlhAGLBWAEfOg7g2KoE6O7eMGbKu12pihG0lAJCC-aLotSSdLMA0L27mg1S7EFdx8LOreFk_tEWorwbWlzTjbcimnOQQ0sKuHFkHTyhQXbgQtznxviD29NaGfPMnQ1KZl3COqWSURWfQgv7NEVldbiMJOlKXL0lYXTizRwvRty7fRAphaoc0N7AotS4Lhgaw3pbEIl4ybD9tk-O4Emyp1A
+V  -test sync and homeServer running together with SNS(from file)
+V  -run folderListner and sync REST from threads in one project
+V  -from homeServer: updte aws with name, address
+V(enter in xml)  -handle JWT when sending files between homeServer and syncFolder
+V  -BUG rename inside folder of user
+V  -function to initilize folder(download all files...)
+-test AWS connections
+X  -handle create of new folder homeServer ?
+V  -get homeServer addrrs from aws
+V  -get Sync REST from aws
+V  -add JWT filter to syncFolderREST

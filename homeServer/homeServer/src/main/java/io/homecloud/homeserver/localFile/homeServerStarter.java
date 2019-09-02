@@ -27,10 +27,11 @@ public class homeServerStarter {
 
 	public static void run(String[] args, String userName) {
 
+		//create folders for app
 		String homeServerDir = createMainAppFolders();
-
 		creatUserFolder(homeServerDir, userName);
 
+		//create config.xml
 		String serverId = userName + "-homeServer";
 		createXML(homeServerDir, serverId);
 
@@ -38,12 +39,13 @@ public class homeServerStarter {
 		
 		serverId = config.get("homeServer").get("server-id");
 		String awsDomain = config.get("AWS").get("domain");
-
-		homeServerApp.run(args, userName,serverId, awsDomain);
+		String token = config.get("AWS").get("JWT");
+		
+		homeServerApp.run(args, userName,serverId, awsDomain, token);
 
 	}
 
-	private static HashMap<String, HashMap<String, String>> readXML(String xmlFile) {
+	public static HashMap<String, HashMap<String, String>> readXML(String xmlFile) {
 		HashMap<String, HashMap<String, String>> rtn = new HashMap<String, HashMap<String, String>>();
 		try {
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -99,6 +101,9 @@ public class homeServerStarter {
 			Element awsDomain = doc.createElement("domain");
 			awsDomain.appendChild(doc.createTextNode("www.aws.com"));
 			serverAWSMainNode.appendChild(awsDomain);
+			Element jwtElement = doc.createElement("JWT");
+			jwtElement.appendChild(doc.createTextNode("JWT-PLACE-HOLDER"));
+			serverAWSMainNode.appendChild(jwtElement);
 			root.appendChild(serverAWSMainNode);
 
 			doc.appendChild(root);

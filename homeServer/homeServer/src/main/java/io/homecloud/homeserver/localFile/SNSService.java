@@ -4,13 +4,17 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 
 import io.homecloud.homeserver.utils.HttpDownloadUtility;
+import io.homecloud.homeserver.utils.SyncedFolderConnectionDetailsDto;
 
 @Service
 public class SNSService {
@@ -23,11 +27,14 @@ public class SNSService {
 
 	private final String _root = new File(System.getProperty("user.home")).getParentFile().getParent() + 
 			File.separator + "homeServer" + File.separator + "root";
-	
+
+	private final String mainFolder = new File(System.getProperty("user.home")).getParentFile().getParent() + 
+			File.separator + "homeServer";
+
 	public ResponseEntity handleSNSNotification(String subject, String message) {
-		
+
 		switch (subject) {
-		
+
 		case "DELETE":
 			//message = filePath of file
 			if(message.isEmpty()) //trying to delete root TODO fix with users
@@ -70,9 +77,8 @@ public class SNSService {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();//500
 
 		case "GET":
-			//TODO get domainName of syncFolder REST from aws
 			//message = filePath of file
-			String domain = getDomain();
+			String domain = getDomainFromAws();
 			domain += "/download";
 			String fileDir = message.substring(0, message.lastIndexOf(File.separator));
 			message = message.replace("\\", "/");
@@ -88,10 +94,34 @@ public class SNSService {
 		default:
 			break;
 		}
-		
+
 		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();//500
 	}
-	
+
+	private String getDomainFromAws() {
+		HashMap<String, String> map = getAwsAndTokenFromXML();
+		String awsDomain = map.get("awsDomain");
+		String token = map.get("JWT");
+		String endPoint = "/clients/getMySyncedFolderDetails";
+		String uri = awsDomain + endPoint;
+		RestTemplate restTemplate = new RestTemplate();
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("Authorization", "Barear " + token);
+
+		SyncedFolderConnectionDetailsDto response = restTemplate.getForObject(uri, SyncedFolderConnectionDetailsDto.class,
+				headers);
+		return response.getHomeServerAddress();
+	}
+
+	private HashMap<String, String> getAwsAndTokenFromXML() {
+		HashMap<String, HashMap<String, String>> config = homeServerStarter.readXML(mainFolder + File.separator + "config.xml");
+		HashMap<String, String> rtn = new HashMap<String, String>();
+		rtn.put("awsDomain", config.get("AWS").get("domain"));
+		rtn.put("JWT", config.get("AWS").get("JWT"));
+		return rtn;
+	}
+
+	//temporary function to get syncFolder domain name from txt file
 	private String getDomain() {
 		String file  = _root + File.separator + "sync_folder_domain.txt";
 		BufferedReader reader;

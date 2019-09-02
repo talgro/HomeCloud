@@ -26,7 +26,7 @@ import java.util.List;
 
 @Slf4j
 public class AuthenticationByJwtFilter extends OncePerRequestFilter {
-	private static final boolean debug = true;
+	private static final boolean debug = false;
 	private JwtUtils jwtUtils;
 	private final String ACCESS_COOCKIE_NAME = "access_cookie";
 	private final String REFRESH_TOKEN_URL = "";

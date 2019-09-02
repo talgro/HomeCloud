@@ -90,11 +90,11 @@ public class LocalFileService {
 
 	//This method changes the name of folder/file at "filePath" to "newFileName"
 	public byte updateFile(String filePath, String newFileName) {
-		String fullPath = _root + "\\" + filePath;
+		String fullPath = _root + "/" + filePath;
 		File oldFileName = new File(fullPath);
 		String fullNewFilePath = "";
-		if(filePath.contains("\\"))
-			fullNewFilePath = filePath.substring(0, filePath.lastIndexOf('\\')) + "\\";
+		if(filePath.contains("/"))
+			fullNewFilePath = filePath.substring(0, filePath.lastIndexOf("/")) + "/";
 		fullNewFilePath += newFileName;
 		File newFileNameFile = new File(_root + "\\" + fullNewFilePath);
 		if(!oldFileName.exists())

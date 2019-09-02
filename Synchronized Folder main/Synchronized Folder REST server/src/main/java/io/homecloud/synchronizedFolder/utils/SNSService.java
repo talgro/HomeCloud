@@ -7,15 +7,20 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Comparator;
+import java.util.HashMap;
 
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
+
+import io.homecloud.synchronizedFolder.SyncFolderRESTStarter;
 
 @Service
 public class SNSService {
 
-	private final static String folder_dir = System.getProperty("user.home") + File.separator + "homeServer";
+	private final static String folder_dir = System.getProperty("user.home") + File.separator + "HomeCloud";
 
 	public final static byte SUCCESS = 0;
 	public final static byte NOT_FOUND = 1;
@@ -67,9 +72,10 @@ public class SNSService {
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();//500
 
 		case "GET":
-			//TODO get domainName of homeServer from aws
 			//message = filePath of file
-			String domain = getDomain();
+			
+			//String domain = getDomain(); old function
+			String domain = getDomainFromAws();
 			domain += "/download";
 			//remove file from extension to get folder
 			String fileDir = message.substring(0, message.lastIndexOf("/"));
@@ -88,6 +94,29 @@ public class SNSService {
 
 		return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();//500	
 
+	}
+
+	private String getDomainFromAws() {
+		HashMap<String, String> map = getAwsAndTokenFromXML();
+		String awsDomain = map.get("awsDomain");
+		String token = map.get("JWT");
+		String endPoint = "/clients/getMyHomeServerDetails";
+		String uri = awsDomain + endPoint;
+		RestTemplate restTemplate = new RestTemplate();
+		HttpHeaders headers = new HttpHeaders();
+		headers.add("Authorization", "Barear " + token);
+
+		HomeServerConnectionDetailsDto response = restTemplate.getForObject(uri, HomeServerConnectionDetailsDto.class,
+				headers);
+		return response.getHomeServerAddress();
+	}
+
+	private HashMap<String, String> getAwsAndTokenFromXML() {
+		HashMap<String, HashMap<String, String>> config = SyncFolderRESTStarter.readXML(folder_dir + File.separator + "config.xml");
+		HashMap<String, String> rtn = new HashMap<String, String>();
+		rtn.put("awsDomain", config.get("AWS").get("domain"));
+		rtn.put("JWT", config.get("AWS").get("JWT"));
+		return rtn;
 	}
 
 	//This method changes the name of folder/file at "filePath" to "newFileName"

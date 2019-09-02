@@ -2,6 +2,9 @@ package io.homecloud.homeserver.localFile;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -47,14 +50,14 @@ public class LocalFileController {
 
 	@Autowired /*A Singleton object */
 	private FileSystemStorageService _storageService;
-	
+
 	@Autowired
 	private SNSService _service;
 
 	private static final String publishTopicArn = "arn:aws:sns:us-east-2:977623331286:homeServer_changes";
 
 	private static final SNSPublish publisher = new SNSPublish(publishTopicArn);
-	
+
 	//-------------mapping functions-------------------------
 
 	//GET - /{userName}/..
@@ -62,7 +65,14 @@ public class LocalFileController {
 	@RequestMapping(value = "{userName}/**", method = RequestMethod.GET)
 	@ResponseBody
 	public ResponseEntity getFiles(@PathVariable("userName") String userName) {  
-		String filePath=getCurentPath();
+		String filePath = "";
+		try {
+			filePath = getCurentPath();
+		} catch (UnsupportedEncodingException e) {
+			System.out.println("Error decoding url");
+			e.printStackTrace();
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		}
 		System.out.println("GET to: " + filePath);
 		//filePath = removeRoot(filePath);
 		DataResponse response = _localFileService.getFoldersFromPath(filePath);
@@ -85,7 +95,14 @@ public class LocalFileController {
 	@RequestMapping(value = "download/{userName}/**", method = RequestMethod.GET)
 	@ResponseBody
 	public ResponseEntity<Resource> serveFile(@PathVariable("userName") String userName) {
-		String downloadPath = getCurentPath();
+		String downloadPath = "";
+		try {
+			downloadPath = getCurentPath();
+		} catch (UnsupportedEncodingException e) {
+			System.out.println("Error decoding url");
+			e.printStackTrace();
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		}
 		System.out.println("GET to: " + downloadPath);
 		downloadPath = downloadPath.substring(9);
 		//downloadPath = removeRoot(downloadPath);
@@ -100,10 +117,16 @@ public class LocalFileController {
 	@RequestMapping(value = "{userName}/**", method = RequestMethod.PUT)
 	@ResponseBody
 	public ResponseEntity updateLocalFile(@PathVariable("userName") String userName ,@RequestBody String newFileName) {
-		String filePath = getCurentPath();
+		String filePath = "";
+		try {
+			filePath = getCurentPath();
+		} catch (UnsupportedEncodingException e) {
+			System.out.println("Error decoding url");
+			e.printStackTrace();
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		}
 		System.out.println("PUT to: " + filePath);
-		//filePath = removeRoot(filePath);
-		if(filePath.isEmpty()) //trying to change name of root TODO handle users
+		if(filePath.length() <= userName.length() + 2) 
 			return ResponseEntity.status(HttpStatus.METHOD_NOT_ALLOWED).build();//405
 		byte response = _localFileService.updateFile(filePath, newFileName);
 		switch (response) {
@@ -129,10 +152,17 @@ public class LocalFileController {
 	@RequestMapping(value = "{userName}/**", method = RequestMethod.DELETE)
 	@ResponseBody
 	public ResponseEntity deletefile(@PathVariable("userName") String userName) {
-		String filePath = getCurentPath();
+		String filePath = "";
+		try {
+			filePath = getCurentPath();
+		} catch (UnsupportedEncodingException e) {
+			System.out.println("Error decoding url");
+			e.printStackTrace();
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		}
 		System.out.println("DELETE to: " + filePath);
 		//filePath = removeRoot(filePath);
-		if(filePath.isEmpty()) //trying to delete root TODO fix with users
+		if(filePath.length() <= userName.length()+2) //trying to delete root 
 			return ResponseEntity.status(HttpStatus.METHOD_NOT_ALLOWED).build();//405
 		byte response = _localFileService.deleteFile(filePath);
 		switch (response) {
@@ -154,7 +184,14 @@ public class LocalFileController {
 	//POST for upload file
 	@RequestMapping(value = "upload/{userName}/**", method = RequestMethod.POST)
 	public ResponseEntity<Void> handleFileUpload(@PathVariable("userName") String userName, @RequestParam("file") MultipartFile file) {
-		String uploadPath = getCurentPath();
+		String uploadPath = "";
+		try {
+			uploadPath = getCurentPath();
+		} catch (UnsupportedEncodingException e) {
+			System.out.println("Error decoding url");
+			e.printStackTrace();
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		}
 		System.out.println("POST to: " + uploadPath);
 		uploadPath = uploadPath.substring(7);
 		//uploadPath = removeRoot(uploadPath);
@@ -167,24 +204,31 @@ public class LocalFileController {
 	//POST for adding new user
 	@RequestMapping(value = "addUser", method = RequestMethod.POST)
 	public ResponseEntity<Void> addUser(@RequestBody String userName) {
-		String path = getCurentPath();
+		String path = "";
+		try {
+			path = getCurentPath();
+		} catch (UnsupportedEncodingException e) {
+			System.out.println("Error decoding url");
+			e.printStackTrace();
+			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
+		}
 		System.out.println("POST to: " + path + ", body: " + userName);
 		_localFileService.addUser(userName);
 		return ResponseEntity.ok().build();//200
 	}
 
-	
+
 	//############################### for SNS #########################################
 	@RequestMapping(value = "SNSNotification", method = RequestMethod.POST)
 	public ResponseEntity updateSNS(@RequestHeader Map<String, String> headers, @RequestBody String payload) { 
 		System.out.println("POST to /SNSNotification");
-		
+
 		String requstedHeader = headers.get("x-amz-sns-message-type");
 		GsonBuilder builder = new GsonBuilder(); 
 		builder.setPrettyPrinting(); 
 		Gson gson = builder.create(); 
 		SNSMessage mssg = gson.fromJson(payload, SNSMessage.class);
-		
+
 		if(requstedHeader.equals("SubscriptionConfirmation")) {	
 			System.out.println("Subscribing to SNS...");
 			String urlToSubscribe = mssg.getSubscribeURL();
@@ -216,17 +260,18 @@ public class LocalFileController {
 		}
 		return ResponseEntity.badRequest().build();
 	}
-	
-	
-	
+
+
+
 	//######################### other functions #####################################	
 
-	
-	
+
+
 	//This function is to get the current path URI
-	private String getCurentPath() {
+	private String getCurentPath() throws UnsupportedEncodingException {
 		UriComponentsBuilder builder = ServletUriComponentsBuilder.fromCurrentRequest();
 		String filePath = builder.buildAndExpand().getPath();
+		filePath = URLDecoder.decode(filePath, java.nio.charset.StandardCharsets.UTF_8.toString());
 		return filePath;
 	}
 

@@ -18,7 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class FileSystemStorageService {
 
-	private final static String folder_dir = System.getProperty("user.home") + File.separator + "homeServer"; 
+	private final static String folder_dir = System.getProperty("user.home") + File.separator + "HomeCloud"; 
 
 	public void store(MultipartFile file, Path uploadLocation) {
 		String filename = StringUtils.cleanPath(file.getOriginalFilename());
