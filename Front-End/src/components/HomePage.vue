@@ -164,8 +164,8 @@ export default {
   methods: {
     createFolder () {
       // TODO: ask daniel for the right url
-      let url = this.address + '/' + this.trailToString()
-      this.$http.post('', this.newFolderName).then(function (response) {
+      let url = this.address + '/newFolder/' + this.trailToString()
+      this.$http.post(url, this.newFolderName).then(function (response) {
         this.updateCurrFolder(url)
       })
     },
