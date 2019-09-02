@@ -17,7 +17,7 @@ public class JwtUtils {
     }
 
     public String getUsername(String token) {
-        return getAllClaims(token).getUsername();
+        return getAllClaims(token).getEmail();
     }
 
     public String getUserId(String token) {
@@ -27,7 +27,8 @@ public class JwtUtils {
     private JwtTokenClaims getAllClaims(String token) {
         final ObjectMapper mapper = new ObjectMapper();
         Claims claims = Jwts.parser().parseClaimsJwt(token).getBody();
-        return mapper.convertValue(claims, JwtTokenClaims.class);
+        JwtTokenClaims jwtTokenClaims = mapper.convertValue(claims, JwtTokenClaims.class);
+        return jwtTokenClaims;
     }
 
     private JwtTokenHeader getHeaderClaims(String token) {
