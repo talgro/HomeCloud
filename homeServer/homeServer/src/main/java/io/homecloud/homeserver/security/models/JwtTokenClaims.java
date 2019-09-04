@@ -1,5 +1,7 @@
 package io.homecloud.homeserver.security.models;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,15 +10,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class JwtTokenClaims {
-  private String sub; // "sub"
-  private String event_id;
-  private String token_use;
-  private String scope;
-  private long auth_time;
-  private String iss;
-  private long exp;
-  private long iat;
-  private String jti;
-  private String client_id;
-  private String username;
+	private String sub;
+    private boolean email_verified;
+    private String iss;
+    @JsonProperty("cognito:username")
+    private String username;
+    private String given_name;
+    private String aud;
+    private String event_id;
+    private String token_use;
+    private long auth_time;
+    private long exp;
+    private long iat;
+    private String family_name;
+    private String email;
 }

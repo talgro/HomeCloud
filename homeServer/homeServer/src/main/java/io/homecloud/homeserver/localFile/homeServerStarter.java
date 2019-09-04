@@ -99,7 +99,7 @@ public class homeServerStarter {
 			//AWS Node
 			Element serverAWSMainNode = doc.createElement("AWS");
 			Element awsDomain = doc.createElement("domain");
-			awsDomain.appendChild(doc.createTextNode("www.aws.com"));
+			awsDomain.appendChild(doc.createTextNode("http://talgropper-5kee.localhost.run"));
 			serverAWSMainNode.appendChild(awsDomain);
 			Element jwtElement = doc.createElement("JWT");
 			jwtElement.appendChild(doc.createTextNode("JWT-PLACE-HOLDER"));

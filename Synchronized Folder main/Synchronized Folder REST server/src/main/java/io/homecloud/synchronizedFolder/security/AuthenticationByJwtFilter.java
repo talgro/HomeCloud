@@ -26,12 +26,14 @@ import java.util.List;
 
 @Slf4j
 public class AuthenticationByJwtFilter extends OncePerRequestFilter {
-	private static final boolean debug = false;
+	private static final boolean debug = true;
 	private JwtUtils jwtUtils;
 	private final String ACCESS_COOCKIE_NAME = "access_cookie";
 	private final String REFRESH_TOKEN_URL = "";
-	private final String[] JWKs =
-		{"JU/xcxir19xop/pRxbQ1ulSujIZPr03vr9ggNPw8+dg=", "imO/l2pDmgo61A7Cb6OPBTEdkTvNCFhoiOuAViPF12o="};
+	private final String[] JWKs = {
+			"JU/xcxir19xop/pRxbQ1ulSujIZPr03vr9ggNPw8+dg=",
+			"XI+FVVV4srAPoJQcFKjHD+KlxpoMZjhVIhL71ahArpo=",
+	"8TSQdx7EIr7wH5vOOB/Z8k4IUeV5+6t3aeYySiChxhM="};
 
 	public AuthenticationByJwtFilter(JwtUtils jwtUtils) {
 		this.jwtUtils = jwtUtils;

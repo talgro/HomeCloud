@@ -56,6 +56,7 @@ public class SyncFolderRESTStarter {
 		//*****  Downloading all files to HomeCloud folder from homeServer
 		String AwsEndPoint = "/clients/getMyHomeServerDetails";
 		String homeServerDomain = getHomeServerDomainFromAws(awsDomain + AwsEndPoint, token);
+		System.out.println("homeServer Domain: " + homeServerDomain);
 		String endPoint = "/" + userName;
 
 		try {
@@ -143,7 +144,7 @@ public class SyncFolderRESTStarter {
 				//AWS Node
 				Element serverAWSMainNode = doc.createElement("AWS");
 				Element awsDomain = doc.createElement("domain");
-				awsDomain.appendChild(doc.createTextNode("www.aws.com"));
+				awsDomain.appendChild(doc.createTextNode("http://talgropper-5kee.localhost.run"));
 				serverAWSMainNode.appendChild(awsDomain);
 				Element jwtElement = doc.createElement("JWT");
 				jwtElement.appendChild(doc.createTextNode("JWT-PLACE-HOLDER"));

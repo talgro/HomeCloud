@@ -229,6 +229,7 @@ public class LocalFileController {
 			e.printStackTrace();
 			return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).build();
 		}
+		System.out.println("POST to: " + path);
 		
 		path = path.substring(10);
 		_localFileService.createFolder(path, folderName);
